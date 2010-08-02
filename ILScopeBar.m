@@ -1,10 +1,10 @@
-//
-//  ILScopeBar.m
-//  Iconolatrous
-//
-//  Created by Alex Zielenski on 8/1/10.
-//  Copyright 2010 Alex Zielenski. All rights reserved.
-//
+	//
+	//  ILScopeBar.m
+	//  Iconolatrous
+	//
+	//  Created by Alex Zielenski on 8/1/10.
+	//  Copyright 2010 Alex Zielenski. All rights reserved.
+	//
 
 #import "ILScopeBar.h"
 
@@ -64,7 +64,7 @@
 	[self addSubview:[self itemWithTitle:title tag:tag image:img forIndex:index]];
 }
 - (void)drawRect:(NSRect)dirtyRect {
-    // Drawing code here.
+		// Drawing code here.
 	[gGradient drawInRect:dirtyRect angle:270];
 	[gBorderColor set];
 	NSRectFill(NSMakeRect(0, 0, dirtyRect.size.width, 1));
@@ -99,9 +99,9 @@
 					  forIndex:x];
 	}
 	if (!overflows && overflowButton) {
-			[overflowButton removeFromSuperview], [overflowButton release], overflowButton=nil;
+		[overflowButton removeFromSuperview], [overflowButton release], overflowButton=nil;
 	} else {
-
+		
 		[self createOverflowButton];
 		for (int x = self.cutoffIndex+1; x<self.itemCount;x++) {
 			[self addMenuItemWithTitle:[self titleOfItemAtIndex:x] 
@@ -127,7 +127,7 @@
 	[self setNeedsDisplay:YES];
 }
 - (void)createOverflowButton {
-				// it probably actually isnt the best idea to release and create the overflow button so frequently. And instead i should use removeAllItems. Maybe later?
+		// it probably actually isnt the best idea to release and create the overflow button so frequently. And instead i should use removeAllItems. Maybe later?
 	if (overflowButton)
 		[overflowButton removeFromSuperview], [overflowButton release], overflowButton=nil;
 	
@@ -170,7 +170,7 @@
 	CGFloat wpec = img.size.height/16;
 	imgSize.width=img.size.width/wpec;
 	[item.image setSize:imgSize];
-		
+	
 	return [item autorelease];
 }
 - (void)addMenuItemWithTitle:(NSString*)title tag:(NSInteger)tag image:(NSImage*)img forIndex:(NSInteger)index {
@@ -193,7 +193,7 @@
 		n = [self frameForItemAtIndex:idx-1];
 		n.origin.x+=n.size.width;
 		n.origin.x+=gItemSpacing;
-
+		
 	}
 	
 	
@@ -271,8 +271,11 @@
 	return 0;
 }
 - (NSAttributedString*)attributedTitle {
-	NSAttributedString *title = [[NSAttributedString alloc] initWithString:self.title attributes:[NSDictionary dictionaryWithObjectsAndKeys:gTitleFont, NSFontAttributeName, gTitleColor, NSForegroundColorAttributeName, nil]];
-	return [title autorelease];
+	if (self.title) {
+		NSAttributedString *title = [[NSAttributedString alloc] initWithString:self.title attributes:[NSDictionary dictionaryWithObjectsAndKeys:gTitleFont, NSFontAttributeName, gTitleColor, NSForegroundColorAttributeName, nil]];
+		return [title autorelease];
+	}
+	return nil;
 }
 - (NSString*)title { // Calls the dataSource method. If not implemented, returns nil.
 	if ([self.dataSource respondsToSelector:gBarTitleSelector])
