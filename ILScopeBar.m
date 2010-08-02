@@ -32,7 +32,6 @@
     self = [super initWithFrame:frame];
     if (self) {
 		[[NSImage imageNamed:@"Arrows"] setTemplate:YES];
-		[self reload];
     }
     return self;
 }
@@ -85,20 +84,24 @@
 	
 }
 - (void)rearrangeItems {
+	int se = self.selectedIndex;
+	BOOL overflows = [self overflows]; // refresh the cut off index
 	for (int x = self.subviews.count-1; x>=0;x--) {
 		NSView *v = [self.subviews objectAtIndex:x];
 		[v removeFromSuperview];
-		[v release];
+			//[v release]; it actually gets autoreleased
 	}
+	
 	for (int x = 0; x<=self.cutoffIndex;x++) {
 		[self addItemWithTitle:[self titleOfItemAtIndex:x] 
 						   tag:[self tagForItemAtIndex:x] 
 						 image:[self imageForItemAtIndex:x]
 					  forIndex:x];
 	}
-	/*if (![self overflows] && overflowButton) {
-			//[overflowButton removeFromSuperview], [overflowButton release], overflowButton=nil;
+	if (!overflows && overflowButton) {
+			[overflowButton removeFromSuperview], [overflowButton release], overflowButton=nil;
 	} else {
+
 		[self createOverflowButton];
 		for (int x = self.cutoffIndex+1; x<self.itemCount;x++) {
 			[self addMenuItemWithTitle:[self titleOfItemAtIndex:x] 
@@ -106,15 +109,24 @@
 								 image:[self imageForItemAtIndex:x] 
 							  forIndex:x];
 		}
-	}*/
+	}
+	if (se>=0)
+		[self setSelectedIndex:se];
 }
 - (void)reload {
 	[self createOverflowButton];
 	[self rearrangeItems];
+	
+		// It automatically sets the first item of the menu to be active
+	NSMenu *menu = overflowButton.menu;
+	NSArray *menArray = [menu itemArray];
+	if (menArray.count>0)
+		self.selectedItem=[menArray objectAtIndex:0];
 }
 - (void)createOverflowButton {
-		//if (overflowButton)
-		//[overflowButton removeFromSuperview], [overflowButton release], overflowButton=nil;
+				// it probably actually isnt the best idea to release and create the overflow button so frequently. And instead i should use removeAllItems. Maybe later?
+	if (overflowButton)
+		[overflowButton removeFromSuperview], [overflowButton release], overflowButton=nil;
 	
 	if (!overflowButton && [self overflows]) {
 		overflowButton=[[NSPopUpButton alloc] initWithFrame:NSMakeRect(NSMaxX(self.bounds)-28-gItemSpacing, 4, 28, 19)];		
@@ -149,6 +161,12 @@
 	[item setTag:tag];
 	[item setImage:img];
 	
+		// proportionately (sp?) set the height of the item's image to 16.
+	NSSize imgSize = NSMakeSize(0, 16);
+	CGFloat wpec = img.size.height/16;
+	imgSize.width=img.size.width/wpec;
+	[item.image setSize:imgSize];
+		
 	return [item autorelease];
 }
 - (void)addMenuItemWithTitle:(NSString*)title tag:(NSInteger)tag image:(NSImage*)img forIndex:(NSInteger)index {
@@ -179,7 +197,7 @@
 	NSImage *itemImage = [self imageForItemAtIndex:idx];
 	NSSize titleSize = [title sizeWithAttributes:[NSDictionary dictionaryWithObjectsAndKeys:gItemTitleFont, NSFontAttributeName, nil]];
 	if (itemImage)
-		titleSize.width+=itemImage.size.width;
+		titleSize.width+=itemImage.size.width+gItemTitlePadding-gItemSpacing;
 	
 	n.size.width=titleSize.width;
 	n.size.width+=gItemTitlePadding;
@@ -254,7 +272,7 @@
 }
 - (NSArray*)items {
 	NSPredicate *p = [NSPredicate predicateWithFormat:@"className == %@", [NSButton className]];
-	return [self.subviews filteredArrayUsingPredicate:p];
+	return [[self.subviews filteredArrayUsingPredicate:p] arrayByAddingObjectsFromArray:overflowButton.menu.itemArray];
 }
 - (BOOL)shouldSelectItemAtIndex:(NSInteger)idx {
 	if ([self.delegate respondsToSelector:gShouldSelectItemSelector])
@@ -303,7 +321,8 @@
 			return;
 		if ([self shouldSelectItemAtIndex:idx]) {
 			[self willChangeValueForKey:@"selectedItem"];
-			[selectedItem setState:NSOffState];
+			if ([self.items containsObject:selectedItem])
+				[selectedItem setState:NSOffState];
 			selectedItem=newItem;
 			[selectedItem setState:NSOnState];
 			[self didChangeValueForKey:@"selectedItem"];
