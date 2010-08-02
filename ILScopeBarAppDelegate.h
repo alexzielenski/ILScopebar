@@ -13,6 +13,7 @@
     NSWindow *window;
 	NSArray *people;
 	IBOutlet ILScopeBar *scopeBar;
+	IBOutlet NSTextField *label;
 }
 
 @property (assign) IBOutlet NSWindow *window;

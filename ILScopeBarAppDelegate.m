@@ -44,6 +44,6 @@
 	return YES;
 }
 - (void)didSelectItemInScopeBar:(ILScopeBar*)bar atIndex:(NSInteger)idx withTag:(NSInteger)tag andTitle:(NSString*)title {
-	
+	[label setStringValue:[NSString stringWithFormat:@"Selected Item in Bar: %@\nTag: %i\nTitle: %@\nType: %@", bar.title, tag, title, [bar.selectedItem className]]];
 }
 @end
