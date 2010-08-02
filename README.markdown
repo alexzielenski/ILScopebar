@@ -5,7 +5,8 @@
 	don't fit into a menu at the end of it.
 	
 	**THIS IS A WIP AS OF RIGHT NOW. I AM CURRENTLY OPTIMIZING IT FOR OUTSITE USAGE**
-
+Screenshot: 
+![](screenshot.png)
 
 **Documentation:**
 ==================
@@ -19,3 +20,5 @@
 	
 	I prefer that I am credited in the About box of your app if you used some of my source code with the following format:
 		Uses ILScopebar by Alex Zielenski
+
+
