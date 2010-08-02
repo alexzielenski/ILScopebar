@@ -67,6 +67,9 @@
 - (NSMenuItem*)menuItemWithTitle:(NSString*)title tag:(NSInteger)tag image:(NSImage*)img forIndex:(NSInteger)index;
 - (void)addMenuItemWithTitle:(NSString*)title tag:(NSInteger)tag image:(NSImage*)img forIndex:(NSInteger)index;
 
+- (void)rearrangeItems;
+- (void)createOverflowButton;
+
 - (BOOL)overflows;
 - (NSInteger)cutoffIndex;
 - (NSInteger)indexOfItem:(id)item;

@@ -7,9 +7,12 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "ILScopeBar.h"
 
-@interface ILScopeBarAppDelegate : NSObject <NSApplicationDelegate> {
+@interface ILScopeBarAppDelegate : NSObject <NSApplicationDelegate, ILScopeBarDelegate, ILScopeBarDataSource> {
     NSWindow *window;
+	NSArray *people;
+	IBOutlet ILScopeBar *scopeBar;
 }
 
 @property (assign) IBOutlet NSWindow *window;

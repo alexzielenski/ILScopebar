@@ -25,6 +25,9 @@
 @implementation ILScopeBar
 @synthesize dataSource, selectedItem, delegate, cutoffIndex, overflowButton;
 @dynamic selectedIndex;
+- (void)awakeFromNib {
+	[self reload];
+}
 - (id)initWithFrame:(NSRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
@@ -76,19 +79,42 @@
 	
 	if (self.inLiveResize) {
 			//[self reload];
+		[self rearrangeItems];
 	}
 	
 	
 }
-- (void)reload {
-	
-	for (NSView *v in self.subviews) {
+- (void)rearrangeItems {
+	for (int x = self.subviews.count-1; x>=0;x--) {
+		NSView *v = [self.subviews objectAtIndex:x];
 		[v removeFromSuperview];
 		[v release];
 	}
-		
-	if (overflowButton)
-		[overflowButton removeFromSuperview], [overflowButton release], overflowButton=nil;
+	for (int x = 0; x<=self.cutoffIndex;x++) {
+		[self addItemWithTitle:[self titleOfItemAtIndex:x] 
+						   tag:[self tagForItemAtIndex:x] 
+						 image:[self imageForItemAtIndex:x]
+					  forIndex:x];
+	}
+	/*if (![self overflows] && overflowButton) {
+			//[overflowButton removeFromSuperview], [overflowButton release], overflowButton=nil;
+	} else {
+		[self createOverflowButton];
+		for (int x = self.cutoffIndex+1; x<self.itemCount;x++) {
+			[self addMenuItemWithTitle:[self titleOfItemAtIndex:x] 
+								   tag:[self tagForItemAtIndex:x] 
+								 image:[self imageForItemAtIndex:x] 
+							  forIndex:x];
+		}
+	}*/
+}
+- (void)reload {
+	[self createOverflowButton];
+	[self rearrangeItems];
+}
+- (void)createOverflowButton {
+		//if (overflowButton)
+		//[overflowButton removeFromSuperview], [overflowButton release], overflowButton=nil;
 	
 	if (!overflowButton && [self overflows]) {
 		overflowButton=[[NSPopUpButton alloc] initWithFrame:NSMakeRect(NSMaxX(self.bounds)-28-gItemSpacing, 4, 28, 19)];		
@@ -115,18 +141,6 @@
 		[self addSubview:overflowButton];
 	}
 	
-	for (int x = 0; x<=self.cutoffIndex;x++) {
-		[self addItemWithTitle:[self titleOfItemAtIndex:x] 
-						   tag:[self tagForItemAtIndex:x] 
-						 image:[self imageForItemAtIndex:x]
-					  forIndex:x];
-	}
-	for (int x = self.cutoffIndex+1; x<self.itemCount;x++) {
-		[self addMenuItemWithTitle:[self titleOfItemAtIndex:x] 
-							   tag:[self tagForItemAtIndex:x] 
-							 image:[self imageForItemAtIndex:x] 
-						  forIndex:x];
-	}
 }
 - (NSMenuItem*)menuItemWithTitle:(NSString*)title tag:(NSInteger)tag image:(NSImage*)img forIndex:(NSInteger)index {
 	NSMenuItem *item = [NSMenuItem new];

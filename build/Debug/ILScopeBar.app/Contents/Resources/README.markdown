@@ -3,8 +3,6 @@
 	ILScopebar is a NSView subclass for a scope bar like the one finder uses in it's search. 
 	It is different from MGScopebar and apple's scope bar because instead of grouping, it consolidates all the items that 
 	don't fit into a menu at the end of it.
-	
-	**THIS IS A WIP AS OF RIGHT NOW. I AM CURRENTLY OPTIMIZING IT FOR OUTSITE USAGE**
 
 
 **Documentation:**

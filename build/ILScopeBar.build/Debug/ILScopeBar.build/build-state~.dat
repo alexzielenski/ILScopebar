@@ -1,0 +1,277 @@
+TILScopeBar
+v7
+r0
+t302459676.681100
+cCheck dependencies
+cProcessInfoPlistFile "/Users/Alex/Documents/Source Code/Git/ILScopeBar/build/Debug/ILScopeBar.app/Contents/Info.plist" ILScopeBar-Info.plist
+cCopyStringsFile "/Users/Alex/Documents/Source Code/Git/ILScopeBar/build/Debug/ILScopeBar.app/Contents/Resources/English.lproj/InfoPlist.strings" English.lproj/InfoPlist.strings
+cCompileXIB "/Users/Alex/Documents/Source Code/Git/ILScopeBar/English.lproj/MainMenu.xib"
+cCpResource build/Debug/ILScopeBar.app/Contents/Resources/LICENSE LICENSE
+cCpResource build/Debug/ILScopeBar.app/Contents/Resources/README.markdown README.markdown
+cProcessPCH /var/folders/MC/MCzxGw4pHu0WkXFqZLimF++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/ILScopeBar_Prefix-bqcizqtgeecxzgcczhowcchataaa/ILScopeBar_Prefix.pch.gch ILScopeBar_Prefix.pch normal x86_64 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/ILScopeBar.build/Debug/ILScopeBar.build/Objects-normal/x86_64/main.o "/Users/Alex/Documents/Source Code/Git/ILScopeBar/main.m" normal x86_64 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/ILScopeBar.build/Debug/ILScopeBar.build/Objects-normal/x86_64/ILScopeBarAppDelegate.o "/Users/Alex/Documents/Source Code/Git/ILScopeBar/ILScopeBarAppDelegate.m" normal x86_64 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/ILScopeBar.build/Debug/ILScopeBar.build/Objects-normal/x86_64/ILScopeBar.o "/Users/Alex/Documents/Source Code/Git/ILScopeBar/ILScopeBar.m" normal x86_64 objective-c com.apple.compilers.gcc.4_2
+cLd "/Users/Alex/Documents/Source Code/Git/ILScopeBar/build/Debug/ILScopeBar.app/Contents/MacOS/ILScopeBar" normal x86_64
+cTouch "/Users/Alex/Documents/Source Code/Git/ILScopeBar/build/Debug/ILScopeBar.app"
+
+N/Developer/SDKs/MacOSX10.6.sdk
+c000000004C37FE0400000000000000EE
+t1278737924
+s238
+
+N/Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/Cocoa.framework/Headers/Cocoa.h
+c0000000040C4AA6800000000000001E5
+t1086630504
+s485
+
+N/System/Library/Frameworks/Cocoa.framework/Cocoa
+c000000004A1F2D63000000000000A5E0
+t1243557219
+s42464
+
+N/Users/Alex/Documents/Source Code/Git/ILScopeBar/English.lproj/InfoPlist.strings
+c000000004C56E7A5000000000000002D
+t1280763813
+s45
+
+N/Users/Alex/Documents/Source Code/Git/ILScopeBar/English.lproj/MainMenu.xib
+c000000004C56F29E000000000002D6DE
+t1280766622
+s186078
+
+N/Users/Alex/Documents/Source Code/Git/ILScopeBar/ILScopeBar.h
+c000000004C56084C0000000000000BE3
+t1280706636
+s3043
+i<Cocoa/Cocoa.h>
+
+N/Users/Alex/Documents/Source Code/Git/ILScopeBar/ILScopeBar.m
+c000000004C5638EE00000000000027C4
+t1280719086
+s10180
+i"ILScopeBar.h"
+
+N/Users/Alex/Documents/Source Code/Git/ILScopeBar/ILScopeBarAppDelegate.h
+c000000004C56F3130000000000000195
+t1280766739
+s405
+i<Cocoa/Cocoa.h>
+i"ILScopeBar.h"
+
+N/Users/Alex/Documents/Source Code/Git/ILScopeBar/ILScopeBarAppDelegate.m
+c000000004C56F3810000000000000598
+t1280766849
+s1432
+i"ILScopeBarAppDelegate.h"
+
+N/Users/Alex/Documents/Source Code/Git/ILScopeBar/ILScopeBar_Prefix.pch
+c000000004C56E7A50000000000000097
+t1280763813
+s151
+i<Cocoa/Cocoa.h>
+
+N/Users/Alex/Documents/Source Code/Git/ILScopeBar/LICENSE
+c000000004C56ECE3000000000000418D
+t1280765155
+s16781
+
+N/Users/Alex/Documents/Source Code/Git/ILScopeBar/README
+c000000004C56E8190000000000000000
+t1280763929
+s0
+
+N/Users/Alex/Documents/Source Code/Git/ILScopeBar/README.markdown
+c000000004C56F21F00000000000002FA
+t1280766495
+s762
+
+N/Users/Alex/Documents/Source Code/Git/ILScopeBar/build/Debug/ILScopeBar.app
+t1280766876
+s102
+
+N/Users/Alex/Documents/Source Code/Git/ILScopeBar/build/Debug/ILScopeBar.app/Contents/Info.plist
+t1280766850
+s895
+
+N/Users/Alex/Documents/Source Code/Git/ILScopeBar/build/Debug/ILScopeBar.app/Contents/MacOS/ILScopeBar
+t1280766876
+s40112
+
+N/Users/Alex/Documents/Source Code/Git/ILScopeBar/build/Debug/ILScopeBar.app/Contents/PkgInfo
+t1280766850
+s8
+
+N/Users/Alex/Documents/Source Code/Git/ILScopeBar/build/Debug/ILScopeBar.app/Contents/Resources/English.lproj/InfoPlist.strings
+t1280766850
+s92
+
+N/Users/Alex/Documents/Source Code/Git/ILScopeBar/build/Debug/ILScopeBar.app/Contents/Resources/English.lproj/MainMenu.nib
+t1280766851
+s34816
+
+N/Users/Alex/Documents/Source Code/Git/ILScopeBar/build/Debug/ILScopeBar.app/Contents/Resources/LICENSE
+t1280766850
+s16781
+
+N/Users/Alex/Documents/Source Code/Git/ILScopeBar/build/Debug/ILScopeBar.app/Contents/Resources/README
+t2
+s0
+
+N/Users/Alex/Documents/Source Code/Git/ILScopeBar/build/Debug/ILScopeBar.app/Contents/Resources/README.markdown
+t1280766850
+s762
+
+N/Users/Alex/Documents/Source Code/Git/ILScopeBar/build/ILScopeBar.build/Debug/ILScopeBar.build/Objects-normal/x86_64/ILScopeBar.LinkFileList
+c000000004C56F382000000000000018B
+t1280766850
+s395
+
+N/Users/Alex/Documents/Source Code/Git/ILScopeBar/build/ILScopeBar.build/Debug/ILScopeBar.build/Objects-normal/x86_64/ILScopeBar.o
+t1280766874
+s63132
+
+N/Users/Alex/Documents/Source Code/Git/ILScopeBar/build/ILScopeBar.build/Debug/ILScopeBar.build/Objects-normal/x86_64/ILScopeBarAppDelegate.o
+t1280766873
+s33388
+
+N/Users/Alex/Documents/Source Code/Git/ILScopeBar/build/ILScopeBar.build/Debug/ILScopeBar.build/Objects-normal/x86_64/main.o
+t1280766873
+s5008
+
+N/Users/Alex/Documents/Source Code/Git/ILScopeBar/main.m
+c000000004C56E7A500000000000000FE
+t1280763813
+s254
+i<Cocoa/Cocoa.h>
+
+N/var/folders/MC/MCzxGw4pHu0WkXFqZLimF++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/ILScopeBar_Prefix-bqcizqtgeecxzgcczhowcchataaa/ILScopeBar_Prefix.pch.gch
+t1280766873
+s54265616
+
+NILScopeBar-Info.plist
+c000000004C56E7A500000000000003EA
+t1280763813
+s1002
+
+CCheck dependencies
+r0
+lSLF07#2@18"Check dependencies302459650#302459650#0(0"0(0#1#0"8641562976#0"0#
+
+CCompileC build/ILScopeBar.build/Debug/ILScopeBar.build/Objects-normal/x86_64/ILScopeBar.o "/Users/Alex/Documents/Source Code/Git/ILScopeBar/ILScopeBar.m" normal x86_64 objective-c com.apple.compilers.gcc.4_2
+s302459673.817568
+e302459674.074273
+r1
+xCompileC
+xbuild/ILScopeBar.build/Debug/ILScopeBar.build/Objects-normal/x86_64/ILScopeBar.o
+x/Users/Alex/Documents/Source Code/Git/ILScopeBar/ILScopeBar.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@69"Compile /Users/Alex/Documents/Source Code/Git/ILScopeBar/ILScopeBar.m302459673#302459674#0(0"0(0#0#61"/Users/Alex/Documents/Source Code/Git/ILScopeBar/ILScopeBar.m8637912960#1654"    cd "/Users/Alex/Documents/Source Code/Git/ILScopeBar"    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote "/Users/Alex/Documents/Source Code/Git/ILScopeBar/build/ILScopeBar.build/Debug/ILScopeBar.build/ILScopeBar-generated-files.hmap" "-I/Users/Alex/Documents/Source Code/Git/ILScopeBar/build/ILScopeBar.build/Debug/ILScopeBar.build/ILScopeBar-own-target-headers.hmap" "-I/Users/Alex/Documents/Source Code/Git/ILScopeBar/build/ILScopeBar.build/Debug/ILScopeBar.build/ILScopeBar-all-target-headers.hmap" -iquote "/Users/Alex/Documents/Source Code/Git/ILScopeBar/build/ILScopeBar.build/Debug/ILScopeBar.build/ILScopeBar-project-headers.hmap" "-F/Users/Alex/Documents/Source Code/Git/ILScopeBar/build/Debug" "-I/Users/Alex/Documents/Source Code/Git/ILScopeBar/build/Debug/include" "-I/Users/Alex/Documents/Source Code/Git/ILScopeBar/build/ILScopeBar.build/Debug/ILScopeBar.build/DerivedSources/x86_64" "-I/Users/Alex/Documents/Source Code/Git/ILScopeBar/build/ILScopeBar.build/Debug/ILScopeBar.build/DerivedSources" -include /var/folders/MC/MCzxGw4pHu0WkXFqZLimF++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/ILScopeBar_Prefix-bqcizqtgeecxzgcczhowcchataaa/ILScopeBar_Prefix.pch -c "/Users/Alex/Documents/Source Code/Git/ILScopeBar/ILScopeBar.m" -o "/Users/Alex/Documents/Source Code/Git/ILScopeBar/build/ILScopeBar.build/Debug/ILScopeBar.build/Objects-normal/x86_64/ILScopeBar.o"0#
+
+CCompileC build/ILScopeBar.build/Debug/ILScopeBar.build/Objects-normal/x86_64/ILScopeBarAppDelegate.o "/Users/Alex/Documents/Source Code/Git/ILScopeBar/ILScopeBarAppDelegate.m" normal x86_64 objective-c com.apple.compilers.gcc.4_2
+s302459673.476471
+e302459673.848766
+r1
+xCompileC
+xbuild/ILScopeBar.build/Debug/ILScopeBar.build/Objects-normal/x86_64/ILScopeBarAppDelegate.o
+x/Users/Alex/Documents/Source Code/Git/ILScopeBar/ILScopeBarAppDelegate.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@80"Compile /Users/Alex/Documents/Source Code/Git/ILScopeBar/ILScopeBarAppDelegate.m302459673#302459673#0(0"0(0#0#72"/Users/Alex/Documents/Source Code/Git/ILScopeBar/ILScopeBarAppDelegate.m8620734752#1676"    cd "/Users/Alex/Documents/Source Code/Git/ILScopeBar"    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote "/Users/Alex/Documents/Source Code/Git/ILScopeBar/build/ILScopeBar.build/Debug/ILScopeBar.build/ILScopeBar-generated-files.hmap" "-I/Users/Alex/Documents/Source Code/Git/ILScopeBar/build/ILScopeBar.build/Debug/ILScopeBar.build/ILScopeBar-own-target-headers.hmap" "-I/Users/Alex/Documents/Source Code/Git/ILScopeBar/build/ILScopeBar.build/Debug/ILScopeBar.build/ILScopeBar-all-target-headers.hmap" -iquote "/Users/Alex/Documents/Source Code/Git/ILScopeBar/build/ILScopeBar.build/Debug/ILScopeBar.build/ILScopeBar-project-headers.hmap" "-F/Users/Alex/Documents/Source Code/Git/ILScopeBar/build/Debug" "-I/Users/Alex/Documents/Source Code/Git/ILScopeBar/build/Debug/include" "-I/Users/Alex/Documents/Source Code/Git/ILScopeBar/build/ILScopeBar.build/Debug/ILScopeBar.build/DerivedSources/x86_64" "-I/Users/Alex/Documents/Source Code/Git/ILScopeBar/build/ILScopeBar.build/Debug/ILScopeBar.build/DerivedSources" -include /var/folders/MC/MCzxGw4pHu0WkXFqZLimF++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/ILScopeBar_Prefix-bqcizqtgeecxzgcczhowcchataaa/ILScopeBar_Prefix.pch -c "/Users/Alex/Documents/Source Code/Git/ILScopeBar/ILScopeBarAppDelegate.m" -o "/Users/Alex/Documents/Source Code/Git/ILScopeBar/build/ILScopeBar.build/Debug/ILScopeBar.build/Objects-normal/x86_64/ILScopeBarAppDelegate.o"0#
+
+CCompileC build/ILScopeBar.build/Debug/ILScopeBar.build/Objects-normal/x86_64/main.o "/Users/Alex/Documents/Source Code/Git/ILScopeBar/main.m" normal x86_64 objective-c com.apple.compilers.gcc.4_2
+s302459673.475274
+e302459673.817457
+r1
+xCompileC
+xbuild/ILScopeBar.build/Debug/ILScopeBar.build/Objects-normal/x86_64/main.o
+x/Users/Alex/Documents/Source Code/Git/ILScopeBar/main.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@63"Compile /Users/Alex/Documents/Source Code/Git/ILScopeBar/main.m302459673#302459673#0(0"0(0#0#55"/Users/Alex/Documents/Source Code/Git/ILScopeBar/main.m8626306656#1642"    cd "/Users/Alex/Documents/Source Code/Git/ILScopeBar"    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote "/Users/Alex/Documents/Source Code/Git/ILScopeBar/build/ILScopeBar.build/Debug/ILScopeBar.build/ILScopeBar-generated-files.hmap" "-I/Users/Alex/Documents/Source Code/Git/ILScopeBar/build/ILScopeBar.build/Debug/ILScopeBar.build/ILScopeBar-own-target-headers.hmap" "-I/Users/Alex/Documents/Source Code/Git/ILScopeBar/build/ILScopeBar.build/Debug/ILScopeBar.build/ILScopeBar-all-target-headers.hmap" -iquote "/Users/Alex/Documents/Source Code/Git/ILScopeBar/build/ILScopeBar.build/Debug/ILScopeBar.build/ILScopeBar-project-headers.hmap" "-F/Users/Alex/Documents/Source Code/Git/ILScopeBar/build/Debug" "-I/Users/Alex/Documents/Source Code/Git/ILScopeBar/build/Debug/include" "-I/Users/Alex/Documents/Source Code/Git/ILScopeBar/build/ILScopeBar.build/Debug/ILScopeBar.build/DerivedSources/x86_64" "-I/Users/Alex/Documents/Source Code/Git/ILScopeBar/build/ILScopeBar.build/Debug/ILScopeBar.build/DerivedSources" -include /var/folders/MC/MCzxGw4pHu0WkXFqZLimF++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/ILScopeBar_Prefix-bqcizqtgeecxzgcczhowcchataaa/ILScopeBar_Prefix.pch -c "/Users/Alex/Documents/Source Code/Git/ILScopeBar/main.m" -o "/Users/Alex/Documents/Source Code/Git/ILScopeBar/build/ILScopeBar.build/Debug/ILScopeBar.build/Objects-normal/x86_64/main.o"0#
+
+CCompileXIB "/Users/Alex/Documents/Source Code/Git/ILScopeBar/English.lproj/MainMenu.xib"
+s302459650.411949
+e302459651.156959
+r1
+xCompileXIB
+x/Users/Alex/Documents/Source Code/Git/ILScopeBar/English.lproj/MainMenu.xib
+lSLF07#2@37"CompileXIB English.lproj/MainMenu.xib302459650#302459651#0(0"0(0#0#75"/Users/Alex/Documents/Source Code/Git/ILScopeBar/English.lproj/MainMenu.xib8636297696#403"    cd "/Users/Alex/Documents/Source Code/Git/ILScopeBar"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile "/Users/Alex/Documents/Source Code/Git/ILScopeBar/build/Debug/ILScopeBar.app/Contents/Resources/English.lproj/MainMenu.nib" "/Users/Alex/Documents/Source Code/Git/ILScopeBar/English.lproj/MainMenu.xib" --sdk /Developer/SDKs/MacOSX10.6.sdk0#
+
+CCopyStringsFile "/Users/Alex/Documents/Source Code/Git/ILScopeBar/build/Debug/ILScopeBar.app/Contents/Resources/English.lproj/InfoPlist.strings" English.lproj/InfoPlist.strings
+s302459650.405402
+e302459650.805431
+r1
+xCopyStringsFile
+x/Users/Alex/Documents/Source Code/Git/ILScopeBar/build/Debug/ILScopeBar.app/Contents/Resources/English.lproj/InfoPlist.strings
+xEnglish.lproj/InfoPlist.strings
+lSLF07#2@36"Copy English.lproj/InfoPlist.strings302459650#302459650#0(0"0(0#0#80"/Users/Alex/Documents/Source Code/Git/ILScopeBar/English.lproj/InfoPlist.strings8622357280#392"    cd "/Users/Alex/Documents/Source Code/Git/ILScopeBar"    setenv ICONV /usr/bin/iconv    /Developer/Library/Xcode/Plug-ins/CoreBuildTasks.xcplugin/Contents/Resources/copystrings --validate --inputencoding utf-8 --outputencoding UTF-16 English.lproj/InfoPlist.strings --outdir "/Users/Alex/Documents/Source Code/Git/ILScopeBar/build/Debug/ILScopeBar.app/Contents/Resources/English.lproj"0#
+
+CCpResource build/Debug/ILScopeBar.app/Contents/Resources/LICENSE LICENSE
+s302459650.805527
+e302459650.821653
+r1
+xCpResource
+xbuild/Debug/ILScopeBar.app/Contents/Resources/LICENSE
+xLICENSE
+lSLF07#2@12"Copy LICENSE302459650#302459650#0(0"0(0#0#56"/Users/Alex/Documents/Source Code/Git/ILScopeBar/LICENSE8641465408#362"    cd "/Users/Alex/Documents/Source Code/Git/ILScopeBar"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks "/Users/Alex/Documents/Source Code/Git/ILScopeBar/LICENSE" "/Users/Alex/Documents/Source Code/Git/ILScopeBar/build/Debug/ILScopeBar.app/Contents/Resources"0#
+
+CCpResource build/Debug/ILScopeBar.app/Contents/Resources/README README
+r0
+
+CCpResource build/Debug/ILScopeBar.app/Contents/Resources/README.markdown README.markdown
+s302459650.807046
+e302459650.823800
+r1
+xCpResource
+xbuild/Debug/ILScopeBar.app/Contents/Resources/README.markdown
+xREADME.markdown
+lSLF07#2@20"Copy README.markdown302459650#302459650#0(0"0(0#0#64"/Users/Alex/Documents/Source Code/Git/ILScopeBar/README.markdown8640612320#370"    cd "/Users/Alex/Documents/Source Code/Git/ILScopeBar"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks "/Users/Alex/Documents/Source Code/Git/ILScopeBar/README.markdown" "/Users/Alex/Documents/Source Code/Git/ILScopeBar/build/Debug/ILScopeBar.app/Contents/Resources"0#
+
+CLd "/Users/Alex/Documents/Source Code/Git/ILScopeBar/build/Debug/ILScopeBar.app/Contents/MacOS/ILScopeBar" normal x86_64
+s302459674.074368
+e302459676.674511
+r1
+xLd
+x/Users/Alex/Documents/Source Code/Git/ILScopeBar/build/Debug/ILScopeBar.app/Contents/MacOS/ILScopeBar
+xnormal
+xx86_64
+lSLF07#2@106"Link /Users/Alex/Documents/Source Code/Git/ILScopeBar/build/Debug/ILScopeBar.app/Contents/MacOS/ILScopeBar302459674#302459676#0(0"0(0#0#0"8634970336#617"    cd "/Users/Alex/Documents/Source Code/Git/ILScopeBar"    setenv MACOSX_DEPLOYMENT_TARGET 10.6    /Developer/usr/bin/gcc-4.2 -arch x86_64 -isysroot /Developer/SDKs/MacOSX10.6.sdk "-L/Users/Alex/Documents/Source Code/Git/ILScopeBar/build/Debug" "-F/Users/Alex/Documents/Source Code/Git/ILScopeBar/build/Debug" -filelist "/Users/Alex/Documents/Source Code/Git/ILScopeBar/build/ILScopeBar.build/Debug/ILScopeBar.build/Objects-normal/x86_64/ILScopeBar.LinkFileList" -mmacosx-version-min=10.6 -framework Cocoa -o "/Users/Alex/Documents/Source Code/Git/ILScopeBar/build/Debug/ILScopeBar.app/Contents/MacOS/ILScopeBar"0#
+
+CProcessInfoPlistFile "/Users/Alex/Documents/Source Code/Git/ILScopeBar/build/Debug/ILScopeBar.app/Contents/Info.plist" ILScopeBar-Info.plist
+s302459650.396478
+e302459650.405294
+r1
+xProcessInfoPlistFile
+x/Users/Alex/Documents/Source Code/Git/ILScopeBar/build/Debug/ILScopeBar.app/Contents/Info.plist
+xILScopeBar-Info.plist
+lSLF07#2@29"Process ILScopeBar-Info.plist302459650#302459650#0(0"0(0#0#70"/Users/Alex/Documents/Source Code/Git/ILScopeBar/ILScopeBar-Info.plist8636405728#355"    cd "/Users/Alex/Documents/Source Code/Git/ILScopeBar"    builtin-infoPlistUtility ILScopeBar-Info.plist -genpkginfo "/Users/Alex/Documents/Source Code/Git/ILScopeBar/build/Debug/ILScopeBar.app/Contents/PkgInfo" -expandbuildsettings -platform macosx -o "/Users/Alex/Documents/Source Code/Git/ILScopeBar/build/Debug/ILScopeBar.app/Contents/Info.plist"0#
+
+CProcessPCH /var/folders/MC/MCzxGw4pHu0WkXFqZLimF++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/ILScopeBar_Prefix-bqcizqtgeecxzgcczhowcchataaa/ILScopeBar_Prefix.pch.gch ILScopeBar_Prefix.pch normal x86_64 objective-c com.apple.compilers.gcc.4_2
+s302459651.157086
+e302459673.474792
+r1
+xProcessPCH
+x/var/folders/MC/MCzxGw4pHu0WkXFqZLimF++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/ILScopeBar_Prefix-bqcizqtgeecxzgcczhowcchataaa/ILScopeBar_Prefix.pch.gch
+xILScopeBar_Prefix.pch
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@32"Precompile ILScopeBar_Prefix.pch302459651#302459673#0(0"0(0#0#70"/Users/Alex/Documents/Source Code/Git/ILScopeBar/ILScopeBar_Prefix.pch8635604704#1533"    cd "/Users/Alex/Documents/Source Code/Git/ILScopeBar"    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c-header -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote "/Users/Alex/Documents/Source Code/Git/ILScopeBar/build/ILScopeBar.build/Debug/ILScopeBar.build/ILScopeBar-generated-files.hmap" "-I/Users/Alex/Documents/Source Code/Git/ILScopeBar/build/ILScopeBar.build/Debug/ILScopeBar.build/ILScopeBar-own-target-headers.hmap" "-I/Users/Alex/Documents/Source Code/Git/ILScopeBar/build/ILScopeBar.build/Debug/ILScopeBar.build/ILScopeBar-all-target-headers.hmap" -iquote "/Users/Alex/Documents/Source Code/Git/ILScopeBar/build/ILScopeBar.build/Debug/ILScopeBar.build/ILScopeBar-project-headers.hmap" "-F/Users/Alex/Documents/Source Code/Git/ILScopeBar/build/Debug" "-I/Users/Alex/Documents/Source Code/Git/ILScopeBar/build/Debug/include" "-I/Users/Alex/Documents/Source Code/Git/ILScopeBar/build/ILScopeBar.build/Debug/ILScopeBar.build/DerivedSources/x86_64" "-I/Users/Alex/Documents/Source Code/Git/ILScopeBar/build/ILScopeBar.build/Debug/ILScopeBar.build/DerivedSources" -c "/Users/Alex/Documents/Source Code/Git/ILScopeBar/ILScopeBar_Prefix.pch" -o /var/folders/MC/MCzxGw4pHu0WkXFqZLimF++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/ILScopeBar_Prefix-bqcizqtgeecxzgcczhowcchataaa/ILScopeBar_Prefix.pch.gch0#
+
+CTouch "/Users/Alex/Documents/Source Code/Git/ILScopeBar/build/Debug/ILScopeBar.app"
+s302459676.674668
+e302459676.681050
+r1
+xTouch
+x/Users/Alex/Documents/Source Code/Git/ILScopeBar/build/Debug/ILScopeBar.app
+lSLF07#2@81"Touch /Users/Alex/Documents/Source Code/Git/ILScopeBar/build/Debug/ILScopeBar.app302459676#302459676#0(0"0(0#0#0"8629464320#158"    cd "/Users/Alex/Documents/Source Code/Git/ILScopeBar"    /usr/bin/touch -c "/Users/Alex/Documents/Source Code/Git/ILScopeBar/build/Debug/ILScopeBar.app"0#
+
