@@ -4,7 +4,6 @@
 	It is different from MGScopebar and apple's scope bar because instead of grouping, it consolidates all the items that 
 	don't fit into a menu at the end of it.
 	
-	**THIS IS A WIP AS OF RIGHT NOW. I AM CURRENTLY OPTIMIZING IT FOR OUTSITE USAGE**
 Screenshot: 
 ![](http://github.com/alexzielenski/ILScopebar/raw/master/screenshot.png)
 
