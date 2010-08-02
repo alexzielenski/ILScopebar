@@ -4,6 +4,9 @@
 		activeBuildConfigurationName = Debug;
 		activeExecutable = FAB24A3B12071F2500003D13 /* ILScopeBar */;
 		activeTarget = 8D1107260486CEB800E47090 /* ILScopeBar */;
+		addToTargets = (
+			8D1107260486CEB800E47090 /* ILScopeBar */,
+		);
 		codeSenseManager = FAB24A4F12071F2900003D13 /* Code sense */;
 		executables = (
 			FAB24A3B12071F2500003D13 /* ILScopeBar */,
