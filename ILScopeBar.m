@@ -114,6 +114,8 @@
 		[self setSelectedIndex:se];
 }
 - (void)reload {
+	[self overflows];
+	
 	[self createOverflowButton];
 	[self rearrangeItems];
 	
@@ -161,6 +163,7 @@
 	[item setTitle:title];
 	[item setTag:tag];
 	[item setImage:img];
+	[item setState:NSOffState];
 	
 		// proportionately (sp?) set the height of the item's image to 16.
 	NSSize imgSize = NSMakeSize(0, 16);
@@ -206,8 +209,8 @@
 }
 - (NSRect)frameForBarTitle {
 	NSString *title = self.title;
-	if (!title)
-		return NSZeroRect;
+	if (!title || title.length<=0)
+		return NSMakeRect(gItemSpacing, 0, 0, 0);
 	NSSize titleSize=[self.attributedTitle size];
 	NSRect t = NSZeroRect;
 	t.origin.x=gItemSpacing;
@@ -221,7 +224,8 @@
 - (BOOL)overflows {
 	for (int x = 0; x<self.itemCount;x++) {
 		NSRect f = [self frameForItemAtIndex:x];
-		if (f.origin.x+f.size.width+gItemSpacing+overflowButton.bounds.size.width>self.bounds.size.width) {
+		
+		if (f.origin.x+f.size.width+gItemSpacing*3>self.bounds.size.width) {
 			self.cutoffIndex=x-1;
 			return YES;
 		}
