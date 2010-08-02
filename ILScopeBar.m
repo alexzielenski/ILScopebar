@@ -122,6 +122,7 @@
 	NSArray *menArray = [menu itemArray];
 	if (menArray.count>0)
 		self.selectedItem=[menArray objectAtIndex:0];
+	[self setNeedsDisplay:YES];
 }
 - (void)createOverflowButton {
 				// it probably actually isnt the best idea to release and create the overflow button so frequently. And instead i should use removeAllItems. Maybe later?
@@ -220,7 +221,7 @@
 - (BOOL)overflows {
 	for (int x = 0; x<self.itemCount;x++) {
 		NSRect f = [self frameForItemAtIndex:x];
-		if (f.origin.x+f.size.width+gItemSpacing>self.bounds.size.width) {
+		if (f.origin.x+f.size.width+gItemSpacing+overflowButton.bounds.size.width>self.bounds.size.width) {
 			self.cutoffIndex=x-1;
 			return YES;
 		}
@@ -252,8 +253,12 @@
 	if (idx==-1)
 		return nil;
 	
-	if ([self.dataSource respondsToSelector:gItemImageSelector])
-		return [self.dataSource imageForItemInScopeBar:self atIndex:idx];
+	if ([self.dataSource respondsToSelector:gItemImageSelector]) {
+		NSImage *im = [self.dataSource imageForItemInScopeBar:self atIndex:idx];
+		if (im)
+			[im setSize:NSMakeSize(16, 16)];
+		return im;
+	}
 	return nil;
 }
 - (NSInteger)tagForItemAtIndex:(NSInteger)idx { // Calls the dataSource method. If not implemented, returns 0.

@@ -15,7 +15,7 @@
 		FAB24A651207212700003D13 /* ILScopeBar.m in Sources */ = {isa = PBXBuildFile; fileRef = FAB24A641207212700003D13 /* ILScopeBar.m */; };
 		FAB24A6E1207245F00003D13 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = FAB24A6C1207245F00003D13 /* LICENSE */; };
 		FAB24A7312072A0D00003D13 /* README.markdown in Resources */ = {isa = PBXBuildFile; fileRef = FAB24A7212072A0D00003D13 /* README.markdown */; };
-		FAB24A9312072B6100003D13 /* Arrows.png in Resources */ = {isa = PBXBuildFile; fileRef = FAB24A9212072B6100003D13 /* Arrows.png */; };
+		FAB24CB71207406D00003D13 /* Arrows.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FAB24CB61207406D00003D13 /* Arrows.pdf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,7 +35,7 @@
 		FAB24A641207212700003D13 /* ILScopeBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ILScopeBar.m; sourceTree = "<group>"; };
 		FAB24A6C1207245F00003D13 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		FAB24A7212072A0D00003D13 /* README.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.markdown; sourceTree = "<group>"; };
-		FAB24A9212072B6100003D13 /* Arrows.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Arrows.png; sourceTree = "<group>"; };
+		FAB24CB61207406D00003D13 /* Arrows.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Arrows.pdf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,7 +111,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				FAB24A9212072B6100003D13 /* Arrows.png */,
+				FAB24CB61207406D00003D13 /* Arrows.pdf */,
 				FAB24A6C1207245F00003D13 /* LICENSE */,
 				FAB24A7212072A0D00003D13 /* README.markdown */,
 				8D1107310486CEB800E47090 /* ILScopeBar-Info.plist */,
@@ -177,7 +177,7 @@
 				1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */,
 				FAB24A6E1207245F00003D13 /* LICENSE in Resources */,
 				FAB24A7312072A0D00003D13 /* README.markdown in Resources */,
-				FAB24A9312072B6100003D13 /* Arrows.png in Resources */,
+				FAB24CB71207406D00003D13 /* Arrows.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
