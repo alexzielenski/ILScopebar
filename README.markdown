@@ -6,7 +6,7 @@
 	
 	**THIS IS A WIP AS OF RIGHT NOW. I AM CURRENTLY OPTIMIZING IT FOR OUTSITE USAGE**
 Screenshot: 
-![](screenshot.png)
+![](http://github.com/alexzielenski/ILScopebar/raw/master/screenshot.png)
 
 **Documentation:**
 ==================
