@@ -13,6 +13,8 @@
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 		FAB24A651207212700003D13 /* ILScopeBar.m in Sources */ = {isa = PBXBuildFile; fileRef = FAB24A641207212700003D13 /* ILScopeBar.m */; };
+		FAB24A6E1207245F00003D13 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = FAB24A6C1207245F00003D13 /* LICENSE */; };
+		FAB24A6F1207245F00003D13 /* README in Resources */ = {isa = PBXBuildFile; fileRef = FAB24A6D1207245F00003D13 /* README */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		8D1107320486CEB800E47090 /* ILScopeBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ILScopeBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAB24A631207212700003D13 /* ILScopeBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ILScopeBar.h; sourceTree = "<group>"; };
 		FAB24A641207212700003D13 /* ILScopeBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ILScopeBar.m; sourceTree = "<group>"; };
+		FAB24A6C1207245F00003D13 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		FAB24A6D1207245F00003D13 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +109,8 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				FAB24A6C1207245F00003D13 /* LICENSE */,
+				FAB24A6D1207245F00003D13 /* README */,
 				8D1107310486CEB800E47090 /* ILScopeBar-Info.plist */,
 				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
 				1DDD58140DA1D0A300B32029 /* MainMenu.xib */,
@@ -166,6 +172,8 @@
 			files = (
 				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
 				1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */,
+				FAB24A6E1207245F00003D13 /* LICENSE in Resources */,
+				FAB24A6F1207245F00003D13 /* README in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
