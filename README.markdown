@@ -13,7 +13,7 @@ Documentation tags are inside the header files of the Protocol and the Actual sc
 Protected under the [Creative Commons 3.0 Attributions Unported License][3]
 
 I prefer that I am credited in the About box of your app if you used some of my source code with the following format:  
-	Uses [ILScopeBar][1] by [Alex Zielenski][2]
+Uses [ILScopeBar][1] by [Alex Zielenski][2]
 	
 [1]: http://github.com/alexzielenski/ILScopeBar  "ILScopeBar"
 [2]: http://alexzielenski.com/  "Alex Zielenski"
