@@ -36,6 +36,7 @@
 		FAB24A6C1207245F00003D13 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		FAB24A7212072A0D00003D13 /* README.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.markdown; sourceTree = "<group>"; };
 		FAB24CB61207406D00003D13 /* Arrows.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Arrows.pdf; sourceTree = "<group>"; };
+		FAB254241208795E00003D13 /* ILScopeBarProtocols.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ILScopeBarProtocols.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +56,7 @@
 			children = (
 				FAB24A631207212700003D13 /* ILScopeBar.h */,
 				FAB24A641207212700003D13 /* ILScopeBar.m */,
+				FAB254241208795E00003D13 /* ILScopeBarProtocols.h */,
 				256AC3D80F4B6AC300CF3369 /* ILScopeBarAppDelegate.h */,
 				256AC3D90F4B6AC300CF3369 /* ILScopeBarAppDelegate.m */,
 			);

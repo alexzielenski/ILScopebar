@@ -7,35 +7,13 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "ILScopeBarProtocols.h"
 
-@class ILScopeBar;
-@protocol ILScopeBarDataSource
-@required
-- (NSInteger)numberOfItemsInScopeBar:(ILScopeBar*)bar;
-- (NSString*)titleOfItemInScopeBar:(ILScopeBar*)bar atIndex:(NSInteger)idx;
-
-@optional
-- (NSString*)titleForBar:(ILScopeBar*)bar;
-- (NSInteger)tagForItemInScopeBar:(ILScopeBar*)bar atIndex:(NSInteger)idx;
-- (NSImage*)imageForItemInScopeBar:(ILScopeBar*)bar atIndex:(NSInteger)idx;
-@end
-@protocol ILScopeBarDelegate
-@optional
-- (BOOL)shouldSelectItemInScopeBar:(ILScopeBar*)bar atIndex:(NSInteger)idx;
-- (void)didSelectItemInScopeBar:(ILScopeBar*)bar atIndex:(NSInteger)idx withTag:(NSInteger)tag andTitle:(NSString*)title;
-@end
-
-
-#define gItemCountSelector @selector(numberOfItemsInScopeBar:)
-#define gItemTitleSelector @selector(titleOfItemInScopeBar:atIndex:)
-
-#define gBarTitleSelector @selector(titleForBar:)
-#define gItemTagSelector @selector(tagForItemInScopeBar:atIndex:)
-#define gItemImageSelector @selector(imageForItemInScopeBar:atIndex:)
-
-#define gShouldSelectItemSelector @selector(shouldSelectItemInScopeBar:atIndex:)
-#define gDidSelectItemSelector @selector(didSelectItemInScopeBar:atIndex:withTag:andTitle:)
-
+/**
+ @c ILScopebar is a @c NSView subclass for a scope bar like the one finder uses in it's search. 
+ It is different from MGScopebar and apple's scope bar because instead of grouping, it consolidates all the items that 
+ don't fit into a menu at the end of it. 
+ */
 @interface ILScopeBar : NSView {
 	id <ILScopeBarDataSource> dataSource;
 	id <ILScopeBarDelegate> delegate;
@@ -43,38 +21,124 @@
 	NSInteger cutoffIndex;
 	NSPopUpButton *overflowButton;
 }
+	//////////////////////////////////////////////////////////////////////////////////////////
+	/// @name Properties
+	//////////////////////////////////////////////////////////////////////////////////////////
+/** @c ILScopeBar uses NSPopUpButton to display it's overflow menu.
+ @see cutoffIndex
+ */
 @property (readonly) NSPopUpButton *overflowButton;
-@property (assign) NSInteger cutoffIndex;
-@property (assign) IBOutlet id delegate;
+/** If every item fits, returns the last index of the items.
+ @return Returns the index of which the scope bar's items cut off.
+ @see overflowButton
+ */
+@property (readonly) NSInteger cutoffIndex;
+/** 
+ @return Returns an @c NSButton or @c NSMenuItem depending upon if the item is in the overflow menu.
+ @see selectedIndex
+ */
 @property (assign) id selectedItem;
+/**
+ @see selectedItem
+ @return Returns the index of the selected item.
+ */
 @property (assign) NSInteger selectedIndex;
+/** The delegate could implement the option @c ILScopeBarDelegate Protocol methods.
+ @see ILScopeBarDelegate
+ @see dataSource
+ */
+@property (assign) IBOutlet id delegate;
+/** The datasource to use for the scope bar.
+ 
+ @warning The datasource must implement the @c ILScopeBarDataSource protocol required methods.
+ 
+ @see ILScopeBarDataSource
+ @see delegate
+ */
 @property (assign) IBOutlet id dataSource;
-- (void)reload;
-- (NSRect)frameForItemAtIndex:(NSInteger)idx; // Generates a new frame for an item. To get the actual frame of the item, use the scope bar's subviews and objectAtIndex:
-- (NSRect)frameForBarTitle;
 
-- (NSString*)titleOfItemAtIndex:(NSInteger)idx;
-- (NSInteger)itemCount;
-- (NSImage*)imageForItemAtIndex:(NSInteger)idx; // Calls the dataSource method. If it isnt implemented or it returns null. Just returns nil.
-- (NSInteger)tagForItemAtIndex:(NSInteger)idx; // Calls the dataSource method. If not implemented, returns 0.
+	//////////////////////////////////////////////////////////////////////////////////////////
+	/// @name Displaying the Scope Bar
+	//////////////////////////////////////////////////////////////////////////////////////////
+/** The title that gets displayed at the left side of the scope bar.
+ @return Returns the datasource's @c titleForMethod: method. If not implemented, returns nil.
+ @see attributedTitle
+ */
 - (NSString*)title; // Calls the dataSource method. If not implemented, returns nil.
+/**
+ @return Returns an @c NSAttributed string used when drawing the title.
+ @see title
+ */
 - (NSAttributedString*)attributedTitle;
-- (BOOL)shouldSelectItemAtIndex:(NSInteger)idx;
-- (void)didSelectItem:(id)item;
 
-- (NSButton*)itemWithTitle:(NSString*)title tag:(NSInteger)tag image:(NSImage*)img forIndex:(NSInteger)index;
-- (void)addItemWithTitle:(NSString*)title tag:(NSInteger)tag image:(NSImage*)img forIndex:(NSInteger)index;
-- (NSMenuItem*)menuItemWithTitle:(NSString*)title tag:(NSInteger)tag image:(NSImage*)img forIndex:(NSInteger)index;
-- (void)addMenuItemWithTitle:(NSString*)title tag:(NSInteger)tag image:(NSImage*)img forIndex:(NSInteger)index;
-
+/** Rearranges the items and recreates the overflow button.
+ @see rearrangeItems
+ @see createOverflowButton
+ */
+- (void)reload;
+/** Removes all of the items from the bar and overflow button and then recreates them in their appropriate position.
+ @see reload
+ @see createOverflowButton
+ */
 - (void)rearrangeItems;
+/** Releases and recreates the overflow button.
+ 
+ @see reload
+ @see rearrangeItems
+ */
 - (void)createOverflowButton;
 
-- (BOOL)overflows;
-- (NSInteger)cutoffIndex;
+	//////////////////////////////////////////////////////////////////////////////////////////
+	/// @name Getting Item Info
+	//////////////////////////////////////////////////////////////////////////////////////////
+/** To get the actual frame of the item, use the scope bar's subviews and objectAtIndex:
+ @return Returns a newly generated frame for the item.
+ @warning Value may not be exact.
+ @see indexOfItem:
+ */
+- (NSRect)frameForItemAtIndex:(NSInteger)idx;
+/** 
+ @return Index of the specified item.
+ @warning If the item isn't in the Scope Bar's @c items array, returns NSNotFound
+ */
 - (NSInteger)indexOfItem:(id)item;
+/** Calls the data source method, @c titleOfItemInScopeBar:atIndex:
+ @return Returns the value returned by the data source, nil if the data source doesn't implement it or if the data source hasn't been defined.
+ 
+ @see itemCount
+ @see imageForItemAtIndex:
+ @see tagForItemAtIndex:
+ */
+- (NSString*)titleOfItemAtIndex:(NSInteger)idx;
+/** Calls the data source method, @c numberOfItemsInScopeBar:
+ @return Returns the value returned by the data source, 0 if the data source doesn't implement it or if the data source hasn't been defined.
+ 
+ @see titleOfItemAtIndex:
+ @see imageForItemAtIndex:
+ @see tagForItemAtIndex:
+ */
+- (NSInteger)itemCount;
+/** Calls the data source method, @c imageOfItemInScopeBar:atIndex:
+ @return Returns the value returned by the data source, nil if the data source doesn't implement it or if the data source hasn't been defined.
+ 
+ @see itemCount
+ @see titleForItemAtIndex:
+ @see tagForItemAtIndex:
+ */
+- (NSImage*)imageForItemAtIndex:(NSInteger)idx; // Calls the dataSource method. If it isnt implemented or it returns null. Just returns nil.
+/** Calls the data source method, @c tagOfItemInScopeBar:atIndex:
+ @return Returns the value returned by the data source, 0 if the data source doesn't implement it or if the data source hasn't been defined.
+ 
+ @see itemCount
+ @see imageForItemAtIndex:
+ @see titleForItemAtIndex:
+ */
+- (NSInteger)tagForItemAtIndex:(NSInteger)idx; // Calls the dataSource method. If not implemented, returns 0.
+/**
+ @return Returns the list of the scopebar's subviews filtered by the classes @c NSButton or @c NSMenuItem
+ @warning If there are any unexpected subviews in items, they will be in this list or be removed and released on the next @c reload call.
+ */
 - (NSArray*)items;
-
 @end
 
 

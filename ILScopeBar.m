@@ -22,6 +22,32 @@
 #define gItemTitlePadding gItemSpacing+4
 #define gItemSpacing 10
 
+
+#define gItemCountSelector @selector(numberOfItemsInScopeBar:)
+#define gItemTitleSelector @selector(titleOfItemInScopeBar:atIndex:)
+
+#define gBarTitleSelector @selector(titleForBar:)
+#define gItemTagSelector @selector(tagForItemInScopeBar:atIndex:)
+#define gItemImageSelector @selector(imageForItemInScopeBar:atIndex:)
+
+#define gShouldSelectItemSelector @selector(shouldSelectItemInScopeBar:atIndex:)
+#define gDidSelectItemSelector @selector(didSelectItemInScopeBar:atIndex:withTag:andTitle:)
+
+
+@interface ILScopeBar (Private)
+
+- (BOOL)shouldSelectItemAtIndex:(NSInteger)idx;
+- (void)didSelectItem:(id)item;
+
+- (NSButton*)itemWithTitle:(NSString*)title tag:(NSInteger)tag image:(NSImage*)img forIndex:(NSInteger)index;
+- (void)addItemWithTitle:(NSString*)title tag:(NSInteger)tag image:(NSImage*)img forIndex:(NSInteger)index;
+- (NSMenuItem*)menuItemWithTitle:(NSString*)title tag:(NSInteger)tag image:(NSImage*)img forIndex:(NSInteger)index;
+- (void)addMenuItemWithTitle:(NSString*)title tag:(NSInteger)tag image:(NSImage*)img forIndex:(NSInteger)index;
+
+- (BOOL)overflows;
+@end
+
+
 @implementation ILScopeBar
 @synthesize dataSource, selectedItem, delegate, cutoffIndex, overflowButton;
 @dynamic selectedIndex;
@@ -40,35 +66,14 @@
 	[overflowButton release];
 	[super dealloc];
 }
-- (NSButton*)itemWithTitle:(NSString*)title tag:(NSInteger)tag image:(NSImage*)img forIndex:(NSInteger)index {
-	NSButton *nb = [[NSButton alloc] initWithFrame:[self frameForItemAtIndex:index]];
-	[nb setShowsBorderOnlyWhileMouseInside:YES];
-	[nb setBordered:YES];
-	[nb setAlignment:NSCenterTextAlignment];
-	[nb setButtonType:NSPushOnPushOffButton];
-	[nb.cell setHighlightsBy:NSCellIsBordered | NSCellIsInsetButton];
-	[nb.cell setImageScaling:NSImageScaleProportionallyDown];
-	[nb setBezelStyle:NSRecessedBezelStyle];
-	[nb setImagePosition:NSImageLeft];
-	
-	[nb setTitle:title];
-	[nb setImage:img];
-	[nb setTag:tag];
-	
-	
-	[nb setTarget:self];
-	[nb setAction:@selector(setSelectedItem:)];
-	return [nb autorelease];
-}
-- (void)addItemWithTitle:(NSString*)title tag:(NSInteger)tag image:(NSImage*)img forIndex:(NSInteger)index {
-	[self addSubview:[self itemWithTitle:title tag:tag image:img forIndex:index]];
-}
+
 - (void)drawRect:(NSRect)dirtyRect {
 		// Drawing code here.
 	[gGradient drawInRect:dirtyRect angle:270];
 	[gBorderColor set];
 	NSRectFill(NSMakeRect(0, 0, dirtyRect.size.width, 1));
 	
+		// Probably not the best idea to create it on every draw call
 	NSTextFieldCell *tf = [[NSTextFieldCell alloc] init];
 	[tf setAttributedStringValue:self.attributedTitle];
 	[tf setBackgroundStyle:NSBackgroundStyleRaised];
@@ -83,6 +88,8 @@
 	
 	
 }
+#pragma mark -
+#pragma mark Creating and Adding Items
 - (void)rearrangeItems {
 	int se = self.selectedIndex;
 	BOOL overflows = [self overflows]; // refresh the cut off index
@@ -101,7 +108,6 @@
 	if (!overflows && overflowButton) {
 		[overflowButton removeFromSuperview], [overflowButton release], overflowButton=nil;
 	} else {
-		
 		[self createOverflowButton];
 		for (int x = self.cutoffIndex+1; x<self.itemCount;x++) {
 			[self addMenuItemWithTitle:[self titleOfItemAtIndex:x] 
@@ -110,8 +116,6 @@
 							  forIndex:x];
 		}
 	}
-	if (se>=0)
-		[self setSelectedIndex:se];
 }
 - (void)reload {
 	[self overflows];
@@ -124,6 +128,7 @@
 	NSArray *menArray = [menu itemArray];
 	if (menArray.count>0)
 		self.selectedItem=[menArray objectAtIndex:0];
+
 	[self setNeedsDisplay:YES];
 }
 - (void)createOverflowButton {
@@ -157,6 +162,29 @@
 	}
 	
 }
+- (NSButton*)itemWithTitle:(NSString*)title tag:(NSInteger)tag image:(NSImage*)img forIndex:(NSInteger)index {
+	NSButton *nb = [[NSButton alloc] initWithFrame:[self frameForItemAtIndex:index]];
+	[nb setShowsBorderOnlyWhileMouseInside:YES];
+	[nb setBordered:YES];
+	[nb setAlignment:NSCenterTextAlignment];
+	[nb setButtonType:NSPushOnPushOffButton];
+	[nb.cell setHighlightsBy:NSCellIsBordered | NSCellIsInsetButton];
+	[nb.cell setImageScaling:NSImageScaleProportionallyDown];
+	[nb setBezelStyle:NSRecessedBezelStyle];
+	[nb setImagePosition:NSImageLeft];
+	
+	[nb setTitle:title];
+	[nb setImage:img];
+	[nb setTag:tag];
+	
+	
+	[nb setTarget:self];
+	[nb setAction:@selector(setSelectedItem:)];
+	return [nb autorelease];
+}
+- (void)addItemWithTitle:(NSString*)title tag:(NSInteger)tag image:(NSImage*)img forIndex:(NSInteger)index {
+	[self addSubview:[self itemWithTitle:title tag:tag image:img forIndex:index]];
+}
 - (NSMenuItem*)menuItemWithTitle:(NSString*)title tag:(NSInteger)tag image:(NSImage*)img forIndex:(NSInteger)index {
 	NSMenuItem *item = [NSMenuItem new];
 	
@@ -174,9 +202,12 @@
 	return [item autorelease];
 }
 - (void)addMenuItemWithTitle:(NSString*)title tag:(NSInteger)tag image:(NSImage*)img forIndex:(NSInteger)index {
-	[overflowButton.menu addItem:[self menuItemWithTitle:title tag:tag image:img forIndex:index]];
+	NSMenuItem *item = [self menuItemWithTitle:title tag:tag image:img forIndex:index];
+	[overflowButton.menu addItem:item];
+	[item setState:NSOffState];
 }
 
+#pragma mark -
 #pragma mark Display
 - (NSRect)frameForItemAtIndex:(NSInteger)idx { // Generates a new frame for an item. To get the actual frame of the item, use the scope bar's subviews and objectAtIndex:
 	
@@ -217,20 +248,31 @@
 	t.size.width=titleSize.width+gItemTitlePadding*2;
 	t.size.height=titleSize.height;
 	t.origin.y=roundf(NSMidY(self.bounds)-t.size.height/2);
+	
+	if (t.size.width+t.origin.x>self.bounds.size.width-gItemSpacing*2) {
+		t.size.width=self.bounds.size.width-gItemSpacing*2;
+		if (![overflowButton isHidden] || !overflowButton) {
+			t.size.width-=overflowButton.frame.size.width;
+		}
+	}
+	
 	return t;
 }
 
 
 - (BOOL)overflows {
+	[self willChangeValueForKey:@"cutoffIndex"];
 	for (int x = 0; x<self.itemCount;x++) {
 		NSRect f = [self frameForItemAtIndex:x];
 		
 		if (f.origin.x+f.size.width+gItemSpacing*3>self.bounds.size.width) {
-			self.cutoffIndex=x-1;
+			cutoffIndex=x-1;
+			[self didChangeValueForKey:@"cutoffIndex"];
 			return YES;
 		}
 	}
-	self.cutoffIndex=self.itemCount-1;
+	cutoffIndex=self.itemCount-1;
+	[self didChangeValueForKey:@"cutoffIndex"];
 	return NO;
 }
 
@@ -272,7 +314,12 @@
 }
 - (NSAttributedString*)attributedTitle {
 	if (self.title) {
-		NSAttributedString *title = [[NSAttributedString alloc] initWithString:self.title attributes:[NSDictionary dictionaryWithObjectsAndKeys:gTitleFont, NSFontAttributeName, gTitleColor, NSForegroundColorAttributeName, nil]];
+		NSMutableParagraphStyle *style = [[NSMutableParagraphStyle alloc] init];
+		[style setLineBreakMode:NSLineBreakByTruncatingTail];
+		NSAttributedString *title = [[NSAttributedString alloc] initWithString:self.title 
+																	attributes:[NSDictionary dictionaryWithObjectsAndKeys:gTitleFont, NSFontAttributeName, gTitleColor, NSForegroundColorAttributeName, 
+																				style, NSParagraphStyleAttributeName, nil]];
+		[style release];
 		return [title autorelease];
 	}
 	return nil;
