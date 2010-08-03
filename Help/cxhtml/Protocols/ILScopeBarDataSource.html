@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 STRICT//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>ILScopeBarDataSource protocol reference</title>
+  <meta http-equiv="Content-Type" content="application/xhtml+xml;charset=utf-8" />
+  <link rel="stylesheet" type="text/css" href="../css/screen.css" />
+  <meta name="generator" content="appledoc" />
+</head>
+<body>
+  <div id="mainContainer">
+    <h1>ILScopeBarDataSource protocol reference</h1>
+    <table summary="Basic information" id="classInfo">
+      <tr class="alt">
+        <td><label id="classDeclaration">Declared in</label></td>
+        <td>ILScopeBarProtocols.h</td>
+      </tr>
+    </table>
+      <h2>Overview</h2>
+<p>The required protocol used for any Data Source set for <code><a href="../Classes/ILScopeBar.html">ILScopeBar</a></code></p>
+      <h2>Tasks</h2>
+      <h3>Required Methods</h3>
+      <ul class="methods">
+        <li>
+          <span class="tooltipRegion">
+            <code><a href=#numberOfItemsInScopeBar:>- numberOfItemsInScopeBar:</a></code>
+          </span>
+        </li>
+        <li>
+          <span class="tooltipRegion">
+            <code><a href=#titleOfItemInScopeBar:atIndex:>- titleOfItemInScopeBar:atIndex:</a></code>
+          </span>
+        </li>
+      </ul>
+      <h3>Optional Methods</h3>
+      <ul class="methods">
+        <li>
+          <span class="tooltipRegion">
+            <code><a href=#titleForBar:>- titleForBar:</a></code>
+          </span>
+        </li>
+        <li>
+          <span class="tooltipRegion">
+            <code><a href=#tagForItemInScopeBar:atIndex:>- tagForItemInScopeBar:atIndex:</a></code>
+          </span>
+        </li>
+        <li>
+          <span class="tooltipRegion">
+            <code><a href=#imageForItemInScopeBar:atIndex:>- imageForItemInScopeBar:atIndex:</a></code>
+          </span>
+        </li>
+      </ul>
+      <h2>Instance methods</h2>
+      <h3><a name="numberOfItemsInScopeBar:"></a>numberOfItemsInScopeBar:</h3>
+      <code class="methodDeclaration">- (NSInteger)numberOfItemsInScopeBar:(ILScopeBar *)        <span class="parameter">bar</span>
+</code>
+      <h5>Return value</h5>
+<p>Return the number of items to be used for the scope bar. </p>
+      <h5>Warning</h5>
+<p>This method gets called often, so be sure to optimize it accordingly. </p>
+      <h5>Declared in</h5>
+      <code>ILScopeBarProtocols.h</code>
+      <h3><a name="titleOfItemInScopeBar:atIndex:"></a>titleOfItemInScopeBar:atIndex:</h3>
+      <code class="methodDeclaration">- (NSString *)titleOfItemInScopeBar:(ILScopeBar *)        <span class="parameter">bar</span>
+ atIndex:(NSInteger)        <span class="parameter">idx</span>
+</code>
+      <h5>Return value</h5>
+<p>Return the tile of all the items to be used for the scope bar. </p>
+      <h5>Warning</h5>
+<p>This method gets called often, so be sure to optimize it accordingly. </p>
+      <h5>Declared in</h5>
+      <code>ILScopeBarProtocols.h</code>
+      <h3><a name="titleForBar:"></a>titleForBar:</h3>
+      <code class="methodDeclaration">- (NSString *)titleForBar:(ILScopeBar *)        <span class="parameter">bar</span>
+</code>
+      <h5>Return value</h5>
+<p>Return the title drawn at the left of the scope bar. </p>
+      <h5>Discussion</h5>
+<p>Usually this would have a semicolon </p>
+      <h5>Warning</h5>
+<p>This method gets called often, so be sure to optimize it accordingly. </p>
+      <h5>Declared in</h5>
+      <code>ILScopeBarProtocols.h</code>
+      <h3><a name="tagForItemInScopeBar:atIndex:"></a>tagForItemInScopeBar:atIndex:</h3>
+      <code class="methodDeclaration">- (NSInteger)tagForItemInScopeBar:(ILScopeBar *)        <span class="parameter">bar</span>
+ atIndex:(NSInteger)        <span class="parameter">idx</span>
+</code>
+      <h5>Return value</h5>
+<p>Return the tag of the items in the scope bar. </p>
+      <h5>Warning</h5>
+<p>This method gets called often, so be sure to optimize it accordingly. </p>
+      <h5>Declared in</h5>
+      <code>ILScopeBarProtocols.h</code>
+      <h3><a name="imageForItemInScopeBar:atIndex:"></a>imageForItemInScopeBar:atIndex:</h3>
+      <code class="methodDeclaration">- (NSImage *)imageForItemInScopeBar:(ILScopeBar *)        <span class="parameter">bar</span>
+ atIndex:(NSInteger)        <span class="parameter">idx</span>
+</code>
+      <h5>Return value</h5>
+<p>Return the image of items to be used for the scope bar. </p>
+      <h5>Warning</h5>
+<p>This method gets called often, so be sure to optimize it accordingly. </p>
+      <h5>Declared in</h5>
+      <code>ILScopeBarProtocols.h</code>
+    <hr />
+    <p id="lastUpdated">      (Last updated: 2010-08-03)
+      <br />
+      Back to <a href="../index.html">index</a> / <a href="../hierarchy.html">hierarchy</a>.
+    </p>
+  </div>
+</body>
+</html>

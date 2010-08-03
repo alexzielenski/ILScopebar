@@ -1,0 +1,456 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<object kind="class" generator="appledoc v1.0.5">
+    <name>ILScopeBar</name>
+    <file>ILScopeBar.h</file>
+    <description>
+        <brief></brief>
+        <details>
+            <para>
+                <code>ILScopebar</code>
+                 is a <code>NSView</code>
+                 subclass for a scope bar like the one finder uses in it's search. It is different from MGScopebar and apple's scope bar because instead of grouping, it consolidates all the items that don't fit into a menu at the end of it. </para>
+        </details>
+    </description>
+    <sections>
+        <section>
+            <name>Properties</name>
+            <member kind="property">
+                <name>overflowButton</name>
+                <type>NSPopUpButton *</type>
+                <prototype>@property NSPopUpButton *overflowButton</prototype>
+                <file>ILScopeBar.h</file>
+                <description>
+                    <brief></brief>
+                    <details>
+                        <para>
+                            <code>
+                                <ref id="">ILScopeBar</ref>
+                            </code>
+                             uses NSPopUpButton to display it's overflow menu. </para>
+                    </details>
+                </description>
+                <seeAlso>
+                    <item>
+                        <ref id="#cutoffIndex">cutoffIndex</ref>
+                    </item>
+                </seeAlso>
+                <selector>overflowButton</selector>
+            </member>
+            <member kind="property">
+                <name>cutoffIndex</name>
+                <type>NSInteger</type>
+                <prototype>@property NSInteger cutoffIndex</prototype>
+                <file>ILScopeBar.h</file>
+                <description>
+                    <brief></brief>
+                    <details>
+                        <para>If every item fits, returns the last index of the items. </para>
+                    </details>
+                </description>
+                <return>
+                    <para>Returns the index of which the scope bar's items cut off. </para>
+                </return>
+                <seeAlso>
+                    <item>
+                        <ref id="#overflowButton">overflowButton</ref>
+                    </item>
+                </seeAlso>
+                <selector>cutoffIndex</selector>
+            </member>
+            <member kind="property">
+                <name>selectedItem</name>
+                <type>id</type>
+                <prototype>@property id selectedItem</prototype>
+                <file>ILScopeBar.h</file>
+                <description>
+                    <brief></brief>
+                    <details>
+                        <para></para>
+                    </details>
+                </description>
+                <return>
+                    <para>Returns an <code>NSButton</code>
+                         or <code>NSMenuItem</code>
+                         depending upon if the item is in the overflow menu. </para>
+                </return>
+                <seeAlso>
+                    <item>
+                        <ref id="#selectedIndex">selectedIndex</ref>
+                    </item>
+                </seeAlso>
+                <selector>selectedItem</selector>
+            </member>
+            <member kind="property">
+                <name>selectedIndex</name>
+                <type>NSInteger</type>
+                <prototype>@property NSInteger selectedIndex</prototype>
+                <file>ILScopeBar.h</file>
+                <description>
+                    <brief></brief>
+                    <details>
+                        <para></para>
+                    </details>
+                </description>
+                <return>
+                    <para>Returns the index of the selected item. </para>
+                </return>
+                <seeAlso>
+                    <item>
+                        <ref id="#selectedItem">selectedItem</ref>
+                    </item>
+                </seeAlso>
+                <selector>selectedIndex</selector>
+            </member>
+            <member kind="property">
+                <name>delegate</name>
+                <type>IBOutlet id</type>
+                <prototype>@property IBOutlet id delegate</prototype>
+                <file>ILScopeBar.h</file>
+                <description>
+                    <brief></brief>
+                    <details>
+                        <para>The delegate could implement the option <code>
+                                <ref id="../Protocols/ILScopeBarDelegate$EXTENSION">ILScopeBarDelegate</ref>
+                            </code>
+                             Protocol methods. </para>
+                    </details>
+                </description>
+                <seeAlso>
+                    <item>
+                        <ref id="../Protocols/ILScopeBarDelegate$EXTENSION">ILScopeBarDelegate</ref>
+                    </item>
+                    <item>
+                        <ref id="#dataSource">dataSource</ref>
+                    </item>
+                </seeAlso>
+                <selector>delegate</selector>
+            </member>
+            <member kind="property">
+                <name>dataSource</name>
+                <type>IBOutlet id</type>
+                <prototype>@property IBOutlet id dataSource</prototype>
+                <file>ILScopeBar.h</file>
+                <description>
+                    <brief></brief>
+                    <details>
+                        <para>The datasource to use for the scope bar.</para>
+                        <para></para>
+                    </details>
+                </description>
+                <warning>
+                    <para>The datasource must implement the <code>
+                            <ref id="../Protocols/ILScopeBarDataSource$EXTENSION">ILScopeBarDataSource</ref>
+                        </code>
+                         protocol required methods.</para>
+                </warning>
+                <seeAlso>
+                    <item>
+                        <ref id="../Protocols/ILScopeBarDataSource$EXTENSION">ILScopeBarDataSource</ref>
+                    </item>
+                    <item>
+                        <ref id="#delegate">delegate</ref>
+                    </item>
+                </seeAlso>
+                <selector>dataSource</selector>
+            </member>
+        </section>
+        <section>
+            <name>Displaying the Scope Bar</name>
+            <member kind="instance-method">
+                <name>title</name>
+                <type>NSString *</type>
+                <prototype>- (NSString *)title</prototype>
+                <file>ILScopeBar.h</file>
+                <description>
+                    <brief></brief>
+                    <details>
+                        <para>The title that gets displayed at the left side of the scope bar. </para>
+                    </details>
+                </description>
+                <return>
+                    <para>Returns the datasource's <code>titleForMethod:</code>
+                         method. If not implemented, returns nil. </para>
+                </return>
+                <seeAlso>
+                    <item>
+                        <ref id="#attributedTitle">- attributedTitle</ref>
+                    </item>
+                </seeAlso>
+                <selector>- title</selector>
+            </member>
+            <member kind="instance-method">
+                <name>attributedTitle</name>
+                <type>NSAttributedString *</type>
+                <prototype>- (NSAttributedString *)attributedTitle</prototype>
+                <file>ILScopeBar.h</file>
+                <description>
+                    <brief></brief>
+                    <details>
+                        <para></para>
+                    </details>
+                </description>
+                <return>
+                    <para>Returns an <code>NSAttributed</code>
+                         string used when drawing the title. </para>
+                </return>
+                <seeAlso>
+                    <item>
+                        <ref id="#title">- title</ref>
+                    </item>
+                </seeAlso>
+                <selector>- attributedTitle</selector>
+            </member>
+            <member kind="instance-method">
+                <name>reload</name>
+                <type>void</type>
+                <prototype>- (void)reload</prototype>
+                <file>ILScopeBar.h</file>
+                <description>
+                    <brief></brief>
+                    <details>
+                        <para>Rearranges the items and recreates the overflow button. </para>
+                    </details>
+                </description>
+                <seeAlso>
+                    <item>
+                        <ref id="#rearrangeItems">- rearrangeItems</ref>
+                    </item>
+                    <item>
+                        <ref id="#createOverflowButton">- createOverflowButton</ref>
+                    </item>
+                </seeAlso>
+                <selector>- reload</selector>
+            </member>
+            <member kind="instance-method">
+                <name>rearrangeItems</name>
+                <type>void</type>
+                <prototype>- (void)rearrangeItems</prototype>
+                <file>ILScopeBar.h</file>
+                <description>
+                    <brief></brief>
+                    <details>
+                        <para>Removes all of the items from the bar and overflow button and then recreates them in their appropriate position. </para>
+                    </details>
+                </description>
+                <seeAlso>
+                    <item>
+                        <ref id="#reload">- reload</ref>
+                    </item>
+                    <item>
+                        <ref id="#createOverflowButton">- createOverflowButton</ref>
+                    </item>
+                </seeAlso>
+                <selector>- rearrangeItems</selector>
+            </member>
+            <member kind="instance-method">
+                <name>createOverflowButton</name>
+                <type>void</type>
+                <prototype>- (void)createOverflowButton</prototype>
+                <file>ILScopeBar.h</file>
+                <description>
+                    <brief></brief>
+                    <details>
+                        <para>Releases and recreates the overflow button.</para>
+                        <para></para>
+                    </details>
+                </description>
+                <seeAlso>
+                    <item>
+                        <ref id="#reload">- reload</ref>
+                    </item>
+                    <item>
+                        <ref id="#rearrangeItems">- rearrangeItems</ref>
+                    </item>
+                </seeAlso>
+                <selector>- createOverflowButton</selector>
+            </member>
+        </section>
+        <section>
+            <name>Getting Item Info</name>
+            <member kind="instance-method">
+                <name>frameForItemAtIndex:</name>
+                <type>NSRect</type>
+                <prototype>- (NSRect)frameForItemAtIndex:(NSInteger)<parameter>idx</parameter>
+                </prototype>
+                <file>ILScopeBar.h</file>
+                <description>
+                    <brief></brief>
+                    <details>
+                        <para>To get the actual frame of the item, use the scope bar's subviews and objectAtIndex: </para>
+                    </details>
+                </description>
+                <warning>
+                    <para>Value may not be exact. </para>
+                </warning>
+                <return>
+                    <para>Returns a newly generated frame for the item. </para>
+                </return>
+                <seeAlso>
+                    <item>
+                        <ref id="#indexOfItem:">- indexOfItem:</ref>
+                    </item>
+                </seeAlso>
+                <selector>- frameForItemAtIndex:</selector>
+            </member>
+            <member kind="instance-method">
+                <name>indexOfItem:</name>
+                <type>NSInteger</type>
+                <prototype>- (NSInteger)indexOfItem:(id)<parameter>item</parameter>
+                </prototype>
+                <file>ILScopeBar.h</file>
+                <description>
+                    <brief></brief>
+                    <details>
+                        <para></para>
+                    </details>
+                </description>
+                <warning>
+                    <para>If the item isn't in the Scope Bar's <code>items</code>
+                         array, returns NSNotFound </para>
+                </warning>
+                <return>
+                    <para>Index of the specified item. </para>
+                </return>
+                <selector>- indexOfItem:</selector>
+            </member>
+            <member kind="instance-method">
+                <name>titleOfItemAtIndex:</name>
+                <type>NSString *</type>
+                <prototype>- (NSString *)titleOfItemAtIndex:(NSInteger)<parameter>idx</parameter>
+                </prototype>
+                <file>ILScopeBar.h</file>
+                <description>
+                    <brief></brief>
+                    <details>
+                        <para>Calls the data source method, <code>titleOfItemInScopeBar:atIndex:</code>
+                        </para>
+                    </details>
+                </description>
+                <return>
+                    <para>Returns the value returned by the data source, nil if the data source doesn't implement it or if the data source hasn't been defined.</para>
+                </return>
+                <seeAlso>
+                    <item>
+                        <ref id="#itemCount">- itemCount</ref>
+                    </item>
+                    <item>
+                        <ref id="#imageForItemAtIndex:">- imageForItemAtIndex:</ref>
+                    </item>
+                    <item>
+                        <ref id="#tagForItemAtIndex:">- tagForItemAtIndex:</ref>
+                    </item>
+                </seeAlso>
+                <selector>- titleOfItemAtIndex:</selector>
+            </member>
+            <member kind="instance-method">
+                <name>itemCount</name>
+                <type>NSInteger</type>
+                <prototype>- (NSInteger)itemCount</prototype>
+                <file>ILScopeBar.h</file>
+                <description>
+                    <brief></brief>
+                    <details>
+                        <para>Calls the data source method, <code>numberOfItemsInScopeBar:</code>
+                        </para>
+                    </details>
+                </description>
+                <return>
+                    <para>Returns the value returned by the data source, 0 if the data source doesn't implement it or if the data source hasn't been defined.</para>
+                </return>
+                <seeAlso>
+                    <item>
+                        <ref id="#titleOfItemAtIndex:">- titleOfItemAtIndex:</ref>
+                    </item>
+                    <item>
+                        <ref id="#imageForItemAtIndex:">- imageForItemAtIndex:</ref>
+                    </item>
+                    <item>
+                        <ref id="#tagForItemAtIndex:">- tagForItemAtIndex:</ref>
+                    </item>
+                </seeAlso>
+                <selector>- itemCount</selector>
+            </member>
+            <member kind="instance-method">
+                <name>imageForItemAtIndex:</name>
+                <type>NSImage *</type>
+                <prototype>- (NSImage *)imageForItemAtIndex:(NSInteger)<parameter>idx</parameter>
+                </prototype>
+                <file>ILScopeBar.h</file>
+                <description>
+                    <brief></brief>
+                    <details>
+                        <para>Calls the data source method, <code>imageOfItemInScopeBar:atIndex:</code>
+                        </para>
+                    </details>
+                </description>
+                <return>
+                    <para>Returns the value returned by the data source, nil if the data source doesn't implement it or if the data source hasn't been defined.</para>
+                </return>
+                <seeAlso>
+                    <item>
+                        <ref id="#itemCount">- itemCount</ref>
+                    </item>
+                    <item>
+                        <ref id="#titleForItemAtIndex:">titleForItemAtIndex:</ref>
+                    </item>
+                    <item>
+                        <ref id="#tagForItemAtIndex:">- tagForItemAtIndex:</ref>
+                    </item>
+                </seeAlso>
+                <selector>- imageForItemAtIndex:</selector>
+            </member>
+            <member kind="instance-method">
+                <name>tagForItemAtIndex:</name>
+                <type>NSInteger</type>
+                <prototype>- (NSInteger)tagForItemAtIndex:(NSInteger)<parameter>idx</parameter>
+                </prototype>
+                <file>ILScopeBar.h</file>
+                <description>
+                    <brief></brief>
+                    <details>
+                        <para>Calls the data source method, <code>tagOfItemInScopeBar:atIndex:</code>
+                        </para>
+                    </details>
+                </description>
+                <return>
+                    <para>Returns the value returned by the data source, 0 if the data source doesn't implement it or if the data source hasn't been defined.</para>
+                </return>
+                <seeAlso>
+                    <item>
+                        <ref id="#itemCount">- itemCount</ref>
+                    </item>
+                    <item>
+                        <ref id="#imageForItemAtIndex:">- imageForItemAtIndex:</ref>
+                    </item>
+                    <item>
+                        <ref id="#titleForItemAtIndex:">titleForItemAtIndex:</ref>
+                    </item>
+                </seeAlso>
+                <selector>- tagForItemAtIndex:</selector>
+            </member>
+            <member kind="instance-method">
+                <name>items</name>
+                <type>NSArray *</type>
+                <prototype>- (NSArray *)items</prototype>
+                <file>ILScopeBar.h</file>
+                <description>
+                    <brief></brief>
+                    <details>
+                        <para></para>
+                    </details>
+                </description>
+                <warning>
+                    <para>If there are any unexpected subviews in items, they will be in this list or be removed and released on the next <code>reload</code>
+                         call. </para>
+                </warning>
+                <return>
+                    <para>Returns the list of the scopebar's subviews filtered by the classes <code>NSButton</code>
+                         or <code>NSMenuItem</code>
+                    </para>
+                </return>
+                <selector>- items</selector>
+            </member>
+        </section>
+    </sections>
+    <base>NSObject</base>
+</object>

@@ -1,0 +1,642 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.1">
+  <compounddef id="_i_l_scope_bar_8m" kind="file">
+    <compoundname>ILScopeBar.m</compoundname>
+    <includes refid="_i_l_scope_bar_8h" local="yes">ILScopeBar.h</includes>
+    <incdepgraph>
+      <node id="6">
+        <label>ILScopeBar.h</label>
+        <link refid="_i_l_scope_bar_8h_source"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>Documents/Source Code/Git/ILScopeBar/ILScopeBar.m</label>
+        <link refid="ILScopeBar.m"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>Cocoa/Cocoa.h</label>
+      </node>
+      <node id="8">
+        <label>ILScopeBarProtocols.h</label>
+        <link refid="_i_l_scope_bar_protocols_8h_source"/>
+      </node>
+    </incdepgraph>
+    <innerclass refid="interface_i_l_scope_bar_07_private_08" prot="public">ILScopeBar(Private)</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="_i_l_scope_bar_8m_1aace20ba115f3178c1cc0100a070e2606" prot="public" static="no">
+        <name>gTopColor</name>
+        <initializer>[NSColor colorWithCalibratedWhite:0.883f alpha:1.000f]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Alex/Documents/Source Code/Git/ILScopeBar/ILScopeBar.m" line="11" bodyfile="/Users/Alex/Documents/Source Code/Git/ILScopeBar/ILScopeBar.m" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_i_l_scope_bar_8m_1ae87f9d958a48d3788b07f5cc132f3949" prot="public" static="no">
+        <name>gBottomColor</name>
+        <initializer>[NSColor colorWithCalibratedWhite:0.774f alpha:1.000f]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Alex/Documents/Source Code/Git/ILScopeBar/ILScopeBar.m" line="12" bodyfile="/Users/Alex/Documents/Source Code/Git/ILScopeBar/ILScopeBar.m" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_i_l_scope_bar_8m_1a412a3beeb5fe808b4b7f339dbeb24b44" prot="public" static="no">
+        <name>gBorderColor</name>
+        <initializer>[NSColor colorWithCalibratedWhite:0.427f alpha:1.000f]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Alex/Documents/Source Code/Git/ILScopeBar/ILScopeBar.m" line="13" bodyfile="/Users/Alex/Documents/Source Code/Git/ILScopeBar/ILScopeBar.m" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_i_l_scope_bar_8m_1af8277b4662dec4eeee51f1039d1447d6" prot="public" static="no">
+        <name>gGradient</name>
+        <initializer>[[[NSGradient alloc] initWithStartingColor:gTopColor endingColor:gBottomColor] autorelease]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Alex/Documents/Source Code/Git/ILScopeBar/ILScopeBar.m" line="15" bodyfile="/Users/Alex/Documents/Source Code/Git/ILScopeBar/ILScopeBar.m" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_i_l_scope_bar_8m_1a63cccbee10afaa6bf374fe4c661e535c" prot="public" static="no">
+        <name>gTitleLeftPadding</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Alex/Documents/Source Code/Git/ILScopeBar/ILScopeBar.m" line="17" bodyfile="/Users/Alex/Documents/Source Code/Git/ILScopeBar/ILScopeBar.m" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_i_l_scope_bar_8m_1aa56cb3133d975dd75eca4fb7f952cc22" prot="public" static="no">
+        <name>gTitleColor</name>
+        <initializer>[NSColor darkGrayColor]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Alex/Documents/Source Code/Git/ILScopeBar/ILScopeBar.m" line="18" bodyfile="/Users/Alex/Documents/Source Code/Git/ILScopeBar/ILScopeBar.m" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_i_l_scope_bar_8m_1a94386fa84e9ba731d0fead5537452c68" prot="public" static="no">
+        <name>gTitleFont</name>
+        <initializer>[NSFont boldSystemFontOfSize:12.0f]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Alex/Documents/Source Code/Git/ILScopeBar/ILScopeBar.m" line="19" bodyfile="/Users/Alex/Documents/Source Code/Git/ILScopeBar/ILScopeBar.m" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_i_l_scope_bar_8m_1a3e4e62afa8fcc25b7c3395f151517401" prot="public" static="no">
+        <name>gItemTitleFont</name>
+        <initializer>[NSFont fontWithName:@&quot;LucidaGrande-Bold&quot; size:12.0f]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Alex/Documents/Source Code/Git/ILScopeBar/ILScopeBar.m" line="21" bodyfile="/Users/Alex/Documents/Source Code/Git/ILScopeBar/ILScopeBar.m" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_i_l_scope_bar_8m_1a30d781c51eb14eb3e28a09c4a0b4c1e0" prot="public" static="no">
+        <name>gItemTitlePadding</name>
+        <initializer>gItemSpacing+4</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Alex/Documents/Source Code/Git/ILScopeBar/ILScopeBar.m" line="22" bodyfile="/Users/Alex/Documents/Source Code/Git/ILScopeBar/ILScopeBar.m" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_i_l_scope_bar_8m_1a4d2167b845a062cfd57dedfded56dead" prot="public" static="no">
+        <name>gItemSpacing</name>
+        <initializer>10</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Alex/Documents/Source Code/Git/ILScopeBar/ILScopeBar.m" line="23" bodyfile="/Users/Alex/Documents/Source Code/Git/ILScopeBar/ILScopeBar.m" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_i_l_scope_bar_8m_1aeb679560c87148c662e7b9fc6665aa47" prot="public" static="no">
+        <name>gItemCountSelector</name>
+        <initializer>@selector(numberOfItemsInScopeBar:)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Alex/Documents/Source Code/Git/ILScopeBar/ILScopeBar.m" line="26" bodyfile="/Users/Alex/Documents/Source Code/Git/ILScopeBar/ILScopeBar.m" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_i_l_scope_bar_8m_1a86cc2529a138f0685bf07971d804c9cc" prot="public" static="no">
+        <name>gItemTitleSelector</name>
+        <initializer>@selector(titleOfItemInScopeBar:atIndex:)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Alex/Documents/Source Code/Git/ILScopeBar/ILScopeBar.m" line="27" bodyfile="/Users/Alex/Documents/Source Code/Git/ILScopeBar/ILScopeBar.m" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_i_l_scope_bar_8m_1a594240773e8955c5e1b174cda9d4d6c4" prot="public" static="no">
+        <name>gBarTitleSelector</name>
+        <initializer>@selector(titleForBar:)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Alex/Documents/Source Code/Git/ILScopeBar/ILScopeBar.m" line="29" bodyfile="/Users/Alex/Documents/Source Code/Git/ILScopeBar/ILScopeBar.m" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_i_l_scope_bar_8m_1a811240171f1c931cd7e89c609e0a70bc" prot="public" static="no">
+        <name>gItemTagSelector</name>
+        <initializer>@selector(tagForItemInScopeBar:atIndex:)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Alex/Documents/Source Code/Git/ILScopeBar/ILScopeBar.m" line="30" bodyfile="/Users/Alex/Documents/Source Code/Git/ILScopeBar/ILScopeBar.m" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_i_l_scope_bar_8m_1ab2db4633741b10539dffd1fe779007ea" prot="public" static="no">
+        <name>gItemImageSelector</name>
+        <initializer>@selector(imageForItemInScopeBar:atIndex:)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Alex/Documents/Source Code/Git/ILScopeBar/ILScopeBar.m" line="31" bodyfile="/Users/Alex/Documents/Source Code/Git/ILScopeBar/ILScopeBar.m" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_i_l_scope_bar_8m_1a33b520db16a103125925d89dd087a8b7" prot="public" static="no">
+        <name>gShouldSelectItemSelector</name>
+        <initializer>@selector(shouldSelectItemInScopeBar:atIndex:)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Alex/Documents/Source Code/Git/ILScopeBar/ILScopeBar.m" line="33" bodyfile="/Users/Alex/Documents/Source Code/Git/ILScopeBar/ILScopeBar.m" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_i_l_scope_bar_8m_1a11563c085d173f0940bcea6335d8b90d" prot="public" static="no">
+        <name>gDidSelectItemSelector</name>
+        <initializer>@selector(didSelectItemInScopeBar:atIndex:withTag:andTitle:)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Alex/Documents/Source Code/Git/ILScopeBar/ILScopeBar.m" line="34" bodyfile="/Users/Alex/Documents/Source Code/Git/ILScopeBar/ILScopeBar.m" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>ILScopeBar.m</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>Iconolatrous</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>Created<sp/>by<sp/>Alex<sp/>Zielenski<sp/>on<sp/>8/1/10.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>Copyright<sp/>2010<sp/>Alex<sp/>Zielenski.<sp/>All<sp/>rights<sp/>reserved.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#import<sp/>&quot;ILScopeBar.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>gTopColor<sp/>[NSColor<sp/>colorWithCalibratedWhite:0.883f<sp/>alpha:1.000f]</highlight></codeline>
+<codeline lineno="12"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>gBottomColor<sp/>[NSColor<sp/>colorWithCalibratedWhite:0.774f<sp/>alpha:1.000f]</highlight></codeline>
+<codeline lineno="13"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>gBorderColor<sp/>[NSColor<sp/>colorWithCalibratedWhite:0.427f<sp/>alpha:1.000f]</highlight></codeline>
+<codeline lineno="14"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>gGradient<sp/>[[[NSGradient<sp/>alloc]<sp/>initWithStartingColor:gTopColor<sp/>endingColor:gBottomColor]<sp/>autorelease]</highlight></codeline>
+<codeline lineno="16"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>gTitleLeftPadding</highlight></codeline>
+<codeline lineno="18"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>gTitleColor<sp/>[NSColor<sp/>darkGrayColor]</highlight></codeline>
+<codeline lineno="19"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>gTitleFont<sp/>[NSFont<sp/>boldSystemFontOfSize:12.0f]</highlight></codeline>
+<codeline lineno="20"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>gItemTitleFont<sp/>[NSFont<sp/>fontWithName:@&quot;LucidaGrande-Bold&quot;<sp/>size:12.0f]</highlight></codeline>
+<codeline lineno="22"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>gItemTitlePadding<sp/>gItemSpacing+4</highlight></codeline>
+<codeline lineno="23"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>gItemSpacing<sp/>10</highlight></codeline>
+<codeline lineno="24"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>gItemCountSelector<sp/>@selector(numberOfItemsInScopeBar:)</highlight></codeline>
+<codeline lineno="27"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>gItemTitleSelector<sp/>@selector(titleOfItemInScopeBar:atIndex:)</highlight></codeline>
+<codeline lineno="28"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>gBarTitleSelector<sp/>@selector(titleForBar:)</highlight></codeline>
+<codeline lineno="30"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>gItemTagSelector<sp/>@selector(tagForItemInScopeBar:atIndex:)</highlight></codeline>
+<codeline lineno="31"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>gItemImageSelector<sp/>@selector(imageForItemInScopeBar:atIndex:)</highlight></codeline>
+<codeline lineno="32"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>gShouldSelectItemSelector<sp/>@selector(shouldSelectItemInScopeBar:atIndex:)</highlight></codeline>
+<codeline lineno="34"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>gDidSelectItemSelector<sp/>@selector(didSelectItemInScopeBar:atIndex:withTag:andTitle:)</highlight></codeline>
+<codeline lineno="35"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="keyword">@interface<sp/></highlight><highlight class="normal"><ref refid="interface_i_l_scope_bar" kindref="compound">ILScopeBar</ref><sp/>(Private)</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal">-<sp/>(BOOL)shouldSelectItemAtIndex:(NSInteger)idx;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal">-<sp/>(void)didSelectItem:(</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">)item;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal">-<sp/>(NSButton*)itemWithTitle:(NSString*)title<sp/>tag:(NSInteger)tag<sp/>image:(NSImage*)img<sp/>forIndex:(NSInteger)index;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal">-<sp/>(void)addItemWithTitle:(NSString*)title<sp/>tag:(NSInteger)tag<sp/>image:(NSImage*)img<sp/>forIndex:(NSInteger)index;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal">-<sp/>(NSMenuItem*)menuItemWithTitle:(NSString*)title<sp/>tag:(NSInteger)tag<sp/>image:(NSImage*)img<sp/>forIndex:(NSInteger)index;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal">-<sp/>(void)addMenuItemWithTitle:(NSString*)title<sp/>tag:(NSInteger)tag<sp/>image:(NSImage*)img<sp/>forIndex:(NSInteger)index;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal">-<sp/>(BOOL)overflows;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="keyword">@implementation<sp/></highlight><highlight class="normal"><ref refid="interface_i_l_scope_bar" kindref="compound">ILScopeBar</ref></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="keyword">@synthesize</highlight><highlight class="normal"><sp/>dataSource,<sp/>selectedItem,<sp/>delegate,<sp/>cutoffIndex,<sp/>overflowButton;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal">@dynamic<sp/>selectedIndex;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal">-<sp/>(void)awakeFromNib<sp/>{</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>[</highlight><highlight class="keyword">self</highlight><highlight class="normal"><sp/>reload];</highlight></codeline>
+<codeline lineno="56"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="57"><highlight class="normal">-<sp/>(id)initWithFrame:(NSRect)frame<sp/>{</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal"><sp/>=<sp/>[</highlight><highlight class="keyword">super</highlight><highlight class="normal"><sp/>initWithFrame:frame];</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">self</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[[NSImage<sp/>imageNamed:@&quot;Arrows&quot;]<sp/>setTemplate:YES];</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="64"><highlight class="normal">-<sp/>(void)dealloc<sp/>{</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>[overflowButton<sp/>removeFromSuperview];</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>[overflowButton<sp/>release];</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>[</highlight><highlight class="keyword">super</highlight><highlight class="normal"><sp/>dealloc];</highlight></codeline>
+<codeline lineno="68"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal">-<sp/>(void)drawRect:(NSRect)dirtyRect<sp/>{</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Drawing<sp/>code<sp/>here.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>[gGradient<sp/>drawInRect:dirtyRect<sp/>angle:270];</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>[gBorderColor<sp/>set];</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>NSRectFill(NSMakeRect(0,<sp/>0,<sp/>dirtyRect.size.width,<sp/>1));</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Probably<sp/>not<sp/>the<sp/>best<sp/>idea<sp/>to<sp/>create<sp/>it<sp/>on<sp/>every<sp/>draw<sp/>call</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>NSTextFieldCell<sp/>*tf<sp/>=<sp/>[[NSTextFieldCell<sp/>alloc]<sp/>init];</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>[tf<sp/>setAttributedStringValue:self.attributedTitle];</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>[tf<sp/>setBackgroundStyle:NSBackgroundStyleRaised];</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>[tf<sp/>drawWithFrame:self.frameForBarTitle<sp/></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>inView:self];</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>[tf<sp/>release];</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">self</highlight><highlight class="normal">.inLiveResize)<sp/>{</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//[self<sp/>reload];</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[</highlight><highlight class="keyword">self</highlight><highlight class="normal"><sp/>rearrangeItems];</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="90"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>mark<sp/>-</highlight></codeline>
+<codeline lineno="92"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#pragma<sp/>mark<sp/>Creating<sp/>and<sp/>Adding<sp/>Items</highlight></codeline>
+<codeline lineno="93"><highlight class="preprocessor"></highlight><highlight class="normal">-<sp/>(void)<ref refid="interface_i_l_scope_bar_1a20b6cfd077f38728b48aa3633a0ab351" kindref="member">rearrangeItems</ref><sp/>{</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>se<sp/>=<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">.selectedIndex;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>BOOL<sp/>overflows<sp/>=<sp/>[</highlight><highlight class="keyword">self</highlight><highlight class="normal"><sp/>overflows];<sp/></highlight><highlight class="comment">//<sp/>refresh<sp/>the<sp/>cut<sp/>off<sp/>index</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>x<sp/>=<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">.subviews.count-1;<sp/>x&gt;=0;x--)<sp/>{</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>NSView<sp/>*v<sp/>=<sp/>[</highlight><highlight class="keyword">self</highlight><highlight class="normal">.subviews<sp/>objectAtIndex:x];</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[v<sp/>removeFromSuperview];</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//[v<sp/>release];<sp/>it<sp/>actually<sp/>gets<sp/>autoreleased</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>x<sp/>=<sp/>0;<sp/>x&lt;=</highlight><highlight class="keyword">self</highlight><highlight class="normal">.cutoffIndex;x++)<sp/>{</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[</highlight><highlight class="keyword">self</highlight><highlight class="normal"><sp/>addItemWithTitle:[</highlight><highlight class="keyword">self</highlight><highlight class="normal"><sp/>titleOfItemAtIndex:x]<sp/></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tag:[</highlight><highlight class="keyword">self</highlight><highlight class="normal"><sp/>tagForItemAtIndex:x]<sp/></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>image:[</highlight><highlight class="keyword">self</highlight><highlight class="normal"><sp/>imageForItemAtIndex:x]</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>forIndex:x];</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!overflows<sp/>&amp;&amp;<sp/><ref refid="interface_i_l_scope_bar_1a570023112ef4cebbe413065363cb166a" kindref="member">overflowButton</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[overflowButton<sp/>removeFromSuperview],<sp/>[overflowButton<sp/>release],<sp/><ref refid="interface_i_l_scope_bar_1a570023112ef4cebbe413065363cb166a" kindref="member">overflowButton</ref>=nil;</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[</highlight><highlight class="keyword">self</highlight><highlight class="normal"><sp/>createOverflowButton];</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>x<sp/>=<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">.<ref refid="interface_i_l_scope_bar_1a3deb3ea1c836bec9553e6ac01db6b0e9" kindref="member">cutoffIndex</ref>+1;<sp/>x&lt;</highlight><highlight class="keyword">self</highlight><highlight class="normal">.itemCount;x++)<sp/>{</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[</highlight><highlight class="keyword">self</highlight><highlight class="normal"><sp/>addMenuItemWithTitle:[</highlight><highlight class="keyword">self</highlight><highlight class="normal"><sp/>titleOfItemAtIndex:x]<sp/></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tag:[</highlight><highlight class="keyword">self</highlight><highlight class="normal"><sp/>tagForItemAtIndex:x]<sp/></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>image:[</highlight><highlight class="keyword">self</highlight><highlight class="normal"><sp/>imageForItemAtIndex:x]<sp/></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>forIndex:x];</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="119"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="120"><highlight class="normal">-<sp/>(void)<ref refid="interface_i_l_scope_bar_1adf437e14a3b88e1957094b1070bae600" kindref="member">reload</ref><sp/>{</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/>[</highlight><highlight class="keyword">self</highlight><highlight class="normal"><sp/>overflows];</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/>[</highlight><highlight class="keyword">self</highlight><highlight class="normal"><sp/>createOverflowButton];</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/>[</highlight><highlight class="keyword">self</highlight><highlight class="normal"><sp/>rearrangeItems];</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>It<sp/>automatically<sp/>sets<sp/>the<sp/>first<sp/>item<sp/>of<sp/>the<sp/>menu<sp/>to<sp/>be<sp/>active</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/>NSMenu<sp/>*menu<sp/>=<sp/><ref refid="interface_i_l_scope_bar_1a570023112ef4cebbe413065363cb166a" kindref="member">overflowButton</ref>.menu;</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/>NSArray<sp/>*menArray<sp/>=<sp/>[menu<sp/>itemArray];</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(menArray.count&gt;0)</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">.selectedItem=[menArray<sp/>objectAtIndex:0];</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/>[</highlight><highlight class="keyword">self</highlight><highlight class="normal"><sp/>setNeedsDisplay:YES];</highlight></codeline>
+<codeline lineno="133"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="134"><highlight class="normal">-<sp/>(void)<ref refid="interface_i_l_scope_bar_1a2d1d19b68a5dedae109ae2242f37cfcb" kindref="member">createOverflowButton</ref><sp/>{</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>it<sp/>probably<sp/>actually<sp/>isnt<sp/>the<sp/>best<sp/>idea<sp/>to<sp/>release<sp/>and<sp/>create<sp/>the<sp/>overflow<sp/>button<sp/>so<sp/>frequently.<sp/>And<sp/>instead<sp/>i<sp/>should<sp/>use<sp/>removeAllItems.<sp/>Maybe<sp/>later?</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="interface_i_l_scope_bar_1a570023112ef4cebbe413065363cb166a" kindref="member">overflowButton</ref>)</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[<ref refid="interface_i_l_scope_bar_1a570023112ef4cebbe413065363cb166a" kindref="member">overflowButton</ref><sp/>removeFromSuperview],<sp/>[<ref refid="interface_i_l_scope_bar_1a570023112ef4cebbe413065363cb166a" kindref="member">overflowButton</ref><sp/>release],<sp/><ref refid="interface_i_l_scope_bar_1a570023112ef4cebbe413065363cb166a" kindref="member">overflowButton</ref>=nil;</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="interface_i_l_scope_bar_1a570023112ef4cebbe413065363cb166a" kindref="member">overflowButton</ref><sp/>&amp;&amp;<sp/>[</highlight><highlight class="keyword">self</highlight><highlight class="normal"><sp/>overflows])<sp/>{</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="interface_i_l_scope_bar_1a570023112ef4cebbe413065363cb166a" kindref="member">overflowButton</ref>=[[NSPopUpButton<sp/>alloc]<sp/>initWithFrame:NSMakeRect(NSMaxX(self.bounds)-28-gItemSpacing,<sp/>4,<sp/>28,<sp/>19)];<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[overflowButton<sp/>setButtonType:NSMomentaryLightButton];</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[overflowButton<sp/>setBezelStyle:NSRecessedBezelStyle];</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[overflowButton<sp/>setShowsBorderOnlyWhileMouseInside:YES];</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//[overflowButton<sp/>setTextAlignment:NSCenterTextAlignment];</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[overflowButton<sp/>setPreferredEdge:NSMinYEdge];</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[overflowButton.cell<sp/>setUsesItemFromMenu:NO];</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[overflowButton.cell<sp/>setArrowPosition:NSPopUpNoArrow];</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[overflowButton.cell<sp/>setAltersStateOfSelectedItem:YES];</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[overflowButton.cell<sp/>setHighlightsBy:NSCellIsBordered<sp/>|<sp/>NSCellIsInsetButton];</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[overflowButton.cell<sp/>setImageScaling:NSImageScaleProportionallyDown];</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[overflowButton<sp/>setTarget:self];</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[overflowButton<sp/>setAction:@selector(setSelectedItem:)];</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>NSMenuItem<sp/>*men<sp/>=<sp/>[[NSMenuItem<sp/>alloc]<sp/>init];</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[men<sp/>setTitle:@&quot;&quot;];</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[men<sp/>setImage:[NSImage<sp/>imageNamed:@&quot;Arrows&quot;]];</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[overflowButton.cell<sp/>setMenuItem:men];</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[men<sp/>release];</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[</highlight><highlight class="keyword">self</highlight><highlight class="normal"><sp/>addSubview:overflowButton];</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="164"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="165"><highlight class="normal">-<sp/>(NSButton*)itemWithTitle:(NSString*)title<sp/>tag:(NSInteger)tag<sp/>image:(NSImage*)img<sp/>forIndex:(NSInteger)index<sp/>{</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/>NSButton<sp/>*nb<sp/>=<sp/>[[NSButton<sp/>alloc]<sp/>initWithFrame:[</highlight><highlight class="keyword">self</highlight><highlight class="normal"><sp/>frameForItemAtIndex:index]];</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/>[nb<sp/>setShowsBorderOnlyWhileMouseInside:YES];</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/>[nb<sp/>setBordered:YES];</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/>[nb<sp/>setAlignment:NSCenterTextAlignment];</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/>[nb<sp/>setButtonType:NSPushOnPushOffButton];</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/>[nb.cell<sp/>setHighlightsBy:NSCellIsBordered<sp/>|<sp/>NSCellIsInsetButton];</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/>[nb.cell<sp/>setImageScaling:NSImageScaleProportionallyDown];</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/>[nb<sp/>setBezelStyle:NSRecessedBezelStyle];</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/>[nb<sp/>setImagePosition:NSImageLeft];</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/>[nb<sp/>setTitle:title];</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/>[nb<sp/>setImage:img];</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/>[nb<sp/>setTag:tag];</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/>[nb<sp/>setTarget:self];</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/>[nb<sp/>setAction:@selector(setSelectedItem:)];</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>[nb<sp/>autorelease];</highlight></codeline>
+<codeline lineno="184"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="185"><highlight class="normal">-<sp/>(void)addItemWithTitle:(NSString*)title<sp/>tag:(NSInteger)tag<sp/>image:(NSImage*)img<sp/>forIndex:(NSInteger)index<sp/>{</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/>[</highlight><highlight class="keyword">self</highlight><highlight class="normal"><sp/>addSubview:[</highlight><highlight class="keyword">self</highlight><highlight class="normal"><sp/>itemWithTitle:title<sp/>tag:tag<sp/>image:img<sp/>forIndex:index]];</highlight></codeline>
+<codeline lineno="187"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="188"><highlight class="normal">-<sp/>(NSMenuItem*)menuItemWithTitle:(NSString*)title<sp/>tag:(NSInteger)tag<sp/>image:(NSImage*)img<sp/>forIndex:(NSInteger)index<sp/>{</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/>NSMenuItem<sp/>*item<sp/>=<sp/>[NSMenuItem<sp/>new];</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/>[item<sp/>setTitle:title];</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/>[item<sp/>setTag:tag];</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/>[item<sp/>setImage:img];</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/>[item<sp/>setState:NSOffState];</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>proportionately<sp/>(sp?)<sp/>set<sp/>the<sp/>height<sp/>of<sp/>the<sp/>item&apos;s<sp/>image<sp/>to<sp/>16.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/>NSSize<sp/>imgSize<sp/>=<sp/>NSMakeSize(0,<sp/>16);</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/>CGFloat<sp/>wpec<sp/>=<sp/>img.size.height/16;</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/>imgSize.width=img.size.width/wpec;</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/>[item.image<sp/>setSize:imgSize];</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>[item<sp/>autorelease];</highlight></codeline>
+<codeline lineno="203"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="204"><highlight class="normal">-<sp/>(void)addMenuItemWithTitle:(NSString*)title<sp/>tag:(NSInteger)tag<sp/>image:(NSImage*)img<sp/>forIndex:(NSInteger)index<sp/>{</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/>NSMenuItem<sp/>*item<sp/>=<sp/>[</highlight><highlight class="keyword">self</highlight><highlight class="normal"><sp/>menuItemWithTitle:title<sp/>tag:tag<sp/>image:img<sp/>forIndex:index];</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/>[overflowButton.menu<sp/>addItem:item];</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/>[item<sp/>setState:NSOffState];</highlight></codeline>
+<codeline lineno="208"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"></highlight></codeline>
+<codeline lineno="210"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>mark<sp/>-</highlight></codeline>
+<codeline lineno="211"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#pragma<sp/>mark<sp/>Display</highlight></codeline>
+<codeline lineno="212"><highlight class="preprocessor"></highlight><highlight class="normal">-<sp/>(NSRect)frameForItemAtIndex:(NSInteger)idx<sp/>{<sp/></highlight><highlight class="comment">//<sp/>Generates<sp/>a<sp/>new<sp/>frame<sp/>for<sp/>an<sp/>item.<sp/>To<sp/>get<sp/>the<sp/>actual<sp/>frame<sp/>of<sp/>the<sp/>item,<sp/>use<sp/>the<sp/>scope<sp/>bar&apos;s<sp/>subviews<sp/>and<sp/>objectAtIndex:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/>NSRect<sp/>n<sp/>=<sp/>NSZeroRect;</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(idx==0)<sp/>{</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>NSRect<sp/>t<sp/>=<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">.frameForBarTitle;</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>n.origin.x=t.origin.x+t.size.width;<sp/></highlight><highlight class="comment">//<sp/>root<sp/>origin</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>n.size.height=19;</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>n.origin.y=roundf(NSMidY(</highlight><highlight class="keyword">self</highlight><highlight class="normal">.bounds)-n.size.height/2)-1;</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(idx<sp/>&gt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>n<sp/>=<sp/>[</highlight><highlight class="keyword">self</highlight><highlight class="normal"><sp/>frameForItemAtIndex:idx-1];</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>n.origin.x+=n.size.width;</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>n.origin.x+=gItemSpacing;</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/>NSString<sp/>*<ref refid="interface_i_l_scope_bar_1a858993d483280a7589a37a12f633b0ae" kindref="member">title</ref><sp/>=<sp/>[</highlight><highlight class="keyword">self</highlight><highlight class="normal"><sp/>titleOfItemAtIndex:idx];</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/>NSImage<sp/>*itemImage<sp/>=<sp/>[</highlight><highlight class="keyword">self</highlight><highlight class="normal"><sp/>imageForItemAtIndex:idx];</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/>NSSize<sp/>titleSize<sp/>=<sp/>[title<sp/>sizeWithAttributes:[NSDictionary<sp/>dictionaryWithObjectsAndKeys:gItemTitleFont,<sp/>NSFontAttributeName,<sp/>nil]];</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(itemImage)</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>titleSize.width+=itemImage.size.width+gItemTitlePadding-gItemSpacing;</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/>n.size.width=titleSize.width;</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/>n.size.width+=gItemTitlePadding;</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>n;</highlight></codeline>
+<codeline lineno="240"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="241"><highlight class="normal">-<sp/>(NSRect)frameForBarTitle<sp/>{</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/>NSString<sp/>*title<sp/>=<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">.title;</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!title<sp/>||<sp/>title.length&lt;=0)</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NSMakeRect(gItemSpacing,<sp/>0,<sp/>0,<sp/>0);</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/>NSSize<sp/>titleSize=[</highlight><highlight class="keyword">self</highlight><highlight class="normal">.attributedTitle<sp/>size];</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/>NSRect<sp/>t<sp/>=<sp/>NSZeroRect;</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/>t.origin.x=gItemSpacing;</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/>t.size.width=titleSize.width+gItemTitlePadding*2;</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/>t.size.height=titleSize.height;</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/>t.origin.y=roundf(NSMidY(</highlight><highlight class="keyword">self</highlight><highlight class="normal">.bounds)-t.size.height/2);</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(t.size.width+t.origin.x&gt;</highlight><highlight class="keyword">self</highlight><highlight class="normal">.bounds.size.width-gItemSpacing*2)<sp/>{</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>t.size.width=</highlight><highlight class="keyword">self</highlight><highlight class="normal">.bounds.size.width-gItemSpacing*2;</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(![<ref refid="interface_i_l_scope_bar_1a570023112ef4cebbe413065363cb166a" kindref="member">overflowButton</ref><sp/>isHidden]<sp/>||<sp/>!<ref refid="interface_i_l_scope_bar_1a570023112ef4cebbe413065363cb166a" kindref="member">overflowButton</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>t.size.width-=<ref refid="interface_i_l_scope_bar_1a570023112ef4cebbe413065363cb166a" kindref="member">overflowButton</ref>.frame.size.width;</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>t;</highlight></codeline>
+<codeline lineno="260"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"></highlight></codeline>
+<codeline lineno="262"><highlight class="normal"></highlight></codeline>
+<codeline lineno="263"><highlight class="normal">-<sp/>(BOOL)overflows<sp/>{</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/>[</highlight><highlight class="keyword">self</highlight><highlight class="normal"><sp/>willChangeValueForKey:@&quot;cutoffIndex&quot;];</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>x<sp/>=<sp/>0;<sp/>x&lt;</highlight><highlight class="keyword">self</highlight><highlight class="normal">.itemCount;x++)<sp/>{</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>NSRect<sp/>f<sp/>=<sp/>[</highlight><highlight class="keyword">self</highlight><highlight class="normal"><sp/>frameForItemAtIndex:x];</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(f.origin.x+f.size.width+gItemSpacing*3&gt;</highlight><highlight class="keyword">self</highlight><highlight class="normal">.bounds.size.width)<sp/>{</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="interface_i_l_scope_bar_1a3deb3ea1c836bec9553e6ac01db6b0e9" kindref="member">cutoffIndex</ref>=x-1;</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[</highlight><highlight class="keyword">self</highlight><highlight class="normal"><sp/>didChangeValueForKey:</highlight><highlight class="stringliteral">@&quot;cutoffIndex&quot;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>YES;</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="interface_i_l_scope_bar_1a3deb3ea1c836bec9553e6ac01db6b0e9" kindref="member">cutoffIndex</ref>=</highlight><highlight class="keyword">self</highlight><highlight class="normal">.itemCount-1;</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/>[</highlight><highlight class="keyword">self</highlight><highlight class="normal"><sp/>didChangeValueForKey:@&quot;cutoffIndex&quot;];</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NO;</highlight></codeline>
+<codeline lineno="277"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"></highlight></codeline>
+<codeline lineno="279"><highlight class="normal"></highlight></codeline>
+<codeline lineno="280"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>mark<sp/>-</highlight></codeline>
+<codeline lineno="281"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#pragma<sp/>mark<sp/>Data<sp/>Source<sp/>Data</highlight></codeline>
+<codeline lineno="282"><highlight class="preprocessor"></highlight><highlight class="normal">-<sp/>(NSString*)titleOfItemAtIndex:(NSInteger)idx<sp/>{</highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(idx==-1)</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">@&quot;&gt;&gt;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>([</highlight><highlight class="keyword">self</highlight><highlight class="normal">.dataSource<sp/>respondsToSelector:gItemTitleSelector])</highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>[</highlight><highlight class="keyword">self</highlight><highlight class="normal">.dataSource<sp/>titleOfItemInScopeBar:</highlight><highlight class="keyword">self</highlight><highlight class="normal"><sp/>atIndex:idx];</highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">@&quot;Untitled&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="290"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="291"><highlight class="normal">-<sp/>(NSInteger)<ref refid="interface_i_l_scope_bar_1a99ed27ff1f406437a8985e690a07a627" kindref="member">itemCount</ref><sp/>{</highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>([</highlight><highlight class="keyword">self</highlight><highlight class="normal">.dataSource<sp/>respondsToSelector:gItemCountSelector])</highlight></codeline>
+<codeline lineno="293"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>[</highlight><highlight class="keyword">self</highlight><highlight class="normal">.dataSource<sp/>numberOfItemsInScopeBar:</highlight><highlight class="keyword">self</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="294"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="295"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="296"><highlight class="normal"></highlight></codeline>
+<codeline lineno="297"><highlight class="normal">-<sp/>(NSImage*)imageForItemAtIndex:(NSInteger)idx<sp/>{<sp/></highlight><highlight class="comment">//<sp/>Calls<sp/>the<sp/>dataSource<sp/>method.<sp/>If<sp/>it<sp/>isnt<sp/>implemented<sp/>or<sp/>it<sp/>returns<sp/>null.<sp/>Just<sp/>returns<sp/>nil.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="298"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="299"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(idx==-1)</highlight></codeline>
+<codeline lineno="300"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>nil;</highlight></codeline>
+<codeline lineno="301"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="302"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>([</highlight><highlight class="keyword">self</highlight><highlight class="normal">.dataSource<sp/>respondsToSelector:gItemImageSelector])<sp/>{</highlight></codeline>
+<codeline lineno="303"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>NSImage<sp/>*im<sp/>=<sp/>[</highlight><highlight class="keyword">self</highlight><highlight class="normal">.dataSource<sp/>imageForItemInScopeBar:self<sp/>atIndex:idx];</highlight></codeline>
+<codeline lineno="304"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(im)</highlight></codeline>
+<codeline lineno="305"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[im<sp/>setSize:NSMakeSize(16,<sp/>16)];</highlight></codeline>
+<codeline lineno="306"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>im;</highlight></codeline>
+<codeline lineno="307"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="308"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>nil;</highlight></codeline>
+<codeline lineno="309"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="310"><highlight class="normal">-<sp/>(NSInteger)tagForItemAtIndex:(NSInteger)idx<sp/>{<sp/></highlight><highlight class="comment">//<sp/>Calls<sp/>the<sp/>dataSource<sp/>method.<sp/>If<sp/>not<sp/>implemented,<sp/>returns<sp/>0.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="311"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>([</highlight><highlight class="keyword">self</highlight><highlight class="normal">.dataSource<sp/>respondsToSelector:gItemTagSelector])</highlight></codeline>
+<codeline lineno="312"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>[</highlight><highlight class="keyword">self</highlight><highlight class="normal">.dataSource<sp/>tagForItemInScopeBar:</highlight><highlight class="keyword">self</highlight><highlight class="normal"><sp/>atIndex:idx];</highlight></codeline>
+<codeline lineno="313"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="314"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="315"><highlight class="normal">-<sp/>(NSAttributedString*)<ref refid="interface_i_l_scope_bar_1a4bda03be839277fb408ec3f627332a8f" kindref="member">attributedTitle</ref><sp/>{</highlight></codeline>
+<codeline lineno="316"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">self</highlight><highlight class="normal">.title)<sp/>{</highlight></codeline>
+<codeline lineno="317"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>NSMutableParagraphStyle<sp/>*style<sp/>=<sp/>[[NSMutableParagraphStyle<sp/>alloc]<sp/>init];</highlight></codeline>
+<codeline lineno="318"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[style<sp/>setLineBreakMode:NSLineBreakByTruncatingTail];</highlight></codeline>
+<codeline lineno="319"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>NSAttributedString<sp/>*title<sp/>=<sp/>[[NSAttributedString<sp/>alloc]<sp/>initWithString:self.title<sp/></highlight></codeline>
+<codeline lineno="320"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>attributes:[NSDictionary<sp/>dictionaryWithObjectsAndKeys:gTitleFont,<sp/>NSFontAttributeName,<sp/>gTitleColor,<sp/>NSForegroundColorAttributeName,<sp/></highlight></codeline>
+<codeline lineno="321"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>style,<sp/>NSParagraphStyleAttributeName,<sp/>nil]];</highlight></codeline>
+<codeline lineno="322"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[style<sp/>release];</highlight></codeline>
+<codeline lineno="323"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>[title<sp/>autorelease];</highlight></codeline>
+<codeline lineno="324"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="325"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>nil;</highlight></codeline>
+<codeline lineno="326"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="327"><highlight class="normal">-<sp/>(NSString*)title<sp/>{<sp/></highlight><highlight class="comment">//<sp/>Calls<sp/>the<sp/>dataSource<sp/>method.<sp/>If<sp/>not<sp/>implemented,<sp/>returns<sp/>nil.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="328"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>([</highlight><highlight class="keyword">self</highlight><highlight class="normal">.dataSource<sp/>respondsToSelector:gBarTitleSelector])</highlight></codeline>
+<codeline lineno="329"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>[</highlight><highlight class="keyword">self</highlight><highlight class="normal">.dataSource<sp/>titleForBar:</highlight><highlight class="keyword">self</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="330"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>nil;</highlight></codeline>
+<codeline lineno="331"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="332"><highlight class="normal">-<sp/>(NSArray*)<ref refid="interface_i_l_scope_bar_1aaafef7b25f44ce618470bfc2423d3a1e" kindref="member">items</ref><sp/>{</highlight></codeline>
+<codeline lineno="333"><highlight class="normal"><sp/><sp/><sp/><sp/>NSPredicate<sp/>*p<sp/>=<sp/>[NSPredicate<sp/>predicateWithFormat:@&quot;className<sp/>==<sp/>%@&quot;,<sp/>[NSButton<sp/>className]];</highlight></codeline>
+<codeline lineno="334"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>[[</highlight><highlight class="keyword">self</highlight><highlight class="normal">.subviews<sp/>filteredArrayUsingPredicate:p]<sp/>arrayByAddingObjectsFromArray:overflowButton.menu.itemArray];</highlight></codeline>
+<codeline lineno="335"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="336"><highlight class="normal">-<sp/>(BOOL)shouldSelectItemAtIndex:(NSInteger)idx<sp/>{</highlight></codeline>
+<codeline lineno="337"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>([</highlight><highlight class="keyword">self</highlight><highlight class="normal">.delegate<sp/>respondsToSelector:gShouldSelectItemSelector])</highlight></codeline>
+<codeline lineno="338"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>[</highlight><highlight class="keyword">self</highlight><highlight class="normal">.delegate<sp/>shouldSelectItemInScopeBar:</highlight><highlight class="keyword">self</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="339"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>atIndex:idx];</highlight></codeline>
+<codeline lineno="340"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>YES;</highlight></codeline>
+<codeline lineno="341"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="342"><highlight class="normal">-<sp/>(void)didSelectItem:(NSButton*)item<sp/>{</highlight></codeline>
+<codeline lineno="343"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>([</highlight><highlight class="keyword">self</highlight><highlight class="normal">.delegate<sp/>respondsToSelector:gDidSelectItemSelector])</highlight></codeline>
+<codeline lineno="344"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[</highlight><highlight class="keyword">self</highlight><highlight class="normal">.delegate<sp/>didSelectItemInScopeBar:</highlight><highlight class="keyword">self</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="345"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>atIndex:[</highlight><highlight class="keyword">self</highlight><highlight class="normal"><sp/>indexOfItem:item]<sp/></highlight></codeline>
+<codeline lineno="346"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>withTag:item.tag<sp/></highlight></codeline>
+<codeline lineno="347"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>andTitle:item.title];</highlight></codeline>
+<codeline lineno="348"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="349"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>mark<sp/>-</highlight></codeline>
+<codeline lineno="350"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#pragma<sp/>mark<sp/>Accessors</highlight></codeline>
+<codeline lineno="351"><highlight class="preprocessor"></highlight><highlight class="normal">-<sp/>(NSInteger)indexOfItem:(</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">)item<sp/>{</highlight></codeline>
+<codeline lineno="352"><highlight class="normal"><sp/><sp/><sp/><sp/>NSInteger<sp/>idx<sp/>=<sp/>[</highlight><highlight class="keyword">self</highlight><highlight class="normal">.items<sp/>indexOfObject:item];</highlight></codeline>
+<codeline lineno="353"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(idx<sp/>&gt;=<sp/>0<sp/>&amp;&amp;<sp/>idx<sp/>!=<sp/>NSNotFound)</highlight></codeline>
+<codeline lineno="354"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>idx;</highlight></codeline>
+<codeline lineno="355"><highlight class="normal"><sp/><sp/><sp/><sp/>idx=[overflowButton<sp/>indexOfItem:item]+1;</highlight></codeline>
+<codeline lineno="356"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(idx<sp/>&gt;=<sp/>0<sp/>&amp;&amp;<sp/>idx!=NSNotFound)<sp/>{</highlight></codeline>
+<codeline lineno="357"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>idx+=self.<ref refid="interface_i_l_scope_bar_1a3deb3ea1c836bec9553e6ac01db6b0e9" kindref="member">cutoffIndex</ref>;</highlight></codeline>
+<codeline lineno="358"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>idx;</highlight></codeline>
+<codeline lineno="359"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="360"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NSNotFound;</highlight></codeline>
+<codeline lineno="361"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="362"><highlight class="normal">-<sp/>(NSInteger)<ref refid="interface_i_l_scope_bar_1a4c728420a1b1d2c21a5c7b2421196e71" kindref="member">selectedIndex</ref><sp/>{</highlight></codeline>
+<codeline lineno="363"><highlight class="normal"><sp/><sp/><sp/><sp/>NSArray<sp/>*i<sp/>=<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">.items;</highlight></codeline>
+<codeline lineno="364"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>[i<sp/>indexOfObject:self.selectedItem];</highlight></codeline>
+<codeline lineno="365"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="366"><highlight class="normal">-<sp/>(void)setSelectedIndex:(NSInteger)idx<sp/>{</highlight></codeline>
+<codeline lineno="367"><highlight class="normal"><sp/><sp/><sp/><sp/>[</highlight><highlight class="keyword">self</highlight><highlight class="normal"><sp/>setSelectedItem:[</highlight><highlight class="keyword">self</highlight><highlight class="normal">.items<sp/>objectAtIndex:idx]];</highlight></codeline>
+<codeline lineno="368"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="369"><highlight class="normal">-<sp/>(void)setSelectedItem:(</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">)newItem<sp/>{</highlight></codeline>
+<codeline lineno="370"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(newItem!=<ref refid="interface_i_l_scope_bar_1a570023112ef4cebbe413065363cb166a" kindref="member">overflowButton</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="371"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">self</highlight><highlight class="normal">.<ref refid="interface_i_l_scope_bar_1ae25650dff525e61806384a8112d1fc92" kindref="member">selectedItem</ref>==newItem)<sp/>{</highlight></codeline>
+<codeline lineno="372"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[newItem<sp/>setState:NSOnState];</highlight></codeline>
+<codeline lineno="373"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="374"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="375"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!newItem)</highlight></codeline>
+<codeline lineno="376"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="377"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="378"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>NSInteger<sp/>idx<sp/>=<sp/>[</highlight><highlight class="keyword">self</highlight><highlight class="normal"><sp/>indexOfItem:newItem];</highlight></codeline>
+<codeline lineno="379"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(idx<sp/>&lt;<sp/>0<sp/>||<sp/>idx<sp/>==<sp/>NSNotFound)</highlight></codeline>
+<codeline lineno="380"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="381"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>([</highlight><highlight class="keyword">self</highlight><highlight class="normal"><sp/>shouldSelectItemAtIndex:idx])<sp/>{</highlight></codeline>
+<codeline lineno="382"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[</highlight><highlight class="keyword">self</highlight><highlight class="normal"><sp/>willChangeValueForKey:@&quot;selectedItem&quot;];</highlight></codeline>
+<codeline lineno="383"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>([</highlight><highlight class="keyword">self</highlight><highlight class="normal">.<ref refid="interface_i_l_scope_bar_1aaafef7b25f44ce618470bfc2423d3a1e" kindref="member">items</ref><sp/>containsObject:<ref refid="interface_i_l_scope_bar_1ae25650dff525e61806384a8112d1fc92" kindref="member">selectedItem</ref>])</highlight></codeline>
+<codeline lineno="384"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[selectedItem<sp/>setState:NSOffState];</highlight></codeline>
+<codeline lineno="385"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>selectedItem=newItem;</highlight></codeline>
+<codeline lineno="386"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[selectedItem<sp/>setState:NSOnState];</highlight></codeline>
+<codeline lineno="387"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[</highlight><highlight class="keyword">self</highlight><highlight class="normal"><sp/>didChangeValueForKey:@&quot;selectedItem&quot;];</highlight></codeline>
+<codeline lineno="388"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[</highlight><highlight class="keyword">self</highlight><highlight class="normal"><sp/>didSelectItem:newItem];</highlight></codeline>
+<codeline lineno="389"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="390"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="391"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[newItem<sp/>setState:NSOffState];</highlight></codeline>
+<codeline lineno="392"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="393"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="394"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>NSMenuItem<sp/>*n<sp/>=<sp/>[(NSPopUpButton*)newItem<sp/>selectedItem];</highlight></codeline>
+<codeline lineno="395"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">self</highlight><highlight class="normal">.<ref refid="interface_i_l_scope_bar_1ae25650dff525e61806384a8112d1fc92" kindref="member">selectedItem</ref>==n)<sp/>{</highlight></codeline>
+<codeline lineno="396"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[n<sp/>setState:NSOnState];</highlight></codeline>
+<codeline lineno="397"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="398"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="399"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>NSInteger<sp/>idx<sp/>=<sp/>[</highlight><highlight class="keyword">self</highlight><highlight class="normal"><sp/>indexOfItem:n];</highlight></codeline>
+<codeline lineno="400"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(idx<sp/>&lt;0<sp/>||<sp/>idx==NSNotFound)</highlight></codeline>
+<codeline lineno="401"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="402"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>([</highlight><highlight class="keyword">self</highlight><highlight class="normal"><sp/>shouldSelectItemAtIndex:idx])<sp/>{</highlight></codeline>
+<codeline lineno="403"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[</highlight><highlight class="keyword">self</highlight><highlight class="normal"><sp/>willChangeValueForKey:@&quot;selectedItem&quot;];</highlight></codeline>
+<codeline lineno="404"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[selectedItem<sp/>setState:NSOffState];</highlight></codeline>
+<codeline lineno="405"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="interface_i_l_scope_bar_1ae25650dff525e61806384a8112d1fc92" kindref="member">selectedItem</ref>=n;</highlight></codeline>
+<codeline lineno="406"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[selectedItem<sp/>setState:NSOnState];</highlight></codeline>
+<codeline lineno="407"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[</highlight><highlight class="keyword">self</highlight><highlight class="normal"><sp/>didChangeValueForKey:@&quot;selectedItem&quot;];</highlight></codeline>
+<codeline lineno="408"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[</highlight><highlight class="keyword">self</highlight><highlight class="normal"><sp/>didSelectItem:n];</highlight></codeline>
+<codeline lineno="409"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="410"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[n<sp/>setState:NSOffState];</highlight></codeline>
+<codeline lineno="411"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="412"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="413"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>([<ref refid="interface_i_l_scope_bar_1a570023112ef4cebbe413065363cb166a" kindref="member">overflowButton</ref><sp/><ref refid="interface_i_l_scope_bar_1ae25650dff525e61806384a8112d1fc92" kindref="member">selectedItem</ref>]!=nil)</highlight></codeline>
+<codeline lineno="414"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[<ref refid="interface_i_l_scope_bar_1a570023112ef4cebbe413065363cb166a" kindref="member">overflowButton</ref><sp/>setState:NSOnState];</highlight></codeline>
+<codeline lineno="415"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="416"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/Users/Alex/Documents/Source Code/Git/ILScopeBar/ILScopeBar.m"/>
+  </compounddef>
+</doxygen>

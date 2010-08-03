@@ -1,0 +1,150 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.1">
+  <compounddef id="protocol_i_l_scope_bar_data_source-p" kind="protocol" prot="public">
+    <compoundname>ILScopeBarDataSource-p</compoundname>
+    <derivedcompoundref refid="interface_i_l_scope_bar_app_delegate" prot="public" virt="non-virtual">ILScopeBarAppDelegate</derivedcompoundref>
+    <includes refid="_i_l_scope_bar_protocols_8h" local="no">ILScopeBarProtocols.h</includes>
+      <sectiondef kind="user-defined">
+      <header>Required Methods</header>
+      <description><para><anchor id="_1amgrpa69f175b69f1641f6c29af7db9671147"/> </para></description>
+      <memberdef kind="function" id="protocol_i_l_scope_bar_data_source-p_1a31a49009c8396cf455ddcbeba4c0e0a0" prot="public" static="no" const="no" explicit="no" inline="no" required="yes" virt="virtual">
+        <type>NSInteger</type>
+        <definition>NSInteger ILScopeBarDataSource-p::numberOfItemsInScopeBar:</definition>
+        <argsstring>(ILScopeBar *bar)</argsstring>
+        <name>numberOfItemsInScopeBar:</name>
+        <param>
+          <type><ref refid="interface_i_l_scope_bar" kindref="compound">ILScopeBar</ref> *</type>
+          <declname>bar</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Return the number of items to be used for the scope bar. </para></simplesect>
+<simplesect kind="warning"><para>This method gets called often, so be sure to optimize it accordingly. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Alex/Documents/Source Code/Git/ILScopeBar/ILScopeBarProtocols.h" line="23"/>
+      </memberdef>
+      <memberdef kind="function" id="protocol_i_l_scope_bar_data_source-p_1acbd911a4b9dc55cedf5181bca301cab5" prot="public" static="no" const="no" explicit="no" inline="no" required="yes" virt="virtual">
+        <type>NSString *</type>
+        <definition>NSString* ILScopeBarDataSource-p::titleOfItemInScopeBar:atIndex:</definition>
+        <argsstring>(ILScopeBar *bar,[atIndex] NSInteger idx)</argsstring>
+        <name>titleOfItemInScopeBar:atIndex:</name>
+        <param>
+          <type><ref refid="interface_i_l_scope_bar" kindref="compound">ILScopeBar</ref> *</type>
+          <declname>bar</declname>
+        </param>
+        <param>
+          <attributes>[atIndex]</attributes>
+          <type>NSInteger</type>
+          <declname>idx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Return the tile of all the items to be used for the scope bar. </para></simplesect>
+<simplesect kind="warning"><para>This method gets called often, so be sure to optimize it accordingly. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Alex/Documents/Source Code/Git/ILScopeBar/ILScopeBarProtocols.h" line="28"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Optional Methods</header>
+      <description><para><anchor id="_1amgrp4b20c1bf4c97d7d5b1ae66593523a9d8"/> </para></description>
+      <memberdef kind="function" id="protocol_i_l_scope_bar_data_source-p_1a2912554a291efc5789f65e32ad16bd04" prot="public" static="no" const="no" explicit="no" inline="no" optional="yes" virt="virtual">
+        <type>NSString *</type>
+        <definition>NSString* ILScopeBarDataSource-p::titleForBar:</definition>
+        <argsstring>(ILScopeBar *bar)</argsstring>
+        <name>titleForBar:</name>
+        <param>
+          <type><ref refid="interface_i_l_scope_bar" kindref="compound">ILScopeBar</ref> *</type>
+          <declname>bar</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Usually this would have a semicolon <simplesect kind="return"><para>Return the title drawn at the left of the scope bar. </para></simplesect>
+<simplesect kind="warning"><para>This method gets called often, so be sure to optimize it accordingly. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Alex/Documents/Source Code/Git/ILScopeBar/ILScopeBarProtocols.h" line="37"/>
+      </memberdef>
+      <memberdef kind="function" id="protocol_i_l_scope_bar_data_source-p_1a170a43765a64c08ab05b2c97ba60ca74" prot="public" static="no" const="no" explicit="no" inline="no" optional="yes" virt="virtual">
+        <type>NSInteger</type>
+        <definition>NSInteger ILScopeBarDataSource-p::tagForItemInScopeBar:atIndex:</definition>
+        <argsstring>(ILScopeBar *bar,[atIndex] NSInteger idx)</argsstring>
+        <name>tagForItemInScopeBar:atIndex:</name>
+        <param>
+          <type><ref refid="interface_i_l_scope_bar" kindref="compound">ILScopeBar</ref> *</type>
+          <declname>bar</declname>
+        </param>
+        <param>
+          <attributes>[atIndex]</attributes>
+          <type>NSInteger</type>
+          <declname>idx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Return the tag of the items in the scope bar. </para></simplesect>
+<simplesect kind="warning"><para>This method gets called often, so be sure to optimize it accordingly. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Alex/Documents/Source Code/Git/ILScopeBar/ILScopeBarProtocols.h" line="42"/>
+      </memberdef>
+      <memberdef kind="function" id="protocol_i_l_scope_bar_data_source-p_1a0e6cb4b4be66b78185edcab6a39f15ce" prot="public" static="no" const="no" explicit="no" inline="no" optional="yes" virt="virtual">
+        <type>NSImage *</type>
+        <definition>NSImage* ILScopeBarDataSource-p::imageForItemInScopeBar:atIndex:</definition>
+        <argsstring>(ILScopeBar *bar,[atIndex] NSInteger idx)</argsstring>
+        <name>imageForItemInScopeBar:atIndex:</name>
+        <param>
+          <type><ref refid="interface_i_l_scope_bar" kindref="compound">ILScopeBar</ref> *</type>
+          <declname>bar</declname>
+        </param>
+        <param>
+          <attributes>[atIndex]</attributes>
+          <type>NSInteger</type>
+          <declname>idx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Return the image of items to be used for the scope bar. </para></simplesect>
+<simplesect kind="warning"><para>This method gets called often, so be sure to optimize it accordingly. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Alex/Documents/Source Code/Git/ILScopeBar/ILScopeBarProtocols.h" line="47"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>The required protocol used for any Data Source set for <computeroutput><ref refid="interface_i_l_scope_bar" kindref="compound">ILScopeBar</ref></computeroutput> </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="12">
+        <label>ILScopeBarAppDelegate</label>
+        <link refid="interface_i_l_scope_bar_app_delegate"/>
+        <childnode refid="11" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>&lt;ILScopeBarDataSource&gt;</label>
+        <link refid="protocol_i_l_scope_bar_data_source-p"/>
+      </node>
+    </inheritancegraph>
+    <location file="/Users/Alex/Documents/Source Code/Git/ILScopeBar/ILScopeBarProtocols.h" line="14" bodyfile="/Users/Alex/Documents/Source Code/Git/ILScopeBar/ILScopeBarProtocols.h" bodystart="14" bodyend="-1"/>
+    <listofallmembers>
+      <member refid="protocol_i_l_scope_bar_data_source-p_1a0e6cb4b4be66b78185edcab6a39f15ce" prot="public" virt="virtual"><scope>ILScopeBarDataSource-p</scope><name>imageForItemInScopeBar:atIndex:</name></member>
+      <member refid="protocol_i_l_scope_bar_data_source-p_1a31a49009c8396cf455ddcbeba4c0e0a0" prot="public" virt="virtual"><scope>ILScopeBarDataSource-p</scope><name>numberOfItemsInScopeBar:</name></member>
+      <member refid="protocol_i_l_scope_bar_data_source-p_1a170a43765a64c08ab05b2c97ba60ca74" prot="public" virt="virtual"><scope>ILScopeBarDataSource-p</scope><name>tagForItemInScopeBar:atIndex:</name></member>
+      <member refid="protocol_i_l_scope_bar_data_source-p_1a2912554a291efc5789f65e32ad16bd04" prot="public" virt="virtual"><scope>ILScopeBarDataSource-p</scope><name>titleForBar:</name></member>
+      <member refid="protocol_i_l_scope_bar_data_source-p_1acbd911a4b9dc55cedf5181bca301cab5" prot="public" virt="virtual"><scope>ILScopeBarDataSource-p</scope><name>titleOfItemInScopeBar:atIndex:</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<object kind="protocol" generator="appledoc v1.0.5">
+    <name>ILScopeBarDelegate</name>
+    <file>ILScopeBarProtocols.h</file>
+    <description>
+        <brief></brief>
+        <details>
+            <para>A protocol of optional methods that ccould be used for the delegate of an <code>
+                    <ref id="../Classes/ILScopeBar$EXTENSION">ILScopeBar</ref>
+                </code>
+            </para>
+        </details>
+    </description>
+    <seeAlso>
+        <item>
+            <ref id="ILScopeBarDataSource$EXTENSION">ILScopeBarDataSource</ref>
+        </item>
+        <item>
+            <ref id="../Classes/ILScopeBar$EXTENSION">ILScopeBar</ref>
+        </item>
+    </seeAlso>
+    <sections>
+        <section>
+            <name>Optional Methods</name>
+            <member kind="instance-method">
+                <name>shouldSelectItemInScopeBar:atIndex:</name>
+                <type>BOOL</type>
+                <prototype>- (BOOL)shouldSelectItemInScopeBar:(ILScopeBar *)<parameter>bar</parameter>
+                     atIndex:(NSInteger)<parameter>idx</parameter>
+                     </prototype>
+                <file>ILScopeBarProtocols.h</file>
+                <description>
+                    <brief></brief>
+                    <details>
+                        <para>The scope bar calls this method before an item gets selected. If the delegate returns NO, it doesn't change the selection. </para>
+                    </details>
+                </description>
+                <warning>
+                    <para>This method gets called often so be weary of what gets done inside of it. </para>
+                </warning>
+                <selector>- shouldSelectItemInScopeBar:atIndex:</selector>
+            </member>
+            <member kind="instance-method">
+                <name>didSelectItemInScopeBar:atIndex:withTag:andTitle:</name>
+                <type>void</type>
+                <prototype>- (void)didSelectItemInScopeBar:(ILScopeBar *)<parameter>bar</parameter>
+                     atIndex:(NSInteger)<parameter>idx</parameter>
+                     withTag:(NSInteger)<parameter>tag</parameter>
+                     andTitle:(NSString *)<parameter>title</parameter>
+                     </prototype>
+                <file>ILScopeBarProtocols.h</file>
+                <description>
+                    <brief></brief>
+                    <details>
+                        <para>The scope bar calls this delegate method after every time an item is selection. </para>
+                    </details>
+                </description>
+                <selector>- didSelectItemInScopeBar:atIndex:withTag:andTitle:</selector>
+            </member>
+        </section>
+    </sections>
+</object>

@@ -1,0 +1,125 @@
+<?xml version="1.0"?>
+<object kind="protocol" generator="appledoc v1.0.5">
+    <name>ILScopeBarDataSource</name>
+    <file>ILScopeBarProtocols.h</file>
+    <description>
+        <brief></brief>
+        <details>
+            <para>The required protocol used for any Data Source set for <code>
+                    <ref id="../Classes/ILScopeBar$EXTENSION">ILScopeBar</ref>
+                </code>
+            </para>
+        </details>
+    </description>
+    <sections>
+        <section>
+            <name>Required Methods</name>
+            <member kind="instance-method">
+                <name>numberOfItemsInScopeBar:</name>
+                <type>NSInteger</type>
+                <prototype>- (NSInteger)numberOfItemsInScopeBar:(ILScopeBar *)<parameter>bar</parameter>
+                     </prototype>
+                <file>ILScopeBarProtocols.h</file>
+                <description>
+                    <brief></brief>
+                    <details>
+                        <para></para>
+                    </details>
+                </description>
+                <warning>
+                    <para>This method gets called often, so be sure to optimize it accordingly. </para>
+                </warning>
+                <return>
+                    <para>Return the number of items to be used for the scope bar. </para>
+                </return>
+                <selector>- numberOfItemsInScopeBar:</selector>
+            </member>
+            <member kind="instance-method">
+                <name>titleOfItemInScopeBar:atIndex:</name>
+                <type>NSString *</type>
+                <prototype>- (NSString *)titleOfItemInScopeBar:(ILScopeBar *)<parameter>bar</parameter>
+                     atIndex:(NSInteger)<parameter>idx</parameter>
+                     </prototype>
+                <file>ILScopeBarProtocols.h</file>
+                <description>
+                    <brief></brief>
+                    <details>
+                        <para></para>
+                    </details>
+                </description>
+                <warning>
+                    <para>This method gets called often, so be sure to optimize it accordingly. </para>
+                </warning>
+                <return>
+                    <para>Return the tile of all the items to be used for the scope bar. </para>
+                </return>
+                <selector>- titleOfItemInScopeBar:atIndex:</selector>
+            </member>
+        </section>
+        <section>
+            <name>Optional Methods</name>
+            <member kind="instance-method">
+                <name>titleForBar:</name>
+                <type>NSString *</type>
+                <prototype>- (NSString *)titleForBar:(ILScopeBar *)<parameter>bar</parameter>
+                     </prototype>
+                <file>ILScopeBarProtocols.h</file>
+                <description>
+                    <brief></brief>
+                    <details>
+                        <para>Usually this would have a semicolon </para>
+                    </details>
+                </description>
+                <warning>
+                    <para>This method gets called often, so be sure to optimize it accordingly. </para>
+                </warning>
+                <return>
+                    <para>Return the title drawn at the left of the scope bar. </para>
+                </return>
+                <selector>- titleForBar:</selector>
+            </member>
+            <member kind="instance-method">
+                <name>tagForItemInScopeBar:atIndex:</name>
+                <type>NSInteger</type>
+                <prototype>- (NSInteger)tagForItemInScopeBar:(ILScopeBar *)<parameter>bar</parameter>
+                     atIndex:(NSInteger)<parameter>idx</parameter>
+                     </prototype>
+                <file>ILScopeBarProtocols.h</file>
+                <description>
+                    <brief></brief>
+                    <details>
+                        <para></para>
+                    </details>
+                </description>
+                <warning>
+                    <para>This method gets called often, so be sure to optimize it accordingly. </para>
+                </warning>
+                <return>
+                    <para>Return the tag of the items in the scope bar. </para>
+                </return>
+                <selector>- tagForItemInScopeBar:atIndex:</selector>
+            </member>
+            <member kind="instance-method">
+                <name>imageForItemInScopeBar:atIndex:</name>
+                <type>NSImage *</type>
+                <prototype>- (NSImage *)imageForItemInScopeBar:(ILScopeBar *)<parameter>bar</parameter>
+                     atIndex:(NSInteger)<parameter>idx</parameter>
+                     </prototype>
+                <file>ILScopeBarProtocols.h</file>
+                <description>
+                    <brief></brief>
+                    <details>
+                        <para></para>
+                    </details>
+                </description>
+                <warning>
+                    <para>This method gets called often, so be sure to optimize it accordingly. </para>
+                </warning>
+                <return>
+                    <para>Return the image of items to be used for the scope bar. </para>
+                </return>
+                <selector>- imageForItemInScopeBar:atIndex:</selector>
+            </member>
+        </section>
+    </sections>
+</object>

@@ -1,0 +1,89 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.1">
+  <compounddef id="protocol_i_l_scope_bar_delegate-p" kind="protocol" prot="public">
+    <compoundname>ILScopeBarDelegate-p</compoundname>
+    <derivedcompoundref refid="interface_i_l_scope_bar_app_delegate" prot="public" virt="non-virtual">ILScopeBarAppDelegate</derivedcompoundref>
+    <includes refid="_i_l_scope_bar_protocols_8h" local="no">ILScopeBarProtocols.h</includes>
+      <sectiondef kind="user-defined">
+      <header>Optional Methods</header>
+      <description><para><anchor id="_1amgrp4b20c1bf4c97d7d5b1ae66593523a9d8"/> </para></description>
+      <memberdef kind="function" id="protocol_i_l_scope_bar_delegate-p_1a0cd74375eed1fa90ed4a90941f71829a" prot="public" static="no" const="no" explicit="no" inline="no" optional="yes" virt="virtual">
+        <type>BOOL</type>
+        <definition>BOOL ILScopeBarDelegate-p::shouldSelectItemInScopeBar:atIndex:</definition>
+        <argsstring>(ILScopeBar *bar,[atIndex] NSInteger idx)</argsstring>
+        <name>shouldSelectItemInScopeBar:atIndex:</name>
+        <param>
+          <type><ref refid="interface_i_l_scope_bar" kindref="compound">ILScopeBar</ref> *</type>
+          <declname>bar</declname>
+        </param>
+        <param>
+          <attributes>[atIndex]</attributes>
+          <type>NSInteger</type>
+          <declname>idx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The scope bar calls this method before an item gets selected. If the delegate returns NO, it doesn&apos;t change the selection. <simplesect kind="warning"><para>This method gets called often so be weary of what gets done inside of it. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Alex/Documents/Source Code/Git/ILScopeBar/ILScopeBarProtocols.h" line="64"/>
+      </memberdef>
+      <memberdef kind="function" id="protocol_i_l_scope_bar_delegate-p_1a9c2650d988b18cd39edc03ebfc4357ff" prot="public" static="no" const="no" explicit="no" inline="no" optional="yes" virt="virtual">
+        <type>void</type>
+        <definition>void ILScopeBarDelegate-p::didSelectItemInScopeBar:atIndex:withTag:andTitle:</definition>
+        <argsstring>(ILScopeBar *bar,[atIndex] NSInteger idx,[withTag] NSInteger tag,[andTitle] NSString *title)</argsstring>
+        <name>didSelectItemInScopeBar:atIndex:withTag:andTitle:</name>
+        <param>
+          <type><ref refid="interface_i_l_scope_bar" kindref="compound">ILScopeBar</ref> *</type>
+          <declname>bar</declname>
+        </param>
+        <param>
+          <attributes>[atIndex]</attributes>
+          <type>NSInteger</type>
+          <declname>idx</declname>
+        </param>
+        <param>
+          <attributes>[withTag]</attributes>
+          <type>NSInteger</type>
+          <declname>tag</declname>
+        </param>
+        <param>
+          <attributes>[andTitle]</attributes>
+          <type>NSString *</type>
+          <declname>title</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The scope bar calls this delegate method after every time an item is selection. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Alex/Documents/Source Code/Git/ILScopeBar/ILScopeBarProtocols.h" line="68"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>A protocol of optional methods that ccould be used for the delegate of an <computeroutput><ref refid="interface_i_l_scope_bar" kindref="compound">ILScopeBar</ref></computeroutput> <simplesect kind="see"><para><ref refid="protocol_i_l_scope_bar_data_source-p" kindref="compound">ILScopeBarDataSource</ref> </para><simplesectsep/><para><ref refid="interface_i_l_scope_bar" kindref="compound">ILScopeBar</ref> </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="15">
+        <label>ILScopeBarAppDelegate</label>
+        <link refid="interface_i_l_scope_bar_app_delegate"/>
+        <childnode refid="14" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>&lt;ILScopeBarDelegate&gt;</label>
+        <link refid="protocol_i_l_scope_bar_delegate-p"/>
+      </node>
+    </inheritancegraph>
+    <location file="/Users/Alex/Documents/Source Code/Git/ILScopeBar/ILScopeBarProtocols.h" line="56" bodyfile="/Users/Alex/Documents/Source Code/Git/ILScopeBar/ILScopeBarProtocols.h" bodystart="56" bodyend="-1"/>
+    <listofallmembers>
+      <member refid="protocol_i_l_scope_bar_delegate-p_1a9c2650d988b18cd39edc03ebfc4357ff" prot="public" virt="virtual"><scope>ILScopeBarDelegate-p</scope><name>didSelectItemInScopeBar:atIndex:withTag:andTitle:</name></member>
+      <member refid="protocol_i_l_scope_bar_delegate-p_1a0cd74375eed1fa90ed4a90941f71829a" prot="public" virt="virtual"><scope>ILScopeBarDelegate-p</scope><name>shouldSelectItemInScopeBar:atIndex:</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

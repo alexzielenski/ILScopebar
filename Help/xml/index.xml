@@ -1,0 +1,107 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.7.1">
+  <compound refid="interface_i_l_scope_bar" kind="class"><name>ILScopeBar</name>
+    <member refid="interface_i_l_scope_bar_1a570023112ef4cebbe413065363cb166a" kind="property"><name>overflowButton</name></member>
+    <member refid="interface_i_l_scope_bar_1a3deb3ea1c836bec9553e6ac01db6b0e9" kind="property"><name>cutoffIndex</name></member>
+    <member refid="interface_i_l_scope_bar_1ae25650dff525e61806384a8112d1fc92" kind="property"><name>selectedItem</name></member>
+    <member refid="interface_i_l_scope_bar_1a4c728420a1b1d2c21a5c7b2421196e71" kind="property"><name>selectedIndex</name></member>
+    <member refid="interface_i_l_scope_bar_1abdc022c0c5914c09554235a98a829c5d" kind="property"><name>delegate</name></member>
+    <member refid="interface_i_l_scope_bar_1af144f96558080f21fa1a7231324a1903" kind="property"><name>dataSource</name></member>
+    <member refid="interface_i_l_scope_bar_1a858993d483280a7589a37a12f633b0ae" kind="function"><name>title</name></member>
+    <member refid="interface_i_l_scope_bar_1a4bda03be839277fb408ec3f627332a8f" kind="function"><name>attributedTitle</name></member>
+    <member refid="interface_i_l_scope_bar_1adf437e14a3b88e1957094b1070bae600" kind="function"><name>reload</name></member>
+    <member refid="interface_i_l_scope_bar_1a20b6cfd077f38728b48aa3633a0ab351" kind="function"><name>rearrangeItems</name></member>
+    <member refid="interface_i_l_scope_bar_1a2d1d19b68a5dedae109ae2242f37cfcb" kind="function"><name>createOverflowButton</name></member>
+    <member refid="interface_i_l_scope_bar_1ace6dbdf126ec8e2169a063d7d2c004e7" kind="function"><name>frameForItemAtIndex:</name></member>
+    <member refid="interface_i_l_scope_bar_1a55fed07251c69d6cbe610c688aa01ca5" kind="function"><name>indexOfItem:</name></member>
+    <member refid="interface_i_l_scope_bar_1ab2b0bd890da11f3d11f92df3b7cd96a8" kind="function"><name>titleOfItemAtIndex:</name></member>
+    <member refid="interface_i_l_scope_bar_1a99ed27ff1f406437a8985e690a07a627" kind="function"><name>itemCount</name></member>
+    <member refid="interface_i_l_scope_bar_1aa4e1bf288a8728be783d377391337ca4" kind="function"><name>imageForItemAtIndex:</name></member>
+    <member refid="interface_i_l_scope_bar_1ab12c7c34569cc8ac83b554f227df66bd" kind="function"><name>tagForItemAtIndex:</name></member>
+    <member refid="interface_i_l_scope_bar_1aaafef7b25f44ce618470bfc2423d3a1e" kind="function"><name>items</name></member>
+    <member refid="interface_i_l_scope_bar_1a2a7001be388fa35c28be651c96d13515" kind="variable"><name>dataSource</name></member>
+    <member refid="interface_i_l_scope_bar_1a1b74877b42760d8530a018652334d499" kind="variable"><name>delegate</name></member>
+    <member refid="interface_i_l_scope_bar_1a2ec98bfe032f0599771ba97f8944ea6a" kind="function"><name>shouldSelectItemAtIndex:</name></member>
+    <member refid="interface_i_l_scope_bar_1a3c228a05ab1f53b6f1aa226801989b90" kind="function"><name>didSelectItem:</name></member>
+    <member refid="interface_i_l_scope_bar_1a61e7a3c404e7198aca3d420f20143115" kind="function"><name>itemWithTitle:tag:image:forIndex:</name></member>
+    <member refid="interface_i_l_scope_bar_1aafebff37054f7287e45525a382138684" kind="function"><name>addItemWithTitle:tag:image:forIndex:</name></member>
+    <member refid="interface_i_l_scope_bar_1a4e836f906f002a8fb6614d84a374dbd9" kind="function"><name>menuItemWithTitle:tag:image:forIndex:</name></member>
+    <member refid="interface_i_l_scope_bar_1a484434a4845d9b064765c7e67e8fad4e" kind="function"><name>addMenuItemWithTitle:tag:image:forIndex:</name></member>
+    <member refid="interface_i_l_scope_bar_1ac3c6e4670a57af8ec192395921dac269" kind="function"><name>overflows</name></member>
+  </compound>
+  <compound refid="interface_i_l_scope_bar_07_private_08" kind="class"><name>ILScopeBar(Private)</name>
+    <member refid="interface_i_l_scope_bar_1a2ec98bfe032f0599771ba97f8944ea6a" kind="function"><name>shouldSelectItemAtIndex:</name></member>
+    <member refid="interface_i_l_scope_bar_1a3c228a05ab1f53b6f1aa226801989b90" kind="function"><name>didSelectItem:</name></member>
+    <member refid="interface_i_l_scope_bar_1a61e7a3c404e7198aca3d420f20143115" kind="function"><name>itemWithTitle:tag:image:forIndex:</name></member>
+    <member refid="interface_i_l_scope_bar_1aafebff37054f7287e45525a382138684" kind="function"><name>addItemWithTitle:tag:image:forIndex:</name></member>
+    <member refid="interface_i_l_scope_bar_1a4e836f906f002a8fb6614d84a374dbd9" kind="function"><name>menuItemWithTitle:tag:image:forIndex:</name></member>
+    <member refid="interface_i_l_scope_bar_1a484434a4845d9b064765c7e67e8fad4e" kind="function"><name>addMenuItemWithTitle:tag:image:forIndex:</name></member>
+    <member refid="interface_i_l_scope_bar_1ac3c6e4670a57af8ec192395921dac269" kind="function"><name>overflows</name></member>
+  </compound>
+  <compound refid="interface_i_l_scope_bar_app_delegate" kind="class"><name>ILScopeBarAppDelegate</name>
+    <member refid="interface_i_l_scope_bar_app_delegate_1a5d9d29655e81fbc6d0439b398784c19f" kind="variable"><name>window</name></member>
+    <member refid="interface_i_l_scope_bar_app_delegate_1a9890b1a224daf7b83fa5b616cb27dc6e" kind="variable"><name>people</name></member>
+    <member refid="interface_i_l_scope_bar_app_delegate_1a10ef7b7e8d2d60b5a10bf9f096405e31" kind="variable"><name>scopeBar</name></member>
+    <member refid="interface_i_l_scope_bar_app_delegate_1a9b764adca2e201bc9d321c069a4c15f1" kind="variable"><name>label</name></member>
+    <member refid="interface_i_l_scope_bar_app_delegate_1a4c0dbe52947d71192a00007651107ce3" kind="variable"><name>barTitle</name></member>
+    <member refid="interface_i_l_scope_bar_app_delegate_1a82d1596ef25bc94859f49e1c5b858df4" kind="variable"><name>addWindow</name></member>
+    <member refid="interface_i_l_scope_bar_app_delegate_1a874528c02e31ada283ddf6e897f99b02" kind="variable"><name>titleField</name></member>
+    <member refid="interface_i_l_scope_bar_app_delegate_1a781e6ac42e300d9dc062263270a63989" kind="variable"><name>idxField</name></member>
+    <member refid="interface_i_l_scope_bar_app_delegate_1a4a7be6e105475e998acc5efaac2c56fe" kind="variable"><name>tagField</name></member>
+    <member refid="interface_i_l_scope_bar_app_delegate_1a3a68df8c34db6891c416fc5ae1f1374f" kind="variable"><name>imageView</name></member>
+    <member refid="interface_i_l_scope_bar_app_delegate_1a7239aa3c8da5e32987f1da209296839c" kind="property"><name>window</name></member>
+    <member refid="interface_i_l_scope_bar_app_delegate_1a6b8aea09dd5508b81be97e3ff7e3c6d3" kind="function"><name>addObject:</name></member>
+    <member refid="interface_i_l_scope_bar_app_delegate_1ade29ef2df3e205e5ba9ed6bfe9bf307c" kind="function"><name>cancelAdd:</name></member>
+    <member refid="interface_i_l_scope_bar_app_delegate_1a63bd65d0b799149552d15fbc2faa6a4f" kind="function"><name>removeSelected:</name></member>
+    <member refid="interface_i_l_scope_bar_app_delegate_1a5983e3e5d657071037d4da3c841956e5" kind="function"><name>setTitle:</name></member>
+  </compound>
+  <compound refid="protocol_i_l_scope_bar_data_source-p" kind="protocol"><name>ILScopeBarDataSource-p</name>
+    <member refid="protocol_i_l_scope_bar_data_source-p_1a31a49009c8396cf455ddcbeba4c0e0a0" kind="function"><name>numberOfItemsInScopeBar:</name></member>
+    <member refid="protocol_i_l_scope_bar_data_source-p_1acbd911a4b9dc55cedf5181bca301cab5" kind="function"><name>titleOfItemInScopeBar:atIndex:</name></member>
+    <member refid="protocol_i_l_scope_bar_data_source-p_1a2912554a291efc5789f65e32ad16bd04" kind="function"><name>titleForBar:</name></member>
+    <member refid="protocol_i_l_scope_bar_data_source-p_1a170a43765a64c08ab05b2c97ba60ca74" kind="function"><name>tagForItemInScopeBar:atIndex:</name></member>
+    <member refid="protocol_i_l_scope_bar_data_source-p_1a0e6cb4b4be66b78185edcab6a39f15ce" kind="function"><name>imageForItemInScopeBar:atIndex:</name></member>
+  </compound>
+  <compound refid="protocol_i_l_scope_bar_delegate-p" kind="protocol"><name>ILScopeBarDelegate-p</name>
+    <member refid="protocol_i_l_scope_bar_delegate-p_1a0cd74375eed1fa90ed4a90941f71829a" kind="function"><name>shouldSelectItemInScopeBar:atIndex:</name></member>
+    <member refid="protocol_i_l_scope_bar_delegate-p_1a9c2650d988b18cd39edc03ebfc4357ff" kind="function"><name>didSelectItemInScopeBar:atIndex:withTag:andTitle:</name></member>
+  </compound>
+  <compound refid="_i_l_scope_bar_8h" kind="file"><name>ILScopeBar.h</name>
+  </compound>
+  <compound refid="_i_l_scope_bar_8m" kind="file"><name>ILScopeBar.m</name>
+    <member refid="_i_l_scope_bar_8m_1aace20ba115f3178c1cc0100a070e2606" kind="define"><name>gTopColor</name></member>
+    <member refid="_i_l_scope_bar_8m_1ae87f9d958a48d3788b07f5cc132f3949" kind="define"><name>gBottomColor</name></member>
+    <member refid="_i_l_scope_bar_8m_1a412a3beeb5fe808b4b7f339dbeb24b44" kind="define"><name>gBorderColor</name></member>
+    <member refid="_i_l_scope_bar_8m_1af8277b4662dec4eeee51f1039d1447d6" kind="define"><name>gGradient</name></member>
+    <member refid="_i_l_scope_bar_8m_1a63cccbee10afaa6bf374fe4c661e535c" kind="define"><name>gTitleLeftPadding</name></member>
+    <member refid="_i_l_scope_bar_8m_1aa56cb3133d975dd75eca4fb7f952cc22" kind="define"><name>gTitleColor</name></member>
+    <member refid="_i_l_scope_bar_8m_1a94386fa84e9ba731d0fead5537452c68" kind="define"><name>gTitleFont</name></member>
+    <member refid="_i_l_scope_bar_8m_1a3e4e62afa8fcc25b7c3395f151517401" kind="define"><name>gItemTitleFont</name></member>
+    <member refid="_i_l_scope_bar_8m_1a30d781c51eb14eb3e28a09c4a0b4c1e0" kind="define"><name>gItemTitlePadding</name></member>
+    <member refid="_i_l_scope_bar_8m_1a4d2167b845a062cfd57dedfded56dead" kind="define"><name>gItemSpacing</name></member>
+    <member refid="_i_l_scope_bar_8m_1aeb679560c87148c662e7b9fc6665aa47" kind="define"><name>gItemCountSelector</name></member>
+    <member refid="_i_l_scope_bar_8m_1a86cc2529a138f0685bf07971d804c9cc" kind="define"><name>gItemTitleSelector</name></member>
+    <member refid="_i_l_scope_bar_8m_1a594240773e8955c5e1b174cda9d4d6c4" kind="define"><name>gBarTitleSelector</name></member>
+    <member refid="_i_l_scope_bar_8m_1a811240171f1c931cd7e89c609e0a70bc" kind="define"><name>gItemTagSelector</name></member>
+    <member refid="_i_l_scope_bar_8m_1ab2db4633741b10539dffd1fe779007ea" kind="define"><name>gItemImageSelector</name></member>
+    <member refid="_i_l_scope_bar_8m_1a33b520db16a103125925d89dd087a8b7" kind="define"><name>gShouldSelectItemSelector</name></member>
+    <member refid="_i_l_scope_bar_8m_1a11563c085d173f0940bcea6335d8b90d" kind="define"><name>gDidSelectItemSelector</name></member>
+  </compound>
+  <compound refid="_i_l_scope_bar_app_delegate_8h" kind="file"><name>ILScopeBarAppDelegate.h</name>
+  </compound>
+  <compound refid="_i_l_scope_bar_app_delegate_8m" kind="file"><name>ILScopeBarAppDelegate.m</name>
+  </compound>
+  <compound refid="_i_l_scope_bar_protocols_8h" kind="file"><name>ILScopeBarProtocols.h</name>
+  </compound>
+  <compound refid="main_8m" kind="file"><name>main.m</name>
+    <member refid="main_8m_1a0ddf1224851353fc92bfbff6f499fa97" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="dir_a63130a83fa2aa92236632b1228ae316" kind="dir"><name>Documents/</name>
+  </compound>
+  <compound refid="dir_d48e4e9ac4854d4aa266e375cc7d9b22" kind="dir"><name>Documents/Source Code/Git/</name>
+  </compound>
+  <compound refid="dir_97236ce68497ca23627afc92381cb5b9" kind="dir"><name>Documents/Source Code/Git/ILScopeBar/</name>
+  </compound>
+  <compound refid="dir_ba8cff67d7f61f030a531a041c330458" kind="dir"><name>Documents/Source Code/</name>
+  </compound>
+</doxygenindex>

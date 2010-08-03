@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.1">
+  <compounddef id="dir_97236ce68497ca23627afc92381cb5b9" kind="dir">
+    <compoundname>Documents/Source Code/Git/ILScopeBar/</compoundname>
+    <innerfile refid="_i_l_scope_bar_8h">ILScopeBar.h</innerfile>
+    <innerfile refid="_i_l_scope_bar_8m">ILScopeBar.m</innerfile>
+    <innerfile refid="_i_l_scope_bar_app_delegate_8h">ILScopeBarAppDelegate.h</innerfile>
+    <innerfile refid="_i_l_scope_bar_app_delegate_8m">ILScopeBarAppDelegate.m</innerfile>
+    <innerfile refid="_i_l_scope_bar_protocols_8h">ILScopeBarProtocols.h</innerfile>
+    <innerfile refid="main_8m">main.m</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/Alex/Documents/Source Code/Git/ILScopeBar/"/>
+  </compounddef>
+</doxygen>

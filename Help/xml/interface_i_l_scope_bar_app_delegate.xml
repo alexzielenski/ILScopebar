@@ -1,0 +1,299 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.1">
+  <compounddef id="interface_i_l_scope_bar_app_delegate" kind="class" prot="public">
+    <compoundname>ILScopeBarAppDelegate</compoundname>
+    <basecompoundref refid="protocol_i_l_scope_bar_delegate-p" prot="public" virt="non-virtual">&lt;ILScopeBarDelegate&gt;</basecompoundref>
+    <basecompoundref refid="protocol_i_l_scope_bar_data_source-p" prot="public" virt="non-virtual">&lt;ILScopeBarDataSource&gt;</basecompoundref>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="interface_i_l_scope_bar_app_delegate_1a5d9d29655e81fbc6d0439b398784c19f" prot="protected" static="no" mutable="no">
+        <type>NSWindow *</type>
+        <definition>NSWindow* ILScopeBarAppDelegate::window</definition>
+        <argsstring></argsstring>
+        <name>window</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Alex/Documents/Source Code/Git/ILScopeBar/ILScopeBarAppDelegate.h" line="13" bodyfile="/Users/Alex/Documents/Source Code/Git/ILScopeBar/ILScopeBarAppDelegate.h" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="interface_i_l_scope_bar_app_delegate_1a9890b1a224daf7b83fa5b616cb27dc6e" prot="protected" static="no" mutable="no">
+        <type>NSMutableArray *</type>
+        <definition>NSMutableArray* ILScopeBarAppDelegate::people</definition>
+        <argsstring></argsstring>
+        <name>people</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Alex/Documents/Source Code/Git/ILScopeBar/ILScopeBarAppDelegate.h" line="14" bodyfile="/Users/Alex/Documents/Source Code/Git/ILScopeBar/ILScopeBarAppDelegate.h" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="interface_i_l_scope_bar_app_delegate_1a10ef7b7e8d2d60b5a10bf9f096405e31" prot="protected" static="no" mutable="no">
+        <type>IBOutlet <ref refid="interface_i_l_scope_bar" kindref="compound">ILScopeBar</ref> *</type>
+        <definition>IBOutlet ILScopeBar* ILScopeBarAppDelegate::scopeBar</definition>
+        <argsstring></argsstring>
+        <name>scopeBar</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Alex/Documents/Source Code/Git/ILScopeBar/ILScopeBarAppDelegate.h" line="16" bodyfile="/Users/Alex/Documents/Source Code/Git/ILScopeBar/ILScopeBarAppDelegate.h" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="interface_i_l_scope_bar_app_delegate_1a9b764adca2e201bc9d321c069a4c15f1" prot="protected" static="no" mutable="no">
+        <type>IBOutlet NSTextField *</type>
+        <definition>IBOutlet NSTextField* ILScopeBarAppDelegate::label</definition>
+        <argsstring></argsstring>
+        <name>label</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Alex/Documents/Source Code/Git/ILScopeBar/ILScopeBarAppDelegate.h" line="17" bodyfile="/Users/Alex/Documents/Source Code/Git/ILScopeBar/ILScopeBarAppDelegate.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="interface_i_l_scope_bar_app_delegate_1a4c0dbe52947d71192a00007651107ce3" prot="protected" static="no" mutable="no">
+        <type>IBOutlet NSTextField *</type>
+        <definition>IBOutlet NSTextField* ILScopeBarAppDelegate::barTitle</definition>
+        <argsstring></argsstring>
+        <name>barTitle</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Alex/Documents/Source Code/Git/ILScopeBar/ILScopeBarAppDelegate.h" line="18" bodyfile="/Users/Alex/Documents/Source Code/Git/ILScopeBar/ILScopeBarAppDelegate.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="interface_i_l_scope_bar_app_delegate_1a82d1596ef25bc94859f49e1c5b858df4" prot="protected" static="no" mutable="no">
+        <type>IBOutlet NSWindow *</type>
+        <definition>IBOutlet NSWindow* ILScopeBarAppDelegate::addWindow</definition>
+        <argsstring></argsstring>
+        <name>addWindow</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Alex/Documents/Source Code/Git/ILScopeBar/ILScopeBarAppDelegate.h" line="20" bodyfile="/Users/Alex/Documents/Source Code/Git/ILScopeBar/ILScopeBarAppDelegate.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="interface_i_l_scope_bar_app_delegate_1a874528c02e31ada283ddf6e897f99b02" prot="protected" static="no" mutable="no">
+        <type>IBOutlet NSTextField *</type>
+        <definition>IBOutlet NSTextField* ILScopeBarAppDelegate::titleField</definition>
+        <argsstring></argsstring>
+        <name>titleField</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Alex/Documents/Source Code/Git/ILScopeBar/ILScopeBarAppDelegate.h" line="21" bodyfile="/Users/Alex/Documents/Source Code/Git/ILScopeBar/ILScopeBarAppDelegate.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="interface_i_l_scope_bar_app_delegate_1a781e6ac42e300d9dc062263270a63989" prot="protected" static="no" mutable="no">
+        <type>IBOutlet NSTextField *</type>
+        <definition>IBOutlet NSTextField* ILScopeBarAppDelegate::idxField</definition>
+        <argsstring></argsstring>
+        <name>idxField</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Alex/Documents/Source Code/Git/ILScopeBar/ILScopeBarAppDelegate.h" line="22" bodyfile="/Users/Alex/Documents/Source Code/Git/ILScopeBar/ILScopeBarAppDelegate.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="interface_i_l_scope_bar_app_delegate_1a4a7be6e105475e998acc5efaac2c56fe" prot="protected" static="no" mutable="no">
+        <type>IBOutlet NSTextField *</type>
+        <definition>IBOutlet NSTextField* ILScopeBarAppDelegate::tagField</definition>
+        <argsstring></argsstring>
+        <name>tagField</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Alex/Documents/Source Code/Git/ILScopeBar/ILScopeBarAppDelegate.h" line="23" bodyfile="/Users/Alex/Documents/Source Code/Git/ILScopeBar/ILScopeBarAppDelegate.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="interface_i_l_scope_bar_app_delegate_1a3a68df8c34db6891c416fc5ae1f1374f" prot="protected" static="no" mutable="no">
+        <type>IBOutlet NSImageView *</type>
+        <definition>IBOutlet NSImageView* ILScopeBarAppDelegate::imageView</definition>
+        <argsstring></argsstring>
+        <name>imageView</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Alex/Documents/Source Code/Git/ILScopeBar/ILScopeBarAppDelegate.h" line="24" bodyfile="/Users/Alex/Documents/Source Code/Git/ILScopeBar/ILScopeBarAppDelegate.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="interface_i_l_scope_bar_app_delegate_1a7239aa3c8da5e32987f1da209296839c" prot="public" static="no" readable="yes" writable="yes" gettable="no" settable="no" accessor="assign">
+        <type>IBOutlet NSWindow *</type>
+        <definition>IBOutlet NSWindow* ILScopeBarAppDelegate::window</definition>
+        <argsstring></argsstring>
+        <name>window</name>
+        <read></read>
+        <write></write>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Alex/Documents/Source Code/Git/ILScopeBar/ILScopeBarAppDelegate.h" line="27" bodyfile="/Users/Alex/Documents/Source Code/Git/ILScopeBar/ILScopeBarAppDelegate.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="interface_i_l_scope_bar_app_delegate_1a6b8aea09dd5508b81be97e3ff7e3c6d3" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>IBAction</type>
+        <definition>IBAction ILScopeBarAppDelegate::addObject:</definition>
+        <argsstring>(id sender)</argsstring>
+        <name>addObject:</name>
+        <param>
+          <type>id</type>
+          <declname>sender</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Alex/Documents/Source Code/Git/ILScopeBar/ILScopeBarAppDelegate.h" line="28" bodyfile="/Users/Alex/Documents/Source Code/Git/ILScopeBar/ILScopeBarAppDelegate.m" bodystart="47" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_i_l_scope_bar_app_delegate_1ade29ef2df3e205e5ba9ed6bfe9bf307c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>IBAction</type>
+        <definition>IBAction ILScopeBarAppDelegate::cancelAdd:</definition>
+        <argsstring>(id sender)</argsstring>
+        <name>cancelAdd:</name>
+        <param>
+          <type>id</type>
+          <declname>sender</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Alex/Documents/Source Code/Git/ILScopeBar/ILScopeBarAppDelegate.h" line="29" bodyfile="/Users/Alex/Documents/Source Code/Git/ILScopeBar/ILScopeBarAppDelegate.m" bodystart="69" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_i_l_scope_bar_app_delegate_1a63bd65d0b799149552d15fbc2faa6a4f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>IBAction</type>
+        <definition>IBAction ILScopeBarAppDelegate::removeSelected:</definition>
+        <argsstring>(id sender)</argsstring>
+        <name>removeSelected:</name>
+        <param>
+          <type>id</type>
+          <declname>sender</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Alex/Documents/Source Code/Git/ILScopeBar/ILScopeBarAppDelegate.h" line="30" bodyfile="/Users/Alex/Documents/Source Code/Git/ILScopeBar/ILScopeBarAppDelegate.m" bodystart="73" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_i_l_scope_bar_app_delegate_1a5983e3e5d657071037d4da3c841956e5" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>IBAction</type>
+        <definition>IBAction ILScopeBarAppDelegate::setTitle:</definition>
+        <argsstring>(id sender)</argsstring>
+        <name>setTitle:</name>
+        <param>
+          <type>id</type>
+          <declname>sender</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Alex/Documents/Source Code/Git/ILScopeBar/ILScopeBarAppDelegate.h" line="31" bodyfile="/Users/Alex/Documents/Source Code/Git/ILScopeBar/ILScopeBarAppDelegate.m" bodystart="43" bodyend="46"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="4">
+        <label>ILScopeBarAppDelegate</label>
+        <link refid="interface_i_l_scope_bar_app_delegate"/>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+        <childnode refid="6" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>&lt;ILScopeBarDelegate&gt;</label>
+        <link refid="protocol_i_l_scope_bar_delegate-p"/>
+      </node>
+      <node id="6">
+        <label>&lt;ILScopeBarDataSource&gt;</label>
+        <link refid="protocol_i_l_scope_bar_data_source-p"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="7">
+        <label>ILScopeBarAppDelegate</label>
+        <link refid="interface_i_l_scope_bar_app_delegate"/>
+        <childnode refid="8" relation="public-inheritance">
+        </childnode>
+        <childnode refid="9" relation="public-inheritance">
+        </childnode>
+        <childnode refid="10" relation="usage">
+          <edgelabel>scopeBar</edgelabel>
+        </childnode>
+      </node>
+      <node id="8">
+        <label>&lt;ILScopeBarDelegate&gt;</label>
+        <link refid="protocol_i_l_scope_bar_delegate-p"/>
+      </node>
+      <node id="10">
+        <label>ILScopeBar</label>
+        <link refid="interface_i_l_scope_bar"/>
+      </node>
+      <node id="9">
+        <label>&lt;ILScopeBarDataSource&gt;</label>
+        <link refid="protocol_i_l_scope_bar_data_source-p"/>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/Alex/Documents/Source Code/Git/ILScopeBar/ILScopeBarAppDelegate.h" line="12" bodyfile="/Users/Alex/Documents/Source Code/Git/ILScopeBar/ILScopeBarAppDelegate.h" bodystart="12" bodyend="-1"/>
+    <listofallmembers>
+      <member refid="interface_i_l_scope_bar_app_delegate_1a6b8aea09dd5508b81be97e3ff7e3c6d3" prot="public" virt="virtual"><scope>ILScopeBarAppDelegate</scope><name>addObject:</name></member>
+      <member refid="interface_i_l_scope_bar_app_delegate_1a82d1596ef25bc94859f49e1c5b858df4" prot="protected" virt="non-virtual"><scope>ILScopeBarAppDelegate</scope><name>addWindow</name></member>
+      <member refid="interface_i_l_scope_bar_app_delegate_1a4c0dbe52947d71192a00007651107ce3" prot="protected" virt="non-virtual"><scope>ILScopeBarAppDelegate</scope><name>barTitle</name></member>
+      <member refid="interface_i_l_scope_bar_app_delegate_1ade29ef2df3e205e5ba9ed6bfe9bf307c" prot="public" virt="virtual"><scope>ILScopeBarAppDelegate</scope><name>cancelAdd:</name></member>
+      <member refid="protocol_i_l_scope_bar_delegate-p_1a9c2650d988b18cd39edc03ebfc4357ff" prot="public" virt="virtual"><scope>ILScopeBarAppDelegate</scope><name>didSelectItemInScopeBar:atIndex:withTag:andTitle:</name></member>
+      <member refid="interface_i_l_scope_bar_app_delegate_1a781e6ac42e300d9dc062263270a63989" prot="protected" virt="non-virtual"><scope>ILScopeBarAppDelegate</scope><name>idxField</name></member>
+      <member refid="protocol_i_l_scope_bar_data_source-p_1a0e6cb4b4be66b78185edcab6a39f15ce" prot="public" virt="virtual"><scope>ILScopeBarAppDelegate</scope><name>imageForItemInScopeBar:atIndex:</name></member>
+      <member refid="interface_i_l_scope_bar_app_delegate_1a3a68df8c34db6891c416fc5ae1f1374f" prot="protected" virt="non-virtual"><scope>ILScopeBarAppDelegate</scope><name>imageView</name></member>
+      <member refid="interface_i_l_scope_bar_app_delegate_1a9b764adca2e201bc9d321c069a4c15f1" prot="protected" virt="non-virtual"><scope>ILScopeBarAppDelegate</scope><name>label</name></member>
+      <member refid="protocol_i_l_scope_bar_data_source-p_1a31a49009c8396cf455ddcbeba4c0e0a0" prot="public" virt="virtual"><scope>ILScopeBarAppDelegate</scope><name>numberOfItemsInScopeBar:</name></member>
+      <member refid="interface_i_l_scope_bar_app_delegate_1a9890b1a224daf7b83fa5b616cb27dc6e" prot="protected" virt="non-virtual"><scope>ILScopeBarAppDelegate</scope><name>people</name></member>
+      <member refid="interface_i_l_scope_bar_app_delegate_1a63bd65d0b799149552d15fbc2faa6a4f" prot="public" virt="virtual"><scope>ILScopeBarAppDelegate</scope><name>removeSelected:</name></member>
+      <member refid="interface_i_l_scope_bar_app_delegate_1a10ef7b7e8d2d60b5a10bf9f096405e31" prot="protected" virt="non-virtual"><scope>ILScopeBarAppDelegate</scope><name>scopeBar</name></member>
+      <member refid="interface_i_l_scope_bar_app_delegate_1a5983e3e5d657071037d4da3c841956e5" prot="public" virt="virtual"><scope>ILScopeBarAppDelegate</scope><name>setTitle:</name></member>
+      <member refid="protocol_i_l_scope_bar_delegate-p_1a0cd74375eed1fa90ed4a90941f71829a" prot="public" virt="virtual"><scope>ILScopeBarAppDelegate</scope><name>shouldSelectItemInScopeBar:atIndex:</name></member>
+      <member refid="interface_i_l_scope_bar_app_delegate_1a4a7be6e105475e998acc5efaac2c56fe" prot="protected" virt="non-virtual"><scope>ILScopeBarAppDelegate</scope><name>tagField</name></member>
+      <member refid="protocol_i_l_scope_bar_data_source-p_1a170a43765a64c08ab05b2c97ba60ca74" prot="public" virt="virtual"><scope>ILScopeBarAppDelegate</scope><name>tagForItemInScopeBar:atIndex:</name></member>
+      <member refid="interface_i_l_scope_bar_app_delegate_1a874528c02e31ada283ddf6e897f99b02" prot="protected" virt="non-virtual"><scope>ILScopeBarAppDelegate</scope><name>titleField</name></member>
+      <member refid="protocol_i_l_scope_bar_data_source-p_1a2912554a291efc5789f65e32ad16bd04" prot="public" virt="virtual"><scope>ILScopeBarAppDelegate</scope><name>titleForBar:</name></member>
+      <member refid="protocol_i_l_scope_bar_data_source-p_1acbd911a4b9dc55cedf5181bca301cab5" prot="public" virt="virtual"><scope>ILScopeBarAppDelegate</scope><name>titleOfItemInScopeBar:atIndex:</name></member>
+      <member refid="interface_i_l_scope_bar_app_delegate_1a5d9d29655e81fbc6d0439b398784c19f" prot="protected" virt="non-virtual"><scope>ILScopeBarAppDelegate</scope><name>window</name></member>
+      <member refid="interface_i_l_scope_bar_app_delegate_1a7239aa3c8da5e32987f1da209296839c" prot="public" virt="non-virtual"><scope>ILScopeBarAppDelegate</scope><name>window</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

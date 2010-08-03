@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 STRICT//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>ILScopeBarDelegate protocol reference</title>
+  <meta http-equiv="Content-Type" content="application/xhtml+xml;charset=utf-8" />
+  <link rel="stylesheet" type="text/css" href="../css/screen.css" />
+  <meta name="generator" content="appledoc" />
+</head>
+<body>
+  <div id="mainContainer">
+    <h1>ILScopeBarDelegate protocol reference</h1>
+    <table summary="Basic information" id="classInfo">
+      <tr class="alt">
+        <td><label id="classDeclaration">Declared in</label></td>
+        <td>ILScopeBarProtocols.h</td>
+      </tr>
+    </table>
+      <h2>Overview</h2>
+<p>A protocol of optional methods that ccould be used for the delegate of an <code><a href="../Classes/ILScopeBar.html">ILScopeBar</a></code></p>
+      <h2>Tasks</h2>
+      <h3>Optional Methods</h3>
+      <ul class="methods">
+        <li>
+          <span class="tooltipRegion">
+            <code><a href=#shouldSelectItemInScopeBar:atIndex:>- shouldSelectItemInScopeBar:atIndex:</a></code>
+          </span>
+        </li>
+        <li>
+          <span class="tooltipRegion">
+            <code><a href=#didSelectItemInScopeBar:atIndex:withTag:andTitle:>- didSelectItemInScopeBar:atIndex:withTag:andTitle:</a></code>
+          </span>
+        </li>
+      </ul>
+      <h2>Instance methods</h2>
+      <h3><a name="shouldSelectItemInScopeBar:atIndex:"></a>shouldSelectItemInScopeBar:atIndex:</h3>
+      <code class="methodDeclaration">- (BOOL)shouldSelectItemInScopeBar:(ILScopeBar *)        <span class="parameter">bar</span>
+ atIndex:(NSInteger)        <span class="parameter">idx</span>
+</code>
+      <h5>Discussion</h5>
+<p>The scope bar calls this method before an item gets selected. If the delegate returns NO, it doesn't change the selection. </p>
+      <h5>Warning</h5>
+<p>This method gets called often so be weary of what gets done inside of it. </p>
+      <h5>Declared in</h5>
+      <code>ILScopeBarProtocols.h</code>
+      <h3><a name="didSelectItemInScopeBar:atIndex:withTag:andTitle:"></a>didSelectItemInScopeBar:atIndex:withTag:andTitle:</h3>
+      <code class="methodDeclaration">- (void)didSelectItemInScopeBar:(ILScopeBar *)        <span class="parameter">bar</span>
+ atIndex:(NSInteger)        <span class="parameter">idx</span>
+ withTag:(NSInteger)        <span class="parameter">tag</span>
+ andTitle:(NSString *)        <span class="parameter">title</span>
+</code>
+      <h5>Discussion</h5>
+<p>The scope bar calls this delegate method after every time an item is selection. </p>
+      <h5>Declared in</h5>
+      <code>ILScopeBarProtocols.h</code>
+    <hr />
+    <p id="lastUpdated">      (Last updated: 2010-08-03)
+      <br />
+      Back to <a href="../index.html">index</a> / <a href="../hierarchy.html">hierarchy</a>.
+    </p>
+  </div>
+</body>
+</html>

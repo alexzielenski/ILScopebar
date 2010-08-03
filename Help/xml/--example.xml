@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.1">
+  <compounddef id="--example" kind="example">
+    <compoundname>-</compoundname>
+    <detaileddescription>
+<para><simplesect kind="return"><para>Return the number of items to be used for the scope bar. </para></simplesect>
+<simplesect kind="warning"><para>This method gets called often, so be sure to optimize it accordingly. (NSInteger)numberOfItemsInScopeBar:(ILScopeBar*)bar { return [people count]; } <programlisting></programlisting> </para></simplesect>
+</para>    </detaileddescription>
+  </compounddef>
+</doxygen>

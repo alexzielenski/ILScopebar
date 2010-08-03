@@ -1,0 +1,92 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.1">
+  <compounddef id="_i_l_scope_bar_8h" kind="file">
+    <compoundname>ILScopeBar.h</compoundname>
+    <includes local="no">Cocoa/Cocoa.h</includes>
+    <includes refid="_i_l_scope_bar_protocols_8h" local="yes">ILScopeBarProtocols.h</includes>
+    <includedby refid="_i_l_scope_bar_8m" local="yes">Documents/Source Code/Git/ILScopeBar/ILScopeBar.m</includedby>
+    <includedby refid="_i_l_scope_bar_app_delegate_8h" local="yes">Documents/Source Code/Git/ILScopeBar/ILScopeBarAppDelegate.h</includedby>
+    <incdepgraph>
+      <node id="0">
+        <label>Documents/Source Code/Git/ILScopeBar/ILScopeBar.h</label>
+        <link refid="ILScopeBar.h"/>
+        <childnode refid="1" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>Cocoa/Cocoa.h</label>
+      </node>
+      <node id="2">
+        <label>ILScopeBarProtocols.h</label>
+        <link refid="_i_l_scope_bar_protocols_8h_source"/>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3">
+        <label>Documents/Source Code/Git/ILScopeBar/ILScopeBar.h</label>
+        <link refid="ILScopeBar.h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>Documents/Source Code/Git/ILScopeBar/ILScopeBarAppDelegate.h</label>
+        <link refid="_i_l_scope_bar_app_delegate_8h_source"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="interface_i_l_scope_bar" prot="public">ILScopeBar</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>ILScopeBar.h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Iconolatrous</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Created<sp/>by<sp/>Alex<sp/>Zielenski<sp/>on<sp/>8/1/10.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Copyright<sp/>2010<sp/>Alex<sp/>Zielenski.<sp/>All<sp/>rights<sp/>reserved.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#import<sp/>&lt;Cocoa/Cocoa.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#import<sp/>&quot;ILScopeBarProtocols.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17" refid="interface_i_l_scope_bar" refkind="compound"><highlight class="keyword">@interface<sp/></highlight><highlight class="normal"><ref refid="interface_i_l_scope_bar" kindref="compound">ILScopeBar</ref><sp/>:<sp/>NSView<sp/>{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>id<sp/>&lt;ILScopeBarDataSource&gt;<sp/>dataSource;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>id<sp/>&lt;ILScopeBarDelegate&gt;<sp/>delegate;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal"><sp/>selectedItem;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>NSInteger<sp/>cutoffIndex;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>NSPopUpButton<sp/>*overflowButton;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="27"></codeline>
+<codeline lineno="30"><highlight class="normal">@property<sp/>(readonly)<sp/>NSPopUpButton<sp/>*overflowButton;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal">@property<sp/>(readonly)<sp/>NSInteger<sp/>cutoffIndex;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal">@property<sp/>(assign)<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal"><sp/>selectedItem;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal">@property<sp/>(assign)<sp/>NSInteger<sp/>selectedIndex;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal">@property<sp/>(assign)<sp/>IBOutlet<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal"><sp/>delegate;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal">@property<sp/>(assign)<sp/>IBOutlet<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal"><sp/>dataSource;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"></codeline>
+<codeline lineno="67"><highlight class="normal">-<sp/>(NSString*)title;<sp/></highlight><highlight class="comment">//<sp/>Calls<sp/>the<sp/>dataSource<sp/>method.<sp/>If<sp/>not<sp/>implemented,<sp/>returns<sp/>nil.</highlight></codeline>
+<codeline lineno="72"><highlight class="comment"></highlight><highlight class="normal">-<sp/>(NSAttributedString*)attributedTitle;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal">-<sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)reload;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal">-<sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)rearrangeItems;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal">-<sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)createOverflowButton;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"></codeline>
+<codeline lineno="99"><highlight class="normal">-<sp/>(NSRect)frameForItemAtIndex:(NSInteger)idx;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal">-<sp/>(NSInteger)indexOfItem:(</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">)item;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal">-<sp/>(NSString*)titleOfItemAtIndex:(NSInteger)idx;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal">-<sp/>(NSInteger)itemCount;</highlight></codeline>
+<codeline lineno="128"><highlight class="normal">-<sp/>(NSImage*)imageForItemAtIndex:(NSInteger)idx;<sp/></highlight><highlight class="comment">//<sp/>Calls<sp/>the<sp/>dataSource<sp/>method.<sp/>If<sp/>it<sp/>isnt<sp/>implemented<sp/>or<sp/>it<sp/>returns<sp/>null.<sp/>Just<sp/>returns<sp/>nil.</highlight></codeline>
+<codeline lineno="136"><highlight class="comment"></highlight><highlight class="normal">-<sp/>(NSInteger)tagForItemAtIndex:(NSInteger)idx;<sp/></highlight><highlight class="comment">//<sp/>Calls<sp/>the<sp/>dataSource<sp/>method.<sp/>If<sp/>not<sp/>implemented,<sp/>returns<sp/>0.</highlight></codeline>
+<codeline lineno="141"><highlight class="comment"></highlight><highlight class="normal">-<sp/>(NSArray*)items;</highlight></codeline>
+<codeline lineno="142"><highlight class="normal">@end</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/Users/Alex/Documents/Source Code/Git/ILScopeBar/ILScopeBar.h"/>
+  </compounddef>
+</doxygen>

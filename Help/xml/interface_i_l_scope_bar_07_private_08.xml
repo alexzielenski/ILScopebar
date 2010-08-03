@@ -1,0 +1,197 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.1">
+  <compounddef id="interface_i_l_scope_bar_07_private_08" kind="class" prot="public">
+    <compoundname>ILScopeBar(Private)</compoundname>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="interface_i_l_scope_bar_1a2ec98bfe032f0599771ba97f8944ea6a" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>BOOL</type>
+        <definition>BOOL ILScopeBar(Private)::shouldSelectItemAtIndex:</definition>
+        <argsstring>(NSInteger idx)</argsstring>
+        <name>shouldSelectItemAtIndex:</name>
+        <param>
+          <type>NSInteger</type>
+          <declname>idx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Alex/Documents/Source Code/Git/ILScopeBar/ILScopeBar.m" line="39"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_i_l_scope_bar_1a3c228a05ab1f53b6f1aa226801989b90" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void ILScopeBar(Private)::didSelectItem:</definition>
+        <argsstring>(id item)</argsstring>
+        <name>didSelectItem:</name>
+        <param>
+          <type>id</type>
+          <declname>item</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Alex/Documents/Source Code/Git/ILScopeBar/ILScopeBar.m" line="40"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_i_l_scope_bar_1a61e7a3c404e7198aca3d420f20143115" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>NSButton *</type>
+        <definition>NSButton* ILScopeBar(Private)::itemWithTitle:tag:image:forIndex:</definition>
+        <argsstring>(NSString *title,[tag] NSInteger tag,[image] NSImage *img,[forIndex] NSInteger index)</argsstring>
+        <name>itemWithTitle:tag:image:forIndex:</name>
+        <param>
+          <type>NSString *</type>
+          <declname>title</declname>
+        </param>
+        <param>
+          <attributes>[tag]</attributes>
+          <type>NSInteger</type>
+          <declname>tag</declname>
+        </param>
+        <param>
+          <attributes>[image]</attributes>
+          <type>NSImage *</type>
+          <declname>img</declname>
+        </param>
+        <param>
+          <attributes>[forIndex]</attributes>
+          <type>NSInteger</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Alex/Documents/Source Code/Git/ILScopeBar/ILScopeBar.m" line="42"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_i_l_scope_bar_1aafebff37054f7287e45525a382138684" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void ILScopeBar(Private)::addItemWithTitle:tag:image:forIndex:</definition>
+        <argsstring>(NSString *title,[tag] NSInteger tag,[image] NSImage *img,[forIndex] NSInteger index)</argsstring>
+        <name>addItemWithTitle:tag:image:forIndex:</name>
+        <param>
+          <type>NSString *</type>
+          <declname>title</declname>
+        </param>
+        <param>
+          <attributes>[tag]</attributes>
+          <type>NSInteger</type>
+          <declname>tag</declname>
+        </param>
+        <param>
+          <attributes>[image]</attributes>
+          <type>NSImage *</type>
+          <declname>img</declname>
+        </param>
+        <param>
+          <attributes>[forIndex]</attributes>
+          <type>NSInteger</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Alex/Documents/Source Code/Git/ILScopeBar/ILScopeBar.m" line="43"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_i_l_scope_bar_1a4e836f906f002a8fb6614d84a374dbd9" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>NSMenuItem *</type>
+        <definition>NSMenuItem* ILScopeBar(Private)::menuItemWithTitle:tag:image:forIndex:</definition>
+        <argsstring>(NSString *title,[tag] NSInteger tag,[image] NSImage *img,[forIndex] NSInteger index)</argsstring>
+        <name>menuItemWithTitle:tag:image:forIndex:</name>
+        <param>
+          <type>NSString *</type>
+          <declname>title</declname>
+        </param>
+        <param>
+          <attributes>[tag]</attributes>
+          <type>NSInteger</type>
+          <declname>tag</declname>
+        </param>
+        <param>
+          <attributes>[image]</attributes>
+          <type>NSImage *</type>
+          <declname>img</declname>
+        </param>
+        <param>
+          <attributes>[forIndex]</attributes>
+          <type>NSInteger</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Alex/Documents/Source Code/Git/ILScopeBar/ILScopeBar.m" line="44"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_i_l_scope_bar_1a484434a4845d9b064765c7e67e8fad4e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void ILScopeBar(Private)::addMenuItemWithTitle:tag:image:forIndex:</definition>
+        <argsstring>(NSString *title,[tag] NSInteger tag,[image] NSImage *img,[forIndex] NSInteger index)</argsstring>
+        <name>addMenuItemWithTitle:tag:image:forIndex:</name>
+        <param>
+          <type>NSString *</type>
+          <declname>title</declname>
+        </param>
+        <param>
+          <attributes>[tag]</attributes>
+          <type>NSInteger</type>
+          <declname>tag</declname>
+        </param>
+        <param>
+          <attributes>[image]</attributes>
+          <type>NSImage *</type>
+          <declname>img</declname>
+        </param>
+        <param>
+          <attributes>[forIndex]</attributes>
+          <type>NSInteger</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Alex/Documents/Source Code/Git/ILScopeBar/ILScopeBar.m" line="45"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_i_l_scope_bar_1ac3c6e4670a57af8ec192395921dac269" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>BOOL</type>
+        <definition>BOOL ILScopeBar(Private)::overflows</definition>
+        <argsstring>()</argsstring>
+        <name>overflows</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Alex/Documents/Source Code/Git/ILScopeBar/ILScopeBar.m" line="47"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/Alex/Documents/Source Code/Git/ILScopeBar/ILScopeBar.m" line="37" bodyfile="/Users/Alex/Documents/Source Code/Git/ILScopeBar/ILScopeBar.m" bodystart="37" bodyend="-1"/>
+    <listofallmembers>
+      <member refid="interface_i_l_scope_bar_1aafebff37054f7287e45525a382138684" prot="public" virt="virtual"><scope>ILScopeBar(Private)</scope><name>addItemWithTitle:tag:image:forIndex:</name></member>
+      <member refid="interface_i_l_scope_bar_1a484434a4845d9b064765c7e67e8fad4e" prot="public" virt="virtual"><scope>ILScopeBar(Private)</scope><name>addMenuItemWithTitle:tag:image:forIndex:</name></member>
+      <member refid="interface_i_l_scope_bar_1a3c228a05ab1f53b6f1aa226801989b90" prot="public" virt="virtual"><scope>ILScopeBar(Private)</scope><name>didSelectItem:</name></member>
+      <member refid="interface_i_l_scope_bar_1a61e7a3c404e7198aca3d420f20143115" prot="public" virt="virtual"><scope>ILScopeBar(Private)</scope><name>itemWithTitle:tag:image:forIndex:</name></member>
+      <member refid="interface_i_l_scope_bar_1a4e836f906f002a8fb6614d84a374dbd9" prot="public" virt="virtual"><scope>ILScopeBar(Private)</scope><name>menuItemWithTitle:tag:image:forIndex:</name></member>
+      <member refid="interface_i_l_scope_bar_1ac3c6e4670a57af8ec192395921dac269" prot="public" virt="virtual"><scope>ILScopeBar(Private)</scope><name>overflows</name></member>
+      <member refid="interface_i_l_scope_bar_1a2ec98bfe032f0599771ba97f8944ea6a" prot="public" virt="virtual"><scope>ILScopeBar(Private)</scope><name>shouldSelectItemAtIndex:</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

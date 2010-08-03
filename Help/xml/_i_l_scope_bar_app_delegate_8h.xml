@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.1">
+  <compounddef id="_i_l_scope_bar_app_delegate_8h" kind="file">
+    <compoundname>ILScopeBarAppDelegate.h</compoundname>
+    <includes local="no">Cocoa/Cocoa.h</includes>
+    <includes refid="_i_l_scope_bar_8h" local="yes">ILScopeBar.h</includes>
+    <includedby refid="_i_l_scope_bar_app_delegate_8m" local="yes">Documents/Source Code/Git/ILScopeBar/ILScopeBarAppDelegate.m</includedby>
+    <incdepgraph>
+      <node id="12">
+        <label>ILScopeBar.h</label>
+        <link refid="_i_l_scope_bar_8h_source"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>Documents/Source Code/Git/ILScopeBar/ILScopeBarAppDelegate.h</label>
+        <link refid="ILScopeBarAppDelegate.h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>Cocoa/Cocoa.h</label>
+      </node>
+      <node id="13">
+        <label>ILScopeBarProtocols.h</label>
+        <link refid="_i_l_scope_bar_protocols_8h_source"/>
+      </node>
+    </incdepgraph>
+    <innerclass refid="interface_i_l_scope_bar_app_delegate" prot="public">ILScopeBarAppDelegate</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>ILScopeBarAppDelegate.h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>ILScopeBar</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Created<sp/>by<sp/>Alex<sp/>Zielenski<sp/>on<sp/>8/2/10.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Copyright<sp/>2010<sp/>Alex<sp/>Zielenski.<sp/>All<sp/>rights<sp/>reserved.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#import<sp/>&lt;Cocoa/Cocoa.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#import<sp/>&quot;ILScopeBar.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12" refid="interface_i_l_scope_bar_app_delegate" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">@interface<sp/></highlight><highlight class="normal"><ref refid="interface_i_l_scope_bar_app_delegate" kindref="compound">ILScopeBarAppDelegate</ref><sp/>:<sp/>NSObject<sp/>&lt;NSApplicationDelegate,<sp/><ref refid="protocol_i_l_scope_bar_delegate-p" kindref="compound">ILScopeBarDelegate</ref>,<sp/><ref refid="protocol_i_l_scope_bar_data_source-p" kindref="compound">ILScopeBarDataSource</ref>&gt;<sp/>{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>NSWindow<sp/>*window;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>NSMutableArray<sp/>*people;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>IBOutlet<sp/><ref refid="interface_i_l_scope_bar" kindref="compound">ILScopeBar</ref><sp/>*scopeBar;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>IBOutlet<sp/>NSTextField<sp/>*label;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>IBOutlet<sp/>NSTextField<sp/>*barTitle;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>IBOutlet<sp/>NSWindow<sp/>*addWindow;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>IBOutlet<sp/>NSTextField<sp/>*titleField;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>IBOutlet<sp/>NSTextField<sp/>*idxField;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>IBOutlet<sp/>NSTextField<sp/>*tagField;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>IBOutlet<sp/>NSImageView<sp/>*imageView;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal">@property<sp/>(assign)<sp/>IBOutlet<sp/>NSWindow<sp/>*window;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal">-<sp/>(IBAction)addObject:(</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">)sender;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal">-<sp/>(IBAction)cancelAdd:(</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">)sender;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal">-<sp/>(IBAction)removeSelected:(</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">)sender;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal">-<sp/>(IBAction)setTitle:(</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">)sender;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal">@end</highlight></codeline>
+    </programlisting>
+    <location file="/Users/Alex/Documents/Source Code/Git/ILScopeBar/ILScopeBarAppDelegate.h"/>
+  </compounddef>
+</doxygen>

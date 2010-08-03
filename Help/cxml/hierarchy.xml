@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<project generator="appledoc v1.0.5">
+    <object kind="class">
+        <name>NSObject</name>
+        <children>
+            <object kind="class" id="Classes/ILScopeBar$EXTENSION">
+                <name>ILScopeBar</name>
+            </object>
+        </children>
+    </object>
+</project>
