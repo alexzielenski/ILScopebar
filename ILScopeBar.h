@@ -95,8 +95,16 @@
  @return Returns a newly generated frame for the item.
  @warning Value may not be exact.
  @see indexOfItem:
+ @see frameForBarTitle
  */
 - (NSRect)frameForItemAtIndex:(NSInteger)idx;
+
+/**
+ @returns Returns the frame of the bar title used for drawing.
+ @see frameForItemAtIndex:
+ */
+- (NSRect)frameForBarTitle;
+
 /** 
  @return Index of the specified item.
  @warning If the item isn't in the Scope Bar's @c items array, returns NSNotFound

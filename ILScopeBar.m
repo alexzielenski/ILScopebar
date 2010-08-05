@@ -49,8 +49,10 @@
 
 
 @implementation ILScopeBar
+
 @synthesize dataSource, selectedItem, delegate, cutoffIndex, overflowButton;
 @dynamic selectedIndex;
+
 - (void)awakeFromNib {
 	[self reload];
 }
@@ -91,7 +93,8 @@
 #pragma mark -
 #pragma mark Creating and Adding Items
 - (void)rearrangeItems {
-	int se = self.selectedIndex;
+	NSInteger se=self.selectedIndex;
+	
 	BOOL overflows = [self overflows]; // refresh the cut off index
 	for (int x = self.subviews.count-1; x>=0;x--) {
 		NSView *v = [self.subviews objectAtIndex:x];
@@ -116,6 +119,8 @@
 							  forIndex:x];
 		}
 	}
+	if (se>=0&&se!=NSNotFound&&se<=self.itemCount)
+		[self setSelectedIndex:se];
 }
 - (void)reload {
 	[self overflows];
@@ -177,7 +182,6 @@
 	[nb setImage:img];
 	[nb setTag:tag];
 	
-	
 	[nb setTarget:self];
 	[nb setAction:@selector(setSelectedItem:)];
 	return [nb autorelease];
@@ -192,7 +196,6 @@
 	[item setTag:tag];
 	[item setImage:img];
 	[item setState:NSOffState];
-	
 		// proportionately (sp?) set the height of the item's image to 16.
 	NSSize imgSize = NSMakeSize(0, 16);
 	CGFloat wpec = img.size.height/16;
@@ -366,7 +369,7 @@
 - (void)setSelectedIndex:(NSInteger)idx {
 	[self setSelectedItem:[self.items objectAtIndex:idx]];
 }
-- (void)setSelectedItem:(id)newItem {
+- (void)setSelectedItem:(id)newItem {	
 	if (newItem!=overflowButton) {
 		if (self.selectedItem==newItem) {
 			[newItem setState:NSOnState];
@@ -380,11 +383,13 @@
 			return;
 		if ([self shouldSelectItemAtIndex:idx]) {
 			[self willChangeValueForKey:@"selectedItem"];
+			[self willChangeValueForKey:@"selectedIndex"];
 			if ([self.items containsObject:selectedItem])
 				[selectedItem setState:NSOffState];
 			selectedItem=newItem;
 			[selectedItem setState:NSOnState];
 			[self didChangeValueForKey:@"selectedItem"];
+			[self didChangeValueForKey:@"selectedIndex"];
 			[self didSelectItem:newItem];
 			
 		} else {
@@ -401,10 +406,12 @@
 			return;
 		if ([self shouldSelectItemAtIndex:idx]) {
 			[self willChangeValueForKey:@"selectedItem"];
+			[self willChangeValueForKey:@"selectedIndex"];
 			[selectedItem setState:NSOffState];
 			selectedItem=n;
 			[selectedItem setState:NSOnState];
 			[self didChangeValueForKey:@"selectedItem"];
+			[self didChangeValueForKey:@"selectedIndex"];
 			[self didSelectItem:n];
 		} else {
 			[n setState:NSOffState];
