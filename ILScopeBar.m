@@ -60,10 +60,15 @@
     self = [super initWithFrame:frame];
     if (self) {
 		[[NSImage imageNamed:@"Arrows"] setTemplate:YES];
+			//	[self showPlusMinus];
     }
     return self;
 }
 - (void)dealloc {
+	if (plusMinus) {
+		[plusMinus removeFromSuperview];
+		[plusMinus release];
+	}
 	[overflowButton removeFromSuperview];
 	[overflowButton release];
 	[super dealloc];
@@ -71,9 +76,9 @@
 
 - (void)drawRect:(NSRect)dirtyRect {
 		// Drawing code here.
-	[gGradient drawInRect:dirtyRect angle:270];
+	[gGradient drawInRect:self.bounds angle:270];
 	[gBorderColor set];
-	NSRectFill(NSMakeRect(0, 0, dirtyRect.size.width, 1));
+	NSRectFill(NSMakeRect(0, 0, self.bounds.size.width, 1));
 	
 		// Probably not the best idea to create it on every draw call
 	NSTextFieldCell *tf = [[NSTextFieldCell alloc] init];
@@ -88,14 +93,57 @@
 		[self rearrangeItems];
 	}
 	
-	
+	//[self showPlusMinus];
 }
 #pragma mark -
 #pragma mark Creating and Adding Items
 - (void)rearrangeItems {
+	BOOL overflows = self.overflows;
+	NSInteger cutoff = self.cutoffIndex;
 	NSInteger se=self.selectedIndex;
+	NSArray *items = self.items;
+	NSMenu *overflowMenu = overflowButton.menu;
+	NSInteger itemCount = self.itemCount;
+	[self createOverflowButton];
+	for (int x=0;x<itemCount;x++) {
+		id item = nil;
+		if (itemCount>0&&x<items.count) {
+			item=[items objectAtIndex:x];
+		}
+		if (item) {
+			if (x>cutoff&&![item isKindOfClass:[NSMenuItem class]]&&overflows) {
+				[item removeFromSuperview];
+				[self addMenuItemWithTitle:[self titleOfItemAtIndex:x] 
+									   tag:[self tagForItemAtIndex:x] 
+									 image:[self imageForItemAtIndex:x] 
+								  forIndex:x];
+			} else if (x<=cutoff&&![item isKindOfClass:[NSButton class]]) {
+				[overflowMenu removeItem:item];
+				[self addItemWithTitle:[self titleOfItemAtIndex:x] 
+								   tag:[self tagForItemAtIndex:x] 
+								 image:[self imageForItemAtIndex:x]
+							  forIndex:x];
+			}
+		} else {
+			if (x>cutoff)
+				[self addMenuItemWithTitle:[self titleOfItemAtIndex:x] 
+									   tag:[self tagForItemAtIndex:x] 
+									 image:[self imageForItemAtIndex:x] 
+								  forIndex:x];
+			else
+				[self addItemWithTitle:[self titleOfItemAtIndex:x] 
+								   tag:[self tagForItemAtIndex:x] 
+								 image:[self imageForItemAtIndex:x]
+							  forIndex:x];
+		}
+
+	}
 	
-	BOOL overflows = [self overflows]; // refresh the cut off index
+	if (overflowMenu.numberOfItems>0) {
+		[[overflowMenu itemAtIndex:0] setState:NSOffState];
+	}
+	
+	/*BOOL overflows = [self overflows]; // refresh the cut off index
 	for (int x = self.subviews.count-1; x>=0;x--) {
 		NSView *v = [self.subviews objectAtIndex:x];
 		[v removeFromSuperview];
@@ -108,19 +156,19 @@
 						 image:[self imageForItemAtIndex:x]
 					  forIndex:x];
 	}
-	if (!overflows && overflowButton) {
-		[overflowButton removeFromSuperview], [overflowButton release], overflowButton=nil;
-	} else {
+	if (overflows) {
 		[self createOverflowButton];
+		[overflowButton removeAllItems];
 		for (int x = self.cutoffIndex+1; x<self.itemCount;x++) {
 			[self addMenuItemWithTitle:[self titleOfItemAtIndex:x] 
 								   tag:[self tagForItemAtIndex:x] 
 								 image:[self imageForItemAtIndex:x] 
 							  forIndex:x];
 		}
-	}
+	}*/
 	if (se>=0&&se!=NSNotFound&&se<=self.itemCount)
 		[self setSelectedIndex:se];
+	[overflowButton setHidden:(overflowButton.menu.numberOfItems<=0)];
 }
 - (void)reload {
 	[self overflows];
@@ -138,22 +186,22 @@
 }
 - (void)createOverflowButton {
 		// it probably actually isnt the best idea to release and create the overflow button so frequently. And instead i should use removeAllItems. Maybe later?
-	if (overflowButton)
-		[overflowButton removeFromSuperview], [overflowButton release], overflowButton=nil;
-	
-	if (!overflowButton && [self overflows]) {
-		overflowButton=[[NSPopUpButton alloc] initWithFrame:NSMakeRect(NSMaxX(self.bounds)-28-gItemSpacing, 4, 28, 19)];		
+		//if (overflowButton)
+		//[overflowButton removeFromSuperview], [overflowButton release], overflowButton=nil;
+	[overflowButton setFrame:NSMakeRect(NSMaxX(self.bounds)-28-gItemSpacing, roundf(NSMidY(self.bounds)-19/2), 28, 19)];
+	if (!overflowButton) {
+		overflowButton=[[NSPopUpButton alloc] initWithFrame:NSMakeRect(NSMaxX(self.bounds)-28-gItemSpacing, roundf(NSMidY(self.bounds)-19/2), 28, 19)];		
 		[overflowButton setButtonType:NSMomentaryLightButton];
 		[overflowButton setBezelStyle:NSRecessedBezelStyle];
+
 		[overflowButton setShowsBorderOnlyWhileMouseInside:YES];
-			//[overflowButton setTextAlignment:NSCenterTextAlignment];
 		[overflowButton setPreferredEdge:NSMinYEdge];
 		[overflowButton.cell setUsesItemFromMenu:NO];
 		[overflowButton.cell setArrowPosition:NSPopUpNoArrow];
 		[overflowButton.cell setAltersStateOfSelectedItem:YES];
 		[overflowButton.cell setHighlightsBy:NSCellIsBordered | NSCellIsInsetButton];
 		[overflowButton.cell setImageScaling:NSImageScaleProportionallyDown];
-		
+
 		[overflowButton setTarget:self];
 		[overflowButton setAction:@selector(setSelectedItem:)];
 		
@@ -163,9 +211,10 @@
 		[overflowButton.cell setMenuItem:men];
 		[men release];
 		
-		[self addSubview:overflowButton];
+			//		[self addSubview:overflowButton];
 	}
-	
+	if (![self.subviews containsObject:overflowButton])
+		[self addSubview:overflowButton];
 }
 - (NSButton*)itemWithTitle:(NSString*)title tag:(NSInteger)tag image:(NSImage*)img forIndex:(NSInteger)index {
 	NSButton *nb = [[NSButton alloc] initWithFrame:[self frameForItemAtIndex:index]];
@@ -184,6 +233,7 @@
 	
 	[nb setTarget:self];
 	[nb setAction:@selector(setSelectedItem:)];
+	[nb setAutoresizingMask:NSViewMaxYMargin|NSViewMinYMargin|NSViewMaxXMargin];
 	return [nb autorelease];
 }
 - (void)addItemWithTitle:(NSString*)title tag:(NSInteger)tag image:(NSImage*)img forIndex:(NSInteger)index {
@@ -196,7 +246,9 @@
 	[item setTag:tag];
 	[item setImage:img];
 	[item setState:NSOffState];
+	
 		// proportionately (sp?) set the height of the item's image to 16.
+	
 	NSSize imgSize = NSMakeSize(0, 16);
 	CGFloat wpec = img.size.height/16;
 	imgSize.width=img.size.width/wpec;
@@ -206,7 +258,7 @@
 }
 - (void)addMenuItemWithTitle:(NSString*)title tag:(NSInteger)tag image:(NSImage*)img forIndex:(NSInteger)index {
 	NSMenuItem *item = [self menuItemWithTitle:title tag:tag image:img forIndex:index];
-	[overflowButton.menu addItem:item];
+	[overflowButton.menu insertItem:item atIndex:index-cutoffIndex-1];
 	[item setState:NSOffState];
 }
 
@@ -419,5 +471,35 @@
 	}
 	if ([overflowButton selectedItem]!=nil)
 		[overflowButton setState:NSOnState];
+}
+- (void)createPlusMinus {
+	if (plusMinus)
+		return;
+	plusMinus=[[NSSegmentedControl alloc] initWithFrame:NSMakeRect(NSMaxX(self.bounds)-60, roundf(NSMidY(self.bounds)-10), 55, 20)];
+	[plusMinus setSegmentCount:2];
+	[plusMinus setImage:[NSImage imageNamed:@"NSAddTemplate"] forSegment:0];
+	[plusMinus setImage:[NSImage imageNamed:@"NSRemoveTemplate"] forSegment:1];
+	[plusMinus setSelectedSegment:1];
+	[plusMinus setSegmentStyle:NSSegmentStyleRoundRect];
+	
+	[plusMinus setAutoresizesSubviews:YES];
+	[self setAutoresizesSubviews:YES];
+	[plusMinus setAutoresizingMask:NSViewMinXMargin|NSViewMaxYMargin];
+	
+	[plusMinus.cell setTag:0 forSegment:0];
+	[plusMinus.cell setTag:1 forSegment:1];
+	[plusMinus.cell setTrackingMode:NSSegmentSwitchTrackingMomentary];
+	
+}
+- (void)showPlusMinus {
+	[self createPlusMinus];
+	if (![self.subviews containsObject:plusMinus])
+		[self addSubview:plusMinus];
+	[self setNeedsDisplay:YES];
+}
+- (void)hidePlusMinus {
+	if ([self.subviews containsObject:plusMinus])
+		[plusMinus removeFromSuperview];
+	[self setNeedsDisplay:YES];
 }
 @end

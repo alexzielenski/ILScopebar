@@ -20,6 +20,7 @@
 	id selectedItem;
 	NSInteger cutoffIndex;
 	NSPopUpButton *overflowButton;
+	NSSegmentedControl *plusMinus;
 }
 	//////////////////////////////////////////////////////////////////////////////////////////
 	/// @name Properties
@@ -147,6 +148,10 @@
  @warning If there are any unexpected subviews in items, they will be in this list or be removed and released on the next @c reload call.
  */
 - (NSArray*)items;
+
+- (void)createPlusMinus;
+- (void)showPlusMinus;
+- (void)hidePlusMinus;
 @end
 
 
