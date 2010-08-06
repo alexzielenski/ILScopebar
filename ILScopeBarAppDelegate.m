@@ -46,7 +46,7 @@
 	[scopeBar reload];
 }
 - (IBAction)addObject:(id)sender {
-	if ([sender tag]==101) {
+	if (sender!=self&&[sender tag]==101) {
 		int idx = idxField.intValue;
 		if (idx<0||idx>=people.count)
 			idx=people.count;
@@ -102,5 +102,11 @@
 }
 - (void)didSelectItemInScopeBar:(ILScopeBar*)bar atIndex:(NSInteger)idx withTag:(NSInteger)tag andTitle:(NSString*)title {
 	[label setStringValue:[NSString stringWithFormat:@"Selected Item in Bar: %@\nTag: %i\nTitle: %@\nType: %@", bar.title, tag, title, [bar.selectedItem className]]];
+}
+- (void)didClickPlusButtonInScopeBar:(ILScopeBar*)bar {
+	[self addObject:self];
+}
+- (void)didClickMinusButtonInScopeBar:(ILScopeBar*)bar {
+	[self removeSelected:self];
 }
 @end

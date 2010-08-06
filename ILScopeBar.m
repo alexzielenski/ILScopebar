@@ -19,7 +19,7 @@
 #define gTitleFont [NSFont boldSystemFontOfSize:12.0f]
 
 #define gItemTitleFont [NSFont fontWithName:@"LucidaGrande-Bold" size:12.0f]
-#define gItemTitlePadding gItemSpacing+4
+#define gItemTitlePadding gItemSpacing+6
 #define gItemSpacing 10
 
 
@@ -33,6 +33,13 @@
 #define gShouldSelectItemSelector @selector(shouldSelectItemInScopeBar:atIndex:)
 #define gDidSelectItemSelector @selector(didSelectItemInScopeBar:atIndex:withTag:andTitle:)
 
+#define gDidClickPlusButtonSelector @selector(didClickPlusButtonInScopeBar:)
+#define gDidClickMinusButtonSelector @selector(didClickMinusButtonInScopeBar:)
+
+#define gPlusMinusWidth 55
+#define gPlusMinusHeight 20
+#define gPlusMinusPad (gPlusMinusWidth+gItemSpacing)
+#define gPlusMinusOrigin (NSMaxX(self.bounds)-gPlusMinusPad)
 
 @interface ILScopeBar (Private)
 
@@ -45,6 +52,12 @@
 - (void)addMenuItemWithTitle:(NSString*)title tag:(NSInteger)tag image:(NSImage*)img forIndex:(NSInteger)index;
 
 - (BOOL)overflows;
+- (NSRect)frameForOverflowButton;
+- (NSRect)frameForPlusMinus;
+
+- (void)didClickMinusButton;
+- (void)didClickPlusButton;
+- (void)buttonAction:(id)sender;
 @end
 
 
@@ -54,13 +67,12 @@
 @dynamic selectedIndex;
 
 - (void)awakeFromNib {
-	[self reload];
 }
 - (id)initWithFrame:(NSRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
 		[[NSImage imageNamed:@"Arrows"] setTemplate:YES];
-			//	[self showPlusMinus];
+		[self showPlusMinus];
     }
     return self;
 }
@@ -68,9 +80,17 @@
 	if (plusMinus) {
 		[plusMinus removeFromSuperview];
 		[plusMinus release];
+		plusMinus=nil;
 	}
-	[overflowButton removeFromSuperview];
-	[overflowButton release];
+	if (overflowButton) {
+		[overflowButton removeFromSuperview];
+		[overflowButton release];
+		overflowButton=nil;
+	}
+	if (titleCell) {
+		[titleCell release];
+		titleCell=nil;
+	}
 	[super dealloc];
 }
 
@@ -81,30 +101,25 @@
 	NSRectFill(NSMakeRect(0, 0, self.bounds.size.width, 1));
 	
 		// Probably not the best idea to create it on every draw call
-	NSTextFieldCell *tf = [[NSTextFieldCell alloc] init];
-	[tf setAttributedStringValue:self.attributedTitle];
-	[tf setBackgroundStyle:NSBackgroundStyleRaised];
-	[tf drawWithFrame:self.frameForBarTitle 
-			   inView:self];
-	[tf release];
+	[titleCell drawWithFrame:self.frameForBarTitle inView:self];
 	
 	if (self.inLiveResize) {
-			//[self reload];
 		[self rearrangeItems];
 	}
-	
-	//[self showPlusMinus];
+	[self showPlusMinus];
 }
 #pragma mark -
 #pragma mark Creating and Adding Items
 - (void)rearrangeItems {
+	[self createOverflowButton];
+	
 	BOOL overflows = self.overflows;
 	NSInteger cutoff = self.cutoffIndex;
 	NSInteger se=self.selectedIndex;
 	NSArray *items = self.items;
 	NSMenu *overflowMenu = overflowButton.menu;
 	NSInteger itemCount = self.itemCount;
-	[self createOverflowButton];
+
 	for (int x=0;x<itemCount;x++) {
 		id item = nil;
 		if (itemCount>0&&x<items.count) {
@@ -124,6 +139,10 @@
 								 image:[self imageForItemAtIndex:x]
 							  forIndex:x];
 			}
+			if ([item isKindOfClass:[NSButton class]]) {
+				[item setFrame:[self frameForItemAtIndex:x]];
+			}
+			
 		} else {
 			if (x>cutoff)
 				[self addMenuItemWithTitle:[self titleOfItemAtIndex:x] 
@@ -143,31 +162,9 @@
 		[[overflowMenu itemAtIndex:0] setState:NSOffState];
 	}
 	
-	/*BOOL overflows = [self overflows]; // refresh the cut off index
-	for (int x = self.subviews.count-1; x>=0;x--) {
-		NSView *v = [self.subviews objectAtIndex:x];
-		[v removeFromSuperview];
-			//[v release]; it actually gets autoreleased
-	}
-	
-	for (int x = 0; x<=self.cutoffIndex;x++) {
-		[self addItemWithTitle:[self titleOfItemAtIndex:x] 
-						   tag:[self tagForItemAtIndex:x] 
-						 image:[self imageForItemAtIndex:x]
-					  forIndex:x];
-	}
-	if (overflows) {
-		[self createOverflowButton];
-		[overflowButton removeAllItems];
-		for (int x = self.cutoffIndex+1; x<self.itemCount;x++) {
-			[self addMenuItemWithTitle:[self titleOfItemAtIndex:x] 
-								   tag:[self tagForItemAtIndex:x] 
-								 image:[self imageForItemAtIndex:x] 
-							  forIndex:x];
-		}
-	}*/
 	if (se>=0&&se!=NSNotFound&&se<=self.itemCount)
 		[self setSelectedIndex:se];
+	
 	[overflowButton setHidden:(overflowButton.menu.numberOfItems<=0)];
 }
 - (void)reload {
@@ -175,29 +172,38 @@
 		[[self.subviews objectAtIndex:x] removeFromSuperview];
 	}
 	if (overflowButton)
-		[overflowButton removeFromSuperview], [overflowButton release], overflowButton=nil;
-	[self overflows];
+		[overflowButton removeAllItems];
 	
 	[self createOverflowButton];
 	[self rearrangeItems];
 	
-		// It automatically sets the first item of the menu to be active
-	NSMenu *menu = overflowButton.menu;
-	NSArray *menArray = [menu itemArray];
-	if (menArray.count>0)
-		self.selectedItem=[menArray objectAtIndex:0];
+	if (titleCell)
+		[titleCell release], titleCell=nil;
+	
+	titleCell = [[NSTextFieldCell alloc] init];
+	[titleCell setAttributedStringValue:self.attributedTitle];
+	[titleCell setBackgroundStyle:NSBackgroundStyleRaised];
+	NSArray *items = self.items;
+	if (![items containsObject:selectedItem]&&items.count>0) {
+		self.selectedItem=[self.items objectAtIndex:0];
+	} else {
+		self.selectedItem=nil;
+	}
 
+	
 	[self setNeedsDisplay:YES];
 }
 - (void)createOverflowButton {
 		// it probably actually isnt the best idea to release and create the overflow button so frequently. And instead i should use removeAllItems. Maybe later?
 		//if (overflowButton)
 		//[overflowButton removeFromSuperview], [overflowButton release], overflowButton=nil;
-	[overflowButton setFrame:NSMakeRect(NSMaxX(self.bounds)-28-gItemSpacing, roundf(NSMidY(self.bounds)-19/2), 28, 19)];
+	//[overflowButton setFrame:[self frameForOverflowButton]];
+	[self overflows];
 	if (!overflowButton) {
 		overflowButton=[[NSPopUpButton alloc] initWithFrame:NSMakeRect(NSMaxX(self.bounds)-28-gItemSpacing, roundf(NSMidY(self.bounds)-19/2), 28, 19)];		
 		[overflowButton setButtonType:NSMomentaryLightButton];
 		[overflowButton setBezelStyle:NSRecessedBezelStyle];
+		[overflowButton setAutoresizingMask:NSViewMinXMargin|NSViewMaxYMargin|NSViewMinYMargin|NSViewMaxYMargin];
 
 		[overflowButton setShowsBorderOnlyWhileMouseInside:YES];
 		[overflowButton setPreferredEdge:NSMinYEdge];
@@ -238,7 +244,7 @@
 	
 	[nb setTarget:self];
 	[nb setAction:@selector(setSelectedItem:)];
-	[nb setAutoresizingMask:NSViewMaxYMargin|NSViewMinYMargin|NSViewMaxXMargin];
+		//[nb setAutoresizingMask:NSViewMaxYMargin|NSViewMinYMargin|NSViewMaxXMargin];
 	return [nb autorelease];
 }
 - (void)addItemWithTitle:(NSString*)title tag:(NSInteger)tag image:(NSImage*)img forIndex:(NSInteger)index {
@@ -318,14 +324,21 @@
 	
 	return t;
 }
-
-
+- (NSRect)frameForOverflowButton {
+	NSRect orig = NSMakeRect(NSMaxX(self.bounds)-28-gItemSpacing, roundf(NSMidY(self.bounds)-19/2), 28, 19);
+	if (showPlusMinus)
+		orig.origin.x-=gPlusMinusPad;
+	return orig;
+}
+- (NSRect)frameForPlusMinus {
+	return NSMakeRect(gPlusMinusOrigin, roundf(NSMidY(self.bounds)-gPlusMinusHeight/2), gPlusMinusWidth, gPlusMinusHeight);
+}
 - (BOOL)overflows {
 	[self willChangeValueForKey:@"cutoffIndex"];
 	for (int x = 0; x<self.itemCount;x++) {
 		NSRect f = [self frameForItemAtIndex:x];
-		
-		if (f.origin.x+f.size.width+gItemSpacing*3>self.bounds.size.width) {
+		float ovrpadding = self.bounds.size.width-overflowButton.frame.origin.x;
+		if (f.origin.x+f.size.width+ovrpadding>self.bounds.size.width) {
 			cutoffIndex=x-1;
 			[self didChangeValueForKey:@"cutoffIndex"];
 			return YES;
@@ -400,11 +413,20 @@
 	return YES;
 }
 - (void)didSelectItem:(NSButton*)item {
-	if ([self.delegate respondsToSelector:gDidSelectItemSelector])
+	if ([self.delegate respondsToSelector:gDidSelectItemSelector]) {
+		NSInteger idx = -1;
+		NSInteger tag = -1;
+		NSString *title = @"";
+		if (item) {
+			idx=[self indexOfItem:item];
+			tag=item.tag;
+			title=item.title;
+		}
 		[self.delegate didSelectItemInScopeBar:self 
-									   atIndex:[self indexOfItem:item] 
-									   withTag:item.tag 
-									  andTitle:item.title];
+									   atIndex:idx
+									   withTag:tag
+									  andTitle:title];
+	}
 }
 #pragma mark -
 #pragma mark Accessors
@@ -432,9 +454,15 @@
 			[newItem setState:NSOnState];
 			return;
 		}
-		if (!newItem)
+		if (!newItem) {
+			[self willChangeValueForKey:@"selectedItem"];
+			[self willChangeValueForKey:@"selectedIndex"];
+			selectedItem=nil;
+			[self didSelectItem:nil];
+			[self didChangeValueForKey:@"selectedItem"];
+			[self didChangeValueForKey:@"selectedIndex"];
 			return;
-		
+		}
 		NSInteger idx = [self indexOfItem:newItem];
 		if (idx < 0 || idx == NSNotFound)
 			return;
@@ -477,23 +505,26 @@
 	if ([overflowButton selectedItem]!=nil)
 		[overflowButton setState:NSOnState];
 }
+#pragma mark -
+#pragma mark Buttons
 - (void)createPlusMinus {
 	if (plusMinus)
 		return;
-	plusMinus=[[NSSegmentedControl alloc] initWithFrame:NSMakeRect(NSMaxX(self.bounds)-60, roundf(NSMidY(self.bounds)-10), 55, 20)];
+	plusMinus=[[NSSegmentedControl alloc] initWithFrame:[self frameForPlusMinus]];
 	[plusMinus setSegmentCount:2];
 	[plusMinus setImage:[NSImage imageNamed:@"NSAddTemplate"] forSegment:0];
 	[plusMinus setImage:[NSImage imageNamed:@"NSRemoveTemplate"] forSegment:1];
 	[plusMinus setSelectedSegment:1];
 	[plusMinus setSegmentStyle:NSSegmentStyleRoundRect];
 	
-	[plusMinus setAutoresizesSubviews:YES];
-	[self setAutoresizesSubviews:YES];
-	[plusMinus setAutoresizingMask:NSViewMinXMargin|NSViewMaxYMargin];
+	[plusMinus setAutoresizingMask:NSViewMinXMargin|NSViewMaxYMargin|NSViewMinYMargin|NSViewMaxYMargin];
 	
 	[plusMinus.cell setTag:0 forSegment:0];
 	[plusMinus.cell setTag:1 forSegment:1];
 	[plusMinus.cell setTrackingMode:NSSegmentSwitchTrackingMomentary];
+	
+	[plusMinus setTarget:self];
+	[plusMinus setAction:@selector(buttonAction:)];
 	
 }
 - (void)showPlusMinus {
@@ -501,10 +532,39 @@
 	if (![self.subviews containsObject:plusMinus])
 		[self addSubview:plusMinus];
 	[self setNeedsDisplay:YES];
+	showPlusMinus=YES;
+	[overflowButton setFrame:[self frameForOverflowButton]];
 }
 - (void)hidePlusMinus {
 	if ([self.subviews containsObject:plusMinus])
 		[plusMinus removeFromSuperview];
 	[self setNeedsDisplay:YES];
+	showPlusMinus=NO;
+	[overflowButton setFrame:[self frameForOverflowButton]];
 }
+- (void)didClickMinusButton {
+	if ([self.delegate respondsToSelector:gDidClickMinusButtonSelector]) {
+		[self.delegate didClickMinusButtonInScopeBar:self];
+	}
+}
+- (void)didClickPlusButton {
+	if ([self.delegate respondsToSelector:gDidClickPlusButtonSelector]) {
+		[self.delegate didClickPlusButtonInScopeBar:self];
+	}
+}
+- (void)buttonAction:(id)sender {
+	if (sender==plusMinus) {
+		switch ([plusMinus selectedSegment]) {
+			case 0:
+				[self didClickPlusButton];
+				break;
+			case 1:
+				[self didClickMinusButton];
+				break;
+			default:
+				break;
+		}
+	}
+}
+
 @end

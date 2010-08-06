@@ -21,6 +21,8 @@
 	NSInteger cutoffIndex;
 	NSPopUpButton *overflowButton;
 	NSSegmentedControl *plusMinus;
+	NSTextFieldCell *titleCell;
+	BOOL showPlusMinus;
 }
 	//////////////////////////////////////////////////////////////////////////////////////////
 	/// @name Properties
@@ -48,7 +50,7 @@
  @see ILScopeBarDelegate
  @see dataSource
  */
-@property (assign) IBOutlet id delegate;
+@property (assign) IBOutlet id <ILScopeBarDelegate> delegate;
 /** The datasource to use for the scope bar.
  
  @warning The datasource must implement the @c ILScopeBarDataSource protocol required methods.
@@ -56,7 +58,7 @@
  @see ILScopeBarDataSource
  @see delegate
  */
-@property (assign) IBOutlet id dataSource;
+@property (assign) IBOutlet id <ILScopeBarDataSource> dataSource;
 
 	//////////////////////////////////////////////////////////////////////////////////////////
 	/// @name Displaying the Scope Bar

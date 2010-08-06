@@ -11,7 +11,7 @@
 /**
  The required protocol used for any Data Source set for @c ILScopeBar
  */
-@protocol ILScopeBarDataSource
+@protocol ILScopeBarDataSource <NSObject>
 	//////////////////////////////////////////////////////////////////////////////////////////
 	/// @name Required Methods
 	//////////////////////////////////////////////////////////////////////////////////////////
@@ -53,7 +53,7 @@
  @see ILScopeBarDataSource
  @see ILScopeBar
  */
-@protocol ILScopeBarDelegate
+@protocol ILScopeBarDelegate <NSObject>
 	//////////////////////////////////////////////////////////////////////////////////////////
 	/// @name Optional Methods
 	//////////////////////////////////////////////////////////////////////////////////////////
@@ -66,4 +66,12 @@
  
  */
 - (void)didSelectItemInScopeBar:(ILScopeBar*)bar atIndex:(NSInteger)idx withTag:(NSInteger)tag andTitle:(NSString*)title;
+/** The scope bar calls this method on the delegate when the plus button is clicked if it is visible.
+ @see didClickMinusButtonInScopeBar:
+ */
+- (void)didClickPlusButtonInScopeBar:(ILScopeBar*)bar;
+/** The scope bar calls this method on the delegate when the minus button is clicked if it is visible.
+ @see didClickPlusButtonInScopeBar:
+ */
+- (void)didClickMinusButtonInScopeBar:(ILScopeBar*)bar;
 @end
