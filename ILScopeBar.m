@@ -171,6 +171,11 @@
 	[overflowButton setHidden:(overflowButton.menu.numberOfItems<=0)];
 }
 - (void)reload {
+	for (int x = self.subviews.count-1;x>=0;x--) {
+		[[self.subviews objectAtIndex:x] removeFromSuperview];
+	}
+	if (overflowButton)
+		[overflowButton removeFromSuperview], [overflowButton release], overflowButton=nil;
 	[self overflows];
 	
 	[self createOverflowButton];
